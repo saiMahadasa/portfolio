@@ -78,7 +78,7 @@ export const projectsData = [
   {
     title: "SunPharma Prohance D & JR Survey Tool ",
     description:
-      "Led the development of an online customer assistance and survey platform, utilizing React.js and Bootstrap to create responsive, role-based dashboards that improved user experience and engagement. Integrated Chart.js to visually represent survey data with dynamic charts and graphs, enhancing decision-making. Implemented third-party APIs for WhatsApp assistance and automated advertising campaigns, resulting in a 25% increase in customer interaction rates. Collaborated with backend teams using Node.js and MySQL to ensure seamless data management and real-time survey analysis.",
+      "Developed a customer platform with React.js, boosting interaction by 25% through API integration.",
     tags: ["React", "Node.js", "SQL", "Tailwind", "Chart.js", "Redux", "AWS"],
     imageUrl: wordanalyticsImg,
   },
