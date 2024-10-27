@@ -7,7 +7,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 
 # Load environment variables from .env
-load_dotenv()
+load_dotenv(dotenv_path="../.env")
 api_key = os.getenv("OPENAI_API_KEY")
 
 # Read the prompt from the specified file
