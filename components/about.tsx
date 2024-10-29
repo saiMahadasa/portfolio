@@ -19,7 +19,7 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        Frontend Developer with 3 years of experience specializing in<span className="font-medium"> React.js, Next.js, 
+        Full Stack Developer with 3 years of experience specializing in<span className="font-medium"> React.js, Next.js, 
         TypeScript, Redux, WordPress, PHP and Tailwind CSS </span>. Successfully improved application performance by <b>30% </b> 
         and reduced load times by <b>20%</b>. Adept at building responsive, scalable, and secure web applications
          in healthcare and cryptocurrency sectors. Proven ability to collaborate with global teams
