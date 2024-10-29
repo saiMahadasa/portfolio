@@ -92,19 +92,19 @@ export const projectsData = [
     imageUrl: corpcommentImg,
 },
   {
-    title: "GMB DocRank AI",
-    description:
-      "Developed an AI-driven tool to enhance local search rankings for doctors, leveraging Google My Business API with React.js. Implemented Google Sign-In for streamlined user access and designed a pricing listing feature for transparent service offerings. Created an admin dashboard with advanced filters and pagination, allowing for efficient data management and analytics. Integrated user authentication for secure access, and optimized search visibility through keyword suggestions, contributing to a 20% improvement in local search rankings.",
-    tags: ["React", "TypeScript", "Node.js", "Express JS", "MySQL"],
-    imageUrl: rmtdevImg,
-  },
-  {
     title: "SunPharma Prohance D & JR Survey Tool ",
     description:
       "Developed a customer platform with React.js, boosting interaction by 25% through API integration. Worked with Whatsapp API service and made automation using cronjobs to send whatsapp message reminders",
     tags: ["React", "PHP", "SQL", "Redux", "AWS"],
     imageUrl: wordanalyticsImg,
   },
+  {
+    title: "GMB DocRank AI",
+    description:
+      "Developed an AI-driven tool to enhance local search rankings for doctors, leveraging Google My Business API with React.js. Implemented Google Sign-In for streamlined user access and designed a pricing listing feature for transparent service offerings. Created an admin dashboard with advanced filters and pagination, allowing for efficient data management and analytics. Integrated user authentication for secure access, and optimized search visibility through keyword suggestions, contributing to a 20% improvement in local search rankings.",
+    tags: ["React", "TypeScript", "Node.js", "Express JS", "MySQL"],
+    imageUrl: rmtdevImg,
+  }
 ] as const;
 
 export const skillsData = [
