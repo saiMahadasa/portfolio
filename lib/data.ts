@@ -89,7 +89,7 @@ export const projectsData = [
     description:
       "Developed a comprehensive hospital management website for AINU Hospitals using WordPress, leveraging various plugins and themes to meet client requirements. Customized functionalities with jQuery, PHP, and CSS to ensure a user-friendly interface and enhance overall performance. Focused on responsive design, providing seamless access across devices, and implemented SEO best practices for improved visibility. The project was completed ahead of schedule, demonstrating effective time management and collaboration with the client for timely feedback and adjustments.",
     tags: ["WordPress", "jQuery", "PHP", "CSS", "Responsive Design", "SEO"],
-    imageUrl: ainuHospitalsImg,
+    imageUrl: corpcommentImg,
 },
   {
     title: "GMB DocRank AI",
