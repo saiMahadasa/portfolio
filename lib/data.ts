@@ -94,7 +94,7 @@ export const projectsData = [
   {
     title: "SunPharma Prohance D & JR Survey Tool ",
     description:
-      "Developed a customer platform with React.js, boosting interaction by 25% through API integration. Worked with Whatsapp API service and made automation using cronjobs to send whatsapp message reminders",
+      "Developed an interactive customer platform using React.js that enhanced user engagement by 25% through seamless API integration. Integrated the WhatsApp API to enable automated customer communication and implemented cron jobs for scheduled message reminders, ensuring timely updates and boosting client satisfaction. The automation improved response rates and streamlined user notifications, resulting in a more efficient customer experience and a significant increase in user interactions across the platform.",
     tags: ["React", "PHP", "SQL", "Redux", "AWS"],
     imageUrl: wordanalyticsImg,
   },
