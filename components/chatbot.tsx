@@ -46,7 +46,8 @@ const Chatbot: React.FC = () => {
             {isOpen && (
                 <div className={styles.chatContainer}>
                     <div className={styles.chatHeader}>Hi, I'm a Personal Bot for Sai Mahadasa</div>
-                    
+                    <br/>
+                    <p>Hello! Our chatbot is currently under development to better assist you in the future.</p>
                     <div style={{ flex: 1, overflowY: 'auto' }}>
                         {messages.map((msg, index) => (
                             <div key={index} className={`${styles.message} ${msg.sender === 'user' ? styles.userMessage : styles.botMessage}`}>
