@@ -74,37 +74,37 @@ export const experiencesData = [
     icon: React.createElement(FaReact),
     date: "Aug 2024 - Dec 2024",
   },
-] as const;
+] 
 
 export const projectsData = [
   {
     title: "PixelPark",
     description:
       "Developed a sophisticated NFT marketplace platform enabling users to lock, vote, verify, and claim rewards for NFT collections through seamless crypto wallet integration. Delivered a pixel-perfect UI by adhering strictly to Figma designs, enhancing user experience and engagement. Utilized Redux for robust state management, ensuring smooth and scalable application performance. Integrated GraphQL APIs for efficient data handling and implemented Styled Components and TypeScript for maintainable and type-safe code, contributing to the platform's reliability and user satisfaction.",
-    tags: ["React", "Next.js", "TypeScript", "Styled Components", "Tailwind CSS", "Redux", "GraphQL"],
+    tags: ["React", "Next.js", "TypeScript",  "Redux", "GraphQL"],
     imageUrl: corpcommentImg,
   },
   {
     title: "AINU Hospitals",
     description:
       "Developed a comprehensive hospital management website for AINU Hospitals using WordPress, leveraging various plugins and themes to meet client requirements. Customized functionalities with jQuery, PHP, and CSS to ensure a user-friendly interface and enhance overall performance. Focused on responsive design, providing seamless access across devices, and implemented SEO best practices for improved visibility. The project was completed ahead of schedule, demonstrating effective time management and collaboration with the client for timely feedback and adjustments.",
-    tags: ["WordPress", "jQuery", "PHP", "CSS", "Responsive Design", "SEO"],
+    tags: ["WordPress", "jQuery", "PHP", "CSS", "jQuery"],
     imageUrl: corpcommentImg,
 },
   {
-    title: "GMB DocRank AI",
-    description:
-      "Developed an AI-driven tool to enhance local search rankings for doctors, leveraging Google My Business API with React.js. Implemented Google Sign-In for streamlined user access and designed a pricing listing feature for transparent service offerings. Created an admin dashboard with advanced filters and pagination, allowing for efficient data management and analytics. Integrated user authentication for secure access, and optimized search visibility through keyword suggestions, contributing to a 20% improvement in local search rankings. Collaborated with backend teams using Node.js to ensure seamless data processing and API interactions.",
-    tags: ["React", "TypeScript", "Node.js", "Express JS", "MySQL"],
-    imageUrl: rmtdevImg,
-  },
-  {
     title: "SunPharma Prohance D & JR Survey Tool ",
     description:
-      "Developed a customer platform with React.js, boosting interaction by 25% through API integration.",
-    tags: ["React", "Node.js", "SQL", "Tailwind", "Chart.js", "Redux", "AWS"],
+      "Developed an interactive customer platform using React.js that enhanced user engagement by 25% through seamless API integration. Integrated the WhatsApp API to enable automated customer communication and implemented cron jobs for scheduled message reminders, ensuring timely updates and boosting client satisfaction. The automation improved response rates and streamlined user notifications, resulting in a more efficient customer experience and a significant increase in user interactions across the platform.",
+    tags: ["React", "PHP", "SQL", "Redux", "AWS"],
     imageUrl: wordanalyticsImg,
   },
+  {
+    title: "GMB DocRank AI",
+    description:
+      "Developed an AI-driven tool to enhance local search rankings for doctors, leveraging Google My Business API with React.js. Implemented Google Sign-In for streamlined user access and designed a pricing listing feature for transparent service offerings. Created an admin dashboard with advanced filters and pagination, allowing for efficient data management and analytics. Integrated user authentication for secure access, and optimized search visibility through keyword suggestions, contributing to a 20% improvement in local search rankings.",
+    tags: ["React", "TypeScript", "Node.js", "Express JS", "MySQL"],
+    imageUrl: rmtdevImg,
+  }
 ] as const;
 
 export const skillsData = [
@@ -112,6 +112,7 @@ export const skillsData = [
   "CSS3",
   "JavaScript",
   "TypeScript",
+  "jQuery",
   "React",
   "Next.js",
   "Python",
