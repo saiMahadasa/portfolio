@@ -1,15 +1,43 @@
 .toggleButton {
     position: fixed;
     right: 20px;
-    bottom: 60px;
+    bottom: 20px;
     background-color: #5c67f2;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
     padding: 10px 15px;
     cursor: pointer;
     z-index: 1000;
-    font-size: 16px;
+    font-size: 24px;
+    animation: blink 1.5s infinite; 
+}
+
+/* Keyframe Animation */
+@keyframes blink {
+    0%, 20% {
+        opacity: 1;                     /* Fully visible */
+    }
+    50% {
+        opacity: 0.5;                   /* Semi-transparent */
+    }
+    80%, 100% {
+        opacity: 1;                     /* Fully visible again */
+    }
+}
+
+.chatHeader{
+    padding: 20px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  max-height: 58px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #002f50;
+}
+
+.chatBox{
+    padding: 6px 0px 0px 0px;
 }
 
 .chatContainer {
@@ -26,7 +54,6 @@
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    padding: 15px;
     z-index: 1000;
 }
 
@@ -40,57 +67,135 @@
 }
 
 .userMessage {
-    background-color: #d4f8c4;
-    color: #2f5132;
+  
     border-radius: 15px 15px 0 15px;
     padding: 10px 14px;
     max-width: 70%;
     font-size: 15px;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-stack-monospace);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
     word-wrap: break-word;
-    text-align: left;
+    text-align: right;
     margin-left: auto;
+    border-radius: 20px 20px 1px 20px;
+    background: rgb(59 130 246 / 0.5);
+    color: black;
 }
 
-.botMessage {
-    background-color: #d1e8ff;
-    color: #2f5132;
-    border-radius: 15px 15px 0 15px;
+.botMessage{
+    
     padding: 10px 14px;
     max-width: 70%;
     font-size: 15px;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-stack-monospace);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
     word-wrap: break-word;
     text-align: left;
     margin-right: auto;
+    border-radius: 20px 20px 20px 1px;
+    background: #5c67f2;
+    color: white;
 }
 
 .inputContainer {
+   background-color: white;
+    align-items: center;
+    bottom: 70px;
+    position: fixed;
     display: flex;
-    margin-top: 10px;
+    width: 400px;
 }
 
+
+
 .input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 360px;
+    outline: none;
+    /* width : 80%; */
+    flex-grow: 1;
+    /* padding: 12px 68px; */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    padding: 12px 15px;
     font-size: 14px;
     transition: border-color 0.3s;
 }
 
 .sendButton {
+    flex-shrink: 0;
     background-color: #5c67f2;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
+    padding: 8px 15px;
     cursor: pointer;
-    margin-left: 10px;
-    font-size: 14px;
+    font-size: 28px;
     transition: background-color 0.3s;
+}
+
+
+
+
+
+/* seperate */
+
+.messageContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.userContainer {
+    flex-direction: row-reverse; 
+    
+   
+}
+
+.botContainer {
+    justify-content: flex-start;
+  
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circle shape for the icon background */
+    margin: 0 10px; /* Spacing between icon and message */
+}
+
+
+.userIcon {
+    background-color: rgb(17 24 39 / var(--tw-bg-opacity)); /* Example color for user icon */
+}
+
+.botIcon {
+    background-color: #4caf50; /* Example color for bot icon */
+}
+
+.icon {
+    color: white; /* White icon color for contrast */
+    font-size: 20px;
+}
+
+/* Message bubble styling */
+.messageBubble {
+    padding: 12px 16px;
+    border-radius: 16px;
+    max-width: 70%;
+    background-color: #f0f0f0; /* Default message bubble color */
+    color: #333;
+    /* text-align: left; */
+}
+
+.userContainer .messageBubble {
+    text-align: right;
+    border-radius: 20px 20px 0px 20px;
+}
+
+.botContainer .messageBubble {
+    background-color: #e8f5e9; /* Light green for bot messages */
+    border-radius: 20px 20px 20px 0px;
 }

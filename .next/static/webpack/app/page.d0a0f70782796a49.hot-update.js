@@ -1,0 +1,21 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("app/page",{
+
+/***/ "(app-client)/./components/Chatbot.module.css":
+/*!***************************************!*\
+  !*** ./components/Chatbot.module.css ***!
+  \***************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+eval(__webpack_require__.ts("// extracted by mini-css-extract-plugin\nmodule.exports = {\"toggleButton\":\"Chatbot_toggleButton__7bM1p\",\"chatHeader\":\"Chatbot_chatHeader__YtjOy\",\"chatBox\":\"Chatbot_chatBox__Q8SvM\",\"chatContainer\":\"Chatbot_chatContainer__NPT3t\",\"message\":\"Chatbot_message__COq9_\",\"userMessage\":\"Chatbot_userMessage__PZfeH\",\"botMessage\":\"Chatbot_botMessage__OXOEG\",\"icon\":\"Chatbot_icon__RS4WW\",\"inputContainer\":\"Chatbot_inputContainer__fD1rH\",\"input\":\"Chatbot_input__vYJKX\",\"sendButton\":\"Chatbot_sendButton__U_2JI\",\"messageContainer\":\"Chatbot_messageContainer__ek__3\",\"userContainer\":\"Chatbot_userContainer__JzbDY\",\"botContainer\":\"Chatbot_botContainer__t3bhd\"};\n    if(true) {\n      // 1730474550808\n      var cssReload = __webpack_require__(/*! ./node_modules/next/dist/compiled/mini-css-extract-plugin/hmr/hotModuleReplacement.js */ \"(app-client)/./node_modules/next/dist/compiled/mini-css-extract-plugin/hmr/hotModuleReplacement.js\")(module.id, {\"publicPath\":\"/_next/\",\"esModule\":false,\"locals\":true});\n      module.hot.dispose(cssReload);\n      \n    }\n  \nmodule.exports.__checksum = \"5ce967a79a70\"\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1jbGllbnQpLy4vY29tcG9uZW50cy9DaGF0Ym90Lm1vZHVsZS5jc3MiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSxrQkFBa0I7QUFDbEIsT0FBTyxJQUFVO0FBQ2pCO0FBQ0Esc0JBQXNCLG1CQUFPLENBQUMsaU1BQTJILGNBQWMsc0RBQXNEO0FBQzdOLE1BQU0sVUFBVTtBQUNoQjtBQUNBO0FBQ0E7QUFDQSx5QkFBeUIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9fTl9FLy4vY29tcG9uZW50cy9DaGF0Ym90Lm1vZHVsZS5jc3M/YzUwYSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbm1vZHVsZS5leHBvcnRzID0ge1widG9nZ2xlQnV0dG9uXCI6XCJDaGF0Ym90X3RvZ2dsZUJ1dHRvbl9fN2JNMXBcIixcImNoYXRIZWFkZXJcIjpcIkNoYXRib3RfY2hhdEhlYWRlcl9fWXRqT3lcIixcImNoYXRCb3hcIjpcIkNoYXRib3RfY2hhdEJveF9fUThTdk1cIixcImNoYXRDb250YWluZXJcIjpcIkNoYXRib3RfY2hhdENvbnRhaW5lcl9fTlBUM3RcIixcIm1lc3NhZ2VcIjpcIkNoYXRib3RfbWVzc2FnZV9fQ09xOV9cIixcInVzZXJNZXNzYWdlXCI6XCJDaGF0Ym90X3VzZXJNZXNzYWdlX19QWmZlSFwiLFwiYm90TWVzc2FnZVwiOlwiQ2hhdGJvdF9ib3RNZXNzYWdlX19PWE9FR1wiLFwiaWNvblwiOlwiQ2hhdGJvdF9pY29uX19SUzRXV1wiLFwiaW5wdXRDb250YWluZXJcIjpcIkNoYXRib3RfaW5wdXRDb250YWluZXJfX2ZEMXJIXCIsXCJpbnB1dFwiOlwiQ2hhdGJvdF9pbnB1dF9fdllKS1hcIixcInNlbmRCdXR0b25cIjpcIkNoYXRib3Rfc2VuZEJ1dHRvbl9fVV8ySklcIixcIm1lc3NhZ2VDb250YWluZXJcIjpcIkNoYXRib3RfbWVzc2FnZUNvbnRhaW5lcl9fZWtfXzNcIixcInVzZXJDb250YWluZXJcIjpcIkNoYXRib3RfdXNlckNvbnRhaW5lcl9fSnpiRFlcIixcImJvdENvbnRhaW5lclwiOlwiQ2hhdGJvdF9ib3RDb250YWluZXJfX3QzYmhkXCJ9O1xuICAgIGlmKG1vZHVsZS5ob3QpIHtcbiAgICAgIC8vIDE3MzA0NzQ1NTA4MDhcbiAgICAgIHZhciBjc3NSZWxvYWQgPSByZXF1aXJlKFwiQzovVXNlcnMvT3duZXIvQUUgUG9ydGZvbGlvL3BvcnRmb2xpby9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2NvbXBpbGVkL21pbmktY3NzLWV4dHJhY3QtcGx1Z2luL2htci9ob3RNb2R1bGVSZXBsYWNlbWVudC5qc1wiKShtb2R1bGUuaWQsIHtcInB1YmxpY1BhdGhcIjpcIi9fbmV4dC9cIixcImVzTW9kdWxlXCI6ZmFsc2UsXCJsb2NhbHNcIjp0cnVlfSk7XG4gICAgICBtb2R1bGUuaG90LmRpc3Bvc2UoY3NzUmVsb2FkKTtcbiAgICAgIFxuICAgIH1cbiAgXG5tb2R1bGUuZXhwb3J0cy5fX2NoZWNrc3VtID0gXCI1Y2U5NjdhNzlhNzBcIlxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(app-client)/./components/Chatbot.module.css\n"));
+
+/***/ })
+
+});

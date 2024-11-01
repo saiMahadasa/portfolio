@@ -2,6 +2,11 @@
 import React, { useState } from 'react';
 import { SiChatbot } from "react-icons/si";
 import styles from './Chatbot.module.css';
+import { FaRegUser } from "react-icons/fa";
+import { FaRobot } from "react-icons/fa";
+import { FaPaperPlane } from "react-icons/fa6";
+
+
 
 const Chatbot: React.FC = () => {
     const [messages, setMessages] = useState<{ sender: string; text: string }[]>([]);
@@ -33,8 +38,9 @@ const Chatbot: React.FC = () => {
                 console.error('Error:', error);
             }
     
-            setUserInput('');
+           
         }
+        setUserInput('');
     };
     
     return (
@@ -45,18 +51,36 @@ const Chatbot: React.FC = () => {
 
             {isOpen && (
                 <div className={styles.chatContainer}>
-                    <div className={styles.chatHeader}>Hi, I'm a Personal Bot for Sai Mahadasa</div>
-                    <br/>
-                    <p>Hello! Our chatbot is currently under development to better assist you in the future.</p>
+                    <div className={styles.chatHeader}>Hi, I'm Sai Mahadasa</div>
+                    
+                    <div className= {styles.chatBox}>
                     <div style={{ flex: 1, overflowY: 'auto' }}>
-                        {messages.map((msg, index) => (
-                            <div key={index} className={`${styles.message} ${msg.sender === 'user' ? styles.userMessage : styles.botMessage}`}>
-                                {msg.text}
-                            </div>
-                        ))}
+                    {messages.map((msg, index) => (
+    <div
+        key={index}
+        className={`${styles.messageContainer} ${
+            msg.sender === 'user' ? styles.userContainer : styles.botContainer
+        }`}
+    >
+        
+        <div className={`${styles.iconContainer} ${msg.sender === 'user' ? styles.userIcon : styles.botIcon}`}>
+            {msg.sender === 'user' ? (
+                <FaRegUser className={styles.icon} /> 
+            ) : (
+                <FaRobot className={styles.icon} /> 
+            )}
+        </div>
+        
+        
+        <div className={styles.messageBubble}>
+            {msg.text}
+        </div>
+    </div>
+))}
                     </div>
 
                     <div className={styles.inputContainer}>
+                        
                         <input 
                             type="text" 
                             className={styles.input}
@@ -64,9 +88,15 @@ const Chatbot: React.FC = () => {
                             onChange={(e) => setUserInput(e.target.value)}
                             placeholder="Type your message..." 
                         />
+                       
+                        
                         <button className={styles.sendButton} onClick={sendMessage}>
-                            Send
+                        <FaPaperPlane />
                         </button>
+                      
+                        
+                        
+                    </div>
                     </div>
                 </div>
             )}
