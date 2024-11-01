@@ -5,6 +5,10 @@ import styles from './Chatbot.module.css';
 import { FaRegUser } from "react-icons/fa";
 import { FaRobot } from "react-icons/fa";
 import { FaPaperPlane } from "react-icons/fa6";
+import { FaRegWindowClose } from "react-icons/fa";
+
+
+
 
 
 
@@ -46,12 +50,12 @@ const Chatbot: React.FC = () => {
     return (
         <div>
             <button className={styles.toggleButton} onClick={handleToggleChat}>
-                <SiChatbot />
+                {isOpen ?    <FaRegWindowClose/> : <SiChatbot />} 
             </button>
 
             {isOpen && (
                 <div className={styles.chatContainer}>
-                    <div className={styles.chatHeader}>Hi, I'm Sai Mahadasa</div>
+                    <div className={styles.chatHeader}>Curious? Just Ask My AI Chatbot!</div>
                     
                     <div className= {styles.chatBox}>
                     <div style={{ flex: 1, overflowY: 'auto' }}>
