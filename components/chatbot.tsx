@@ -22,7 +22,8 @@ const Chatbot: React.FC = () => {
     const sendMessage = async () => {
         if (userInput.trim()) {
             setMessages((prev) => [...prev, { sender: 'user', text: userInput }]);
-    
+            setUserInput('');
+            
             try {
                 const response = await fetch('https://ai-portfolio-chatbot.onrender.com/chatbot', {
                     method: 'POST',
@@ -44,7 +45,7 @@ const Chatbot: React.FC = () => {
     
            
         }
-        setUserInput('');
+        
     };
     
     return (
