@@ -104,6 +104,22 @@
         "async": false
       }
     },
+    "(app-client)/./context/active-section-context.tsx": {
+      "*": {
+        "id": "(sc_client)/./context/active-section-context.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./context/theme-context.tsx": {
+      "*": {
+        "id": "(sc_client)/./context/theme-context.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./node_modules/react-hot-toast/dist/index.mjs": {
       "*": {
         "id": "(sc_client)/./node_modules/react-hot-toast/dist/index.mjs",
@@ -127,27 +143,11 @@
         "chunks": [],
         "async": false
       }
-    },
-    "(app-client)/./context/active-section-context.tsx": {
-      "*": {
-        "id": "(sc_client)/./context/active-section-context.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./context/theme-context.tsx": {
-      "*": {
-        "id": "(sc_client)/./context/theme-context.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
     }
   },
   "edgeSSRModuleMapping": {},
   "clientModules": {
-    "C:\\Users\\Owner\\portfolio-website\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -155,7 +155,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -163,7 +163,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\node_modules\\next\\dist\\client\\components\\app-router.js": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\node_modules\\next\\dist\\client\\components\\app-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
@@ -171,7 +171,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
@@ -179,7 +179,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
       "name": "*",
       "chunks": [
@@ -187,7 +187,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
       "name": "*",
       "chunks": [
@@ -195,7 +195,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "*",
       "chunks": [
@@ -203,7 +203,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "*",
       "chunks": [
@@ -211,7 +211,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
       "name": "*",
       "chunks": [
@@ -219,7 +219,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
       "name": "*",
       "chunks": [
@@ -227,7 +227,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\components\\about.tsx": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\components\\about.tsx": {
       "id": "(app-client)/./components/about.tsx",
       "name": "*",
       "chunks": [
@@ -235,7 +235,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\components\\chatbot.tsx": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\components\\chatbot.tsx": {
       "id": "(app-client)/./components/chatbot.tsx",
       "name": "*",
       "chunks": [
@@ -243,7 +243,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\components\\contact.tsx": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\components\\contact.tsx": {
       "id": "(app-client)/./components/contact.tsx",
       "name": "*",
       "chunks": [
@@ -251,7 +251,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\components\\experience.tsx": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\components\\experience.tsx": {
       "id": "(app-client)/./components/experience.tsx",
       "name": "*",
       "chunks": [
@@ -259,7 +259,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\components\\intro.tsx": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\components\\intro.tsx": {
       "id": "(app-client)/./components/intro.tsx",
       "name": "*",
       "chunks": [
@@ -267,7 +267,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\components\\projects.tsx": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\components\\projects.tsx": {
       "id": "(app-client)/./components/projects.tsx",
       "name": "*",
       "chunks": [
@@ -275,7 +275,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\components\\section-divider.tsx": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\components\\section-divider.tsx": {
       "id": "(app-client)/./components/section-divider.tsx",
       "name": "*",
       "chunks": [
@@ -283,7 +283,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\components\\skills.tsx": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\components\\skills.tsx": {
       "id": "(app-client)/./components/skills.tsx",
       "name": "*",
       "chunks": [
@@ -291,39 +291,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\node_modules\\react-hot-toast\\dist\\index.mjs": {
-      "id": "(app-client)/./node_modules/react-hot-toast/dist/index.mjs",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\Owner\\portfolio-website\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}": {
-      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\Owner\\portfolio-website\\components\\header.tsx": {
-      "id": "(app-client)/./components/header.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\Owner\\portfolio-website\\components\\theme-switch.tsx": {
-      "id": "(app-client)/./components/theme-switch.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\Owner\\portfolio-website\\context\\active-section-context.tsx": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\context\\active-section-context.tsx": {
       "id": "(app-client)/./context/active-section-context.tsx",
       "name": "*",
       "chunks": [
@@ -331,7 +299,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\context\\theme-context.tsx": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\context\\theme-context.tsx": {
       "id": "(app-client)/./context/theme-context.tsx",
       "name": "*",
       "chunks": [
@@ -339,7 +307,39 @@
       ],
       "async": false
     },
-    "C:\\Users\\Owner\\portfolio-website\\app\\globals.css": {
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\node_modules\\react-hot-toast\\dist\\index.mjs": {
+      "id": "(app-client)/./node_modules/react-hot-toast/dist/index.mjs",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\components\\header.tsx": {
+      "id": "(app-client)/./components/header.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\components\\theme-switch.tsx": {
+      "id": "(app-client)/./components/theme-switch.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}": {
+      "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\app\\globals.css": {
       "id": "(app-client)/./app/globals.css",
       "name": "*",
       "chunks": [
@@ -349,10 +349,10 @@
     }
   },
   "entryCSSFiles": {
-    "C:\\Users\\Owner\\portfolio-website\\app\\page": [
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\app\\page": [
       "static/css/app/page.css"
     ],
-    "C:\\Users\\Owner\\portfolio-website\\app\\layout": [
+    "C:\\Users\\Owner\\AE Portfolio\\portfolio\\app\\layout": [
       "static/css/app/layout.css"
     ]
   }
