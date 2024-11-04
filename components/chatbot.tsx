@@ -11,6 +11,7 @@ const Chatbot: React.FC = () => {
     const [messages, setMessages] = useState<{ sender: string; text: string }[]>([]);
     const [userInput, setUserInput] = useState('');
     const [isOpen, setIsOpen] = useState(false);
+    const [isTyping, setIsTyping] = useState(false); // New state for typing indicator
 
     const handleToggleChat = () => setIsOpen(!isOpen);
 
@@ -18,6 +19,7 @@ const Chatbot: React.FC = () => {
         if (userInput.trim()) {
             setMessages((prev) => [...prev, { sender: 'user', text: userInput }]);
             setUserInput('');
+            setIsTyping(true); // Show typing indicator
 
             try {
                 const response = await fetch('https://ai-portfolio-chatbot.onrender.com/chatbot', {
@@ -36,6 +38,8 @@ const Chatbot: React.FC = () => {
                 }
             } catch (error) {
                 console.error('Error:', error);
+            } finally {
+                setIsTyping(false); // Hide typing indicator
             }
         }
     };
@@ -62,6 +66,18 @@ const Chatbot: React.FC = () => {
                                     <div className={styles.messageBubble}>{msg.text}</div>
                                 </div>
                             ))}
+                            {isTyping && ( // Show typing indicator when isTyping is true
+                                <div className={`${styles.messageContainer} ${styles.botContainer}`}>
+                                    <div className={`${styles.iconContainer} ${styles.botIcon}`}>
+                                        <FaRobot className={styles.icon} />
+                                    </div>
+                                    <div className={styles.typingBubble}>
+                                        <span className={styles.typingDot}></span>
+                                        <span className={styles.typingDot}></span>
+                                        <span className={styles.typingDot}></span>
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
                         <div className={styles.inputContainer}>
