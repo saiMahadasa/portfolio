@@ -19,8 +19,8 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        Full Stack Developer with 3 years of experience specializing in<span className="font-medium"> React.js, Next.js, 
-        TypeScript, Redux, WordPress, PHP and Tailwind CSS </span>. Successfully improved application performance by <b>30% </b> 
+        Full Stack Developer with 4 years of experience specializing in<span className="font-medium"> React.js, Next.js, 
+        TypeScript, Redux, Node.js, Tailwind CSS and integrating Generative AI powered RAGs </span>. Successfully improved application performance by <b>30% </b> 
         and reduced load times by <b>20%</b>. Adept at building responsive, scalable, and secure web applications
          in healthcare and cryptocurrency sectors. Proven ability to collaborate with global teams
           to deliver high-quality software solutions. Led initiatives that optimized resources, resulting
