@@ -647,6 +647,9 @@ video {
 .mt-4 {
   margin-top: 1rem;
 }
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
 .block {
   display: block;
 }
@@ -730,6 +733,12 @@ video {
 }
 .max-w-\[53rem\] {
   max-width: 53rem;
+}
+.max-w-\[65rem\] {
+  max-width: 65rem;
+}
+.max-w-\[85rem\] {
+  max-width: 85rem;
 }
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;

@@ -43,10 +43,18 @@ export const experiencesData = [
     date: "2020",
   },
   {
+    title: "Full stack Developer Intern",
+    location: "Multiplier AI Solutions, Hyderabad",
+    description:
+      "As a fresher at Multiplier AI Solutions, Developed high-performance web applications for the healthcare sector, improving operational efficiency by 30% and reducing page load times by 20%. Engineered scalable, responsive apps using React.js, JavaScript, and Java Spring Boot, creating reusable components and leveraging React hooks for state management. Designed RESTful APIs with Java Spring Boot, deployed via Docker, and utilized AWS services for cost-effective, high-availability solutions. Built role-based dashboards for healthcare professionals, integrated third-party APIs for SMS/WhatsApp campaigns, and developed Python-based email automation tools. Optimized MySQL and MongoDB database operations, implemented CI/CD pipelines, and ensured robust code quality through unit testing. Led code reviews, debugging, and troubleshooting in Agile environments. Enhanced UI/UX design and developed custom WordPress themes/plugins to meet client needs, optimizing backend workflows and API integrations.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Jan 2019 - May 2020",
+  },
+  {
     title: "Full stack Developer",
     location: "Multiplier AI Solutions, Hyderabad",
     description:
-      "As a fresher at Multiplier AI Solutions, I quickly adapted to industry standards, mastering React.js, CSS, JavaScript, Typescript, WordPress, PHP, Tailwind CSS, and Bootstrap to contribute to high-impact projects. My initiative in learning and applying these technologies led to a 15% reduction in customer support costs, enhanced patient satisfaction, and streamlined UI development for healthcare clients.",
+      "As a full time developer at Multiplier AI Solutions, I Led the design and development of scalable applications using Node.js, React.js, and MSSQL, enhancing operational performance. Conducted code reviews to ensure adherence to standards and optimize maintainability. Designed a real-time chat app to improve team communication and productivity. Developed API endpoints for seamless integration and enhanced data flow. Managed server and domain integration for secure deployments. Collaborated with UX designers and QA engineers to deliver customer-centric software solutions. Improved data accuracy by 60% through MSSQL automation and mentored junior developers, fostering growth and excellence.",
     icon: React.createElement(CgWorkAlt),
     date: "July 2020 - Jan 2022",
   },
@@ -54,7 +62,7 @@ export const experiencesData = [
     title: "Front-End Developer",
     location: "Rapid Innovation, Noida",
     description:
-      "After 1.5 years of experience, I refined my skills to write more efficient and scalable code at Rapid Innovations, utilizing React.js, TypeScript, and Web3 technologies. This led to a 30% increase in user adoption on NFT and crypto platforms and a 25% boost in transaction success rates. I also had the opportunity to work on U.S.-based projects for a year, optimizing UI/UX with Tailwind CSS, Next.js, and Redux, and delivering high-quality solutions.",
+      "Led front-end development for NFT and crypto platforms like Radius Protocol and PixelPark, driving a 30% increase in user adoption using React.js, TypeScript, and Web3 technologies. Enhanced blockchain integration with Web3JS, improving transaction success by 25%, and delivered pixel-perfect UIs with Tailwind CSS and Next.js, boosting user satisfaction by 20% and reducing bounce rates by 15%. Streamlined state management with Redux and GraphQL, reducing load times by 40%. Developed PixelPark NFT Marketplace, improving platform reliability and user satisfaction. Championed CI/CD pipelines, ensured high code quality, and collaborated cross-functionally to maintain a 100% project delivery rate. Emphasized secure, scalable architectures with Docker and Kubernetes, and mentored junior developers to foster team growth. This led to a 30% increase in user adoption on NFT and crypto platforms and a 25% boost in transaction success rates. I also had the opportunity to work on U.S.-based projects for a year, optimizing UI/UX with Tailwind CSS, Next.js, and Redux, and delivering high-quality solutions.",
     icon: React.createElement(FaReact),
     date: "Feb 2022 - Feb 2023",
   },
@@ -70,9 +78,9 @@ export const experiencesData = [
     title: "Full stack AI Developer",
     location: "Our National Conversation, United States",
     description:
-      "I worked as a Full Stack Web Developer during my internship at Our National Conversation, where I focused on developing AI-powered web applications using large language models (LLMs). I integrated these technologies into various projects, including a news website, where I incorporated the G News API for the ONC project. This experience enhanced my skills in both front-end and back-end development while exploring the innovative applications of AI in web solutions.",
+      "I worked as a Software Engineer at Our National Conversation (ONC) from January 2024 to December 2024. In this role, I developed a scalable and responsive interface using HTML5/CSS3, JavaScript/TypeScript, React.js, and Next.js, optimizing performance with server-side rendering. I enhanced user experience through React hooks, React Query, Zod, and React-Hook-Form for seamless form validation and data entry. Additionally, I led the development of an AI-powered Retrieval-Augmented Generation (RAG) application, integrating OpenAI and Meta's LLaMA APIs for dynamic, real-time responses. I also architected an end-to-end solution using Python Flask for API design, integrating LangChain for data processing and serving the backend for the React.js front-end.",
     icon: React.createElement(FaReact),
-    date: "Aug 2024 - Dec 2024",
+    date: "Jan 2024 - Dec 2024",
   },
 ] 
 
@@ -112,15 +120,20 @@ export const skillsData = [
   "CSS3",
   "JavaScript",
   "TypeScript",
+  "C++",
   "jQuery",
-  "React",
+  "React.js",
+  "React Native",
   "Next.js",
+  "Angular",
   "Python",
-  "Django",
   "PHP",
   "Node.js",
+  "Express.js",
+  "MYSQL",
+  "Generative AI",
   "Git",
-  "Tailwind",
+  "Tailwind css",
   "Styled Components",
   "SASS",
   "Bootstrap",
@@ -131,5 +144,7 @@ export const skillsData = [
   "PostgreSQL",
   "WordPress",
   "Webpack",
+  "AWS",
+  "Docker",
   "Jest",
 ] as const;
