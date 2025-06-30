@@ -1,4 +1,4 @@
-// File: C:\Users\saima\portfolio\app\layout.tsx
+// File: C:\Vibe\portfolio-1\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -64,9 +64,9 @@
         "async": false
       }
     },
-    "(app-client)/./components/experience.tsx": {
+    "(app-client)/./components/projects.tsx": {
       "*": {
-        "id": "(sc_client)/./components/experience.tsx",
+        "id": "(sc_client)/./components/projects.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -80,9 +80,9 @@
         "async": false
       }
     },
-    "(app-client)/./components/projects.tsx": {
+    "(app-client)/./components/skills.tsx": {
       "*": {
-        "id": "(sc_client)/./components/projects.tsx",
+        "id": "(sc_client)/./components/skills.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -96,9 +96,9 @@
         "async": false
       }
     },
-    "(app-client)/./components/skills.tsx": {
+    "(app-client)/./components/experience.tsx": {
       "*": {
-        "id": "(sc_client)/./components/skills.tsx",
+        "id": "(sc_client)/./components/experience.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -120,25 +120,9 @@
         "async": false
       }
     },
-    "(app-client)/./components/theme-switch.tsx": {
-      "*": {
-        "id": "(sc_client)/./components/theme-switch.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./context/active-section-context.tsx": {
       "*": {
         "id": "(sc_client)/./context/active-section-context.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./context/theme-context.tsx": {
-      "*": {
-        "id": "(sc_client)/./context/theme-context.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -147,7 +131,7 @@
   },
   "edgeSSRModuleMapping": {},
   "clientModules": {
-    "C:\\Users\\saima\\portfolio\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
+    "C:\\Vibe\\portfolio-1\\node_modules\\next\\dist\\client\\components\\error-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -155,7 +139,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
+    "C:\\Vibe\\portfolio-1\\node_modules\\next\\dist\\esm\\client\\components\\error-boundary.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
@@ -163,7 +147,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\node_modules\\next\\dist\\client\\components\\app-router.js": {
+    "C:\\Vibe\\portfolio-1\\node_modules\\next\\dist\\client\\components\\app-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
@@ -171,7 +155,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
+    "C:\\Vibe\\portfolio-1\\node_modules\\next\\dist\\esm\\client\\components\\app-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
@@ -179,7 +163,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
+    "C:\\Vibe\\portfolio-1\\node_modules\\next\\dist\\client\\components\\layout-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
       "name": "*",
       "chunks": [
@@ -187,7 +171,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js": {
+    "C:\\Vibe\\portfolio-1\\node_modules\\next\\dist\\esm\\client\\components\\layout-router.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/layout-router.js",
       "name": "*",
       "chunks": [
@@ -195,7 +179,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
+    "C:\\Vibe\\portfolio-1\\node_modules\\next\\dist\\client\\components\\render-from-template-context.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "*",
       "chunks": [
@@ -203,7 +187,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js": {
+    "C:\\Vibe\\portfolio-1\\node_modules\\next\\dist\\esm\\client\\components\\render-from-template-context.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "*",
       "chunks": [
@@ -211,7 +195,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+    "C:\\Vibe\\portfolio-1\\node_modules\\next\\dist\\client\\components\\static-generation-searchparams-bailout-provider.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
       "name": "*",
       "chunks": [
@@ -219,7 +203,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js": {
+    "C:\\Vibe\\portfolio-1\\node_modules\\next\\dist\\esm\\client\\components\\static-generation-searchparams-bailout-provider.js": {
       "id": "(app-client)/./node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
       "name": "*",
       "chunks": [
@@ -227,7 +211,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\components\\about.tsx": {
+    "C:\\Vibe\\portfolio-1\\components\\about.tsx": {
       "id": "(app-client)/./components/about.tsx",
       "name": "*",
       "chunks": [
@@ -235,7 +219,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\components\\chatbot.tsx": {
+    "C:\\Vibe\\portfolio-1\\components\\chatbot.tsx": {
       "id": "(app-client)/./components/chatbot.tsx",
       "name": "*",
       "chunks": [
@@ -243,7 +227,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\components\\contact.tsx": {
+    "C:\\Vibe\\portfolio-1\\components\\contact.tsx": {
       "id": "(app-client)/./components/contact.tsx",
       "name": "*",
       "chunks": [
@@ -251,23 +235,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\components\\experience.tsx": {
-      "id": "(app-client)/./components/experience.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\saima\\portfolio\\components\\intro.tsx": {
-      "id": "(app-client)/./components/intro.tsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\saima\\portfolio\\components\\projects.tsx": {
+    "C:\\Vibe\\portfolio-1\\components\\projects.tsx": {
       "id": "(app-client)/./components/projects.tsx",
       "name": "*",
       "chunks": [
@@ -275,15 +243,15 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\components\\section-divider.tsx": {
-      "id": "(app-client)/./components/section-divider.tsx",
+    "C:\\Vibe\\portfolio-1\\components\\intro.tsx": {
+      "id": "(app-client)/./components/intro.tsx",
       "name": "*",
       "chunks": [
         "app/page:static/chunks/app/page.js"
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\components\\skills.tsx": {
+    "C:\\Vibe\\portfolio-1\\components\\skills.tsx": {
       "id": "(app-client)/./components/skills.tsx",
       "name": "*",
       "chunks": [
@@ -291,7 +259,23 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\node_modules\\react-hot-toast\\dist\\index.mjs": {
+    "C:\\Vibe\\portfolio-1\\components\\section-divider.tsx": {
+      "id": "(app-client)/./components/section-divider.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Vibe\\portfolio-1\\components\\experience.tsx": {
+      "id": "(app-client)/./components/experience.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Vibe\\portfolio-1\\node_modules\\react-hot-toast\\dist\\index.mjs": {
       "id": "(app-client)/./node_modules/react-hot-toast/dist/index.mjs",
       "name": "*",
       "chunks": [
@@ -299,7 +283,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}": {
+    "C:\\Vibe\\portfolio-1\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}": {
       "id": "(app-client)/./node_modules/next/font/google/target.css?{\"path\":\"app\\\\layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}",
       "name": "*",
       "chunks": [
@@ -307,7 +291,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\components\\header.tsx": {
+    "C:\\Vibe\\portfolio-1\\components\\header.tsx": {
       "id": "(app-client)/./components/header.tsx",
       "name": "*",
       "chunks": [
@@ -315,15 +299,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\components\\theme-switch.tsx": {
-      "id": "(app-client)/./components/theme-switch.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\saima\\portfolio\\context\\active-section-context.tsx": {
+    "C:\\Vibe\\portfolio-1\\context\\active-section-context.tsx": {
       "id": "(app-client)/./context/active-section-context.tsx",
       "name": "*",
       "chunks": [
@@ -331,15 +307,7 @@
       ],
       "async": false
     },
-    "C:\\Users\\saima\\portfolio\\context\\theme-context.tsx": {
-      "id": "(app-client)/./context/theme-context.tsx",
-      "name": "*",
-      "chunks": [
-        "app/layout:static/chunks/app/layout.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\saima\\portfolio\\app\\globals.css": {
+    "C:\\Vibe\\portfolio-1\\app\\globals.css": {
       "id": "(app-client)/./app/globals.css",
       "name": "*",
       "chunks": [
@@ -349,10 +317,10 @@
     }
   },
   "entryCSSFiles": {
-    "C:\\Users\\saima\\portfolio\\app\\page": [
+    "C:\\Vibe\\portfolio-1\\app\\page": [
       "static/css/app/page.css"
     ],
-    "C:\\Users\\saima\\portfolio\\app\\layout": [
+    "C:\\Vibe\\portfolio-1\\app\\layout": [
       "static/css/app/layout.css"
     ]
   }

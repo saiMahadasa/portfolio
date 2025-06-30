@@ -1,4 +1,4 @@
-// File: C:\Users\saima\portfolio\app\page.tsx
+// File: C:\Vibe\portfolio-1\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
