@@ -15,7 +15,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="scroll-mt-28 mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="scroll-mt-28 mb-20 sm:mb-28 w-[min(100%,38rem)] text-center px-4 sm:px-6 lg:px-8"
       initial={{
         opacity: 0,
       }}
@@ -48,7 +48,7 @@ export default function Contact() {
       </div>
 
       <form
-        className="mt-10 flex flex-col dark:text-black"
+        className="mt-10 flex flex-col dark:text-black space-y-4"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -61,7 +61,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg border border-gray-300 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-800"
+          className="h-12 sm:h-14 px-4 rounded-lg border border-gray-300 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-800 text-sm sm:text-base"
           name="senderEmail"
           type="email"
           required
@@ -69,7 +69,7 @@ export default function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="h-52 my-3 rounded-lg border border-gray-300 p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-800"
+          className="h-40 sm:h-52 rounded-lg border border-gray-300 p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:focus:ring-primary-800 text-sm sm:text-base resize-none"
           name="message"
           placeholder="Your message"
           required

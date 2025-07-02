@@ -20,8 +20,8 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-slate-900"
-      style={{ marginTop: 0, paddingTop: 0, marginBottom: 0, paddingBottom: 0 }}
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-slate-900 py-8 sm:py-0 sm:pt-16 lg:pt-20"
+      style={{ marginTop: 0, marginBottom: 0, paddingBottom: 0 }}
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -40,15 +40,15 @@ export default function Intro() {
           
           {/* Left Column - Content */}
           <motion.div
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6 text-center lg:text-left"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             {/* Main Heading */}
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               <motion.h1
-                className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight"
+                className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -68,62 +68,62 @@ export default function Intro() {
 
               {/* Static Role Display */}
               <motion.div
-                className="h-10 flex items-center"
+                className="h-8 sm:h-10 flex items-center justify-center lg:justify-start"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                <div className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-300 dark:to-gray-100 bg-clip-text text-transparent">
+                <div className="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-300 dark:to-gray-100 bg-clip-text text-transparent">
                   Full Stack Developer
-                </div>
+        </div>
               </motion.div>
-            </div>
+      </div>
 
             {/* Elaborate Description */}
             <motion.div
-              className="space-y-4"
+              className="space-y-3 sm:space-y-4"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Senior Software Developer with 5+ years of expertise architecting enterprise-grade applications that drive business growth and user engagement. 
                 Master of React.js, Node.js, Python, and TypeScript, delivering scalable, high-performance web solutions that transform user experiences.
               </p>
               
-              <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Proven leader in mentoring development teams, optimizing application architecture, and collaborating with cross-functional 
                 stakeholders to deliver innovative solutions that exceed business objectives and drive measurable results.
               </p>
             </motion.div>
 
             {/* CTA Buttons */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4"
+      <motion.div
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-            >
-              <Link
-                href="#contact"
-                className="group relative inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
-                onClick={() => {
-                  setActiveSection("Contact");
-                  setTimeOfLastClick(Date.now());
-                }}
-              >
+      >
+        <Link
+          href="#contact"
+                className="group relative inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden text-sm sm:text-base"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
+        >
                 <span className="relative z-10 flex items-center gap-2">
                   Get In Touch
                   <BsArrowRight className="transition-transform group-hover:translate-x-1" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Link>
+        </Link>
 
-              <a
-                className="group inline-flex items-center justify-center px-6 py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm text-gray-900 dark:text-white font-semibold rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                href="/CV.pdf"
-                download
-              >
+        <a
+                className="group inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm text-gray-900 dark:text-white font-semibold rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-sm sm:text-base"
+          href="/CV.pdf"
+          download
+        >
                 <HiDownload className="mr-2 transition-transform group-hover:translate-y-1" />
                 Download CV
               </a>
@@ -131,33 +131,33 @@ export default function Intro() {
 
             {/* Social Links */}
             <motion.div
-              className="flex gap-4"
+              className="flex gap-3 sm:gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
             >
               <a
-                className="group p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-                href="https://www.linkedin.com/in/sai-subrahmanyam-mahadasa/"
-                target="_blank"
+                className="group p-2 sm:p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+          href="https://www.linkedin.com/in/sai-subrahmanyam-mahadasa/"
+          target="_blank"
+                rel="noopener noreferrer"
+        >
+                <BsLinkedin className="text-lg sm:text-xl text-blue-600 group-hover:scale-110 transition-transform" />
+        </a>
+        <a
+                className="group p-2 sm:p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+          href="https://github.com/saiMahadasa"
+          target="_blank"
                 rel="noopener noreferrer"
               >
-                <BsLinkedin className="text-xl text-blue-600 group-hover:scale-110 transition-transform" />
-              </a>
-              <a
-                className="group p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-                href="https://github.com/saiMahadasa"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <BsGithub className="text-xl text-gray-900 dark:text-white group-hover:scale-110 transition-transform" />
+                <BsGithub className="text-lg sm:text-xl text-gray-900 dark:text-white group-hover:scale-110 transition-transform" />
               </a>
             </motion.div>
           </motion.div>
 
           {/* Right Column - Profile Image */}
           <motion.div
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end order-first lg:order-last"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -172,7 +172,7 @@ export default function Intro() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="relative w-72 h-72 md:w-80 md:h-80">
+                <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80">
                   {/* Border Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full p-1">
                     <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-2">
@@ -186,29 +186,29 @@ export default function Intro() {
                     </div>
                   </div>
                   
-                  {/* Static Tech Icons - Spread Out */}
-                  <div className="absolute -top-12 -right-12 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                    <FaReact className="text-white text-xl" />
+                  {/* Static Tech Icons - Responsive positioning */}
+                  <div className="absolute -top-6 sm:-top-8 md:-top-12 -right-6 sm:-right-8 md:-right-12 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                    <FaReact className="text-white text-xs sm:text-sm md:text-xl" />
                   </div>
                   
-                  <div className="absolute -bottom-12 -left-12 w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                    <FaNodeJs className="text-white text-xl" />
+                  <div className="absolute -bottom-6 sm:-bottom-8 md:-bottom-12 -left-6 sm:-left-8 md:-left-12 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                    <FaNodeJs className="text-white text-xs sm:text-sm md:text-xl" />
                   </div>
                   
-                  <div className="absolute top-1/2 -right-16 w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
-                    <FaPython className="text-white text-lg" />
+                  <div className="absolute top-1/2 -right-8 sm:-right-12 md:-right-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
+                    <FaPython className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
                   
-                  <div className="absolute top-1/2 -left-16 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center shadow-lg">
-                    <SiTypescript className="text-white text-lg" />
+                  <div className="absolute top-1/2 -left-8 sm:-left-12 md:-left-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center shadow-lg">
+                    <SiTypescript className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
                   
-                  <div className="absolute -top-8 -left-8 w-14 h-14 bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-200 rounded-full flex items-center justify-center shadow-lg">
-                    <SiNextdotjs className="text-white dark:text-black text-lg" />
+                  <div className="absolute -top-4 sm:-top-6 md:-top-8 -left-4 sm:-left-6 md:-left-8 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-200 rounded-full flex items-center justify-center shadow-lg">
+                    <SiNextdotjs className="text-white dark:text-black text-xs sm:text-sm md:text-lg" />
                   </div>
                   
-                  <div className="absolute -bottom-8 -right-8 w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                    <SiTailwindcss className="text-white text-lg" />
+                  <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-4 sm:-right-6 md:-right-8 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                    <SiTailwindcss className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
                 </div>
               </motion.div>
@@ -219,7 +219,7 @@ export default function Intro() {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-6 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}

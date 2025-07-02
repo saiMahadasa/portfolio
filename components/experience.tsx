@@ -146,12 +146,12 @@ export default function Experience() {
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My Career Journey</SectionHeading>
       
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
           {/* Career progression line */}
-          <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-400 via-blue-500 via-green-500 via-purple-500 via-orange-500 to-indigo-500 rounded-full"></div>
+          <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-400 via-blue-500 via-green-500 via-purple-500 via-orange-500 to-indigo-500 rounded-full"></div>
           
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {experiencesData.map((item, index) => (
               <motion.div
                 key={index}
@@ -162,45 +162,45 @@ export default function Experience() {
                 className="relative"
               >
                 {/* Timeline dot with level indicator */}
-                <div className="absolute left-6 top-6 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-white dark:border-gray-900 shadow-lg z-10 flex items-center justify-center">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                <div className="absolute left-2 sm:left-6 top-6 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-white dark:border-gray-900 shadow-lg z-10 flex items-center justify-center">
+                  <div className="w-1 h-1 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                 </div>
                 
-                {/* Level badge - moved to left side */}
-                <div className="absolute left-0 top-4 z-10 transform -translate-x-full pr-2">
-                  <div className={`${getLevelColor(item.level)} text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg flex items-center space-x-1 whitespace-nowrap`}>
+                {/* Level badge - responsive positioning */}
+                <div className="absolute left-0 sm:left-0 top-4 z-10 transform -translate-x-full pr-2 hidden sm:block">
+                  <div className={`${getLevelColor(item.level)} text-white px-2 sm:px-3 py-1 rounded-full text-xs font-semibold shadow-lg flex items-center space-x-1 whitespace-nowrap`}>
                     {getLevelIcon(item.level)}
-                    <span>{item.level}</span>
+                    <span className="hidden sm:inline">{item.level}</span>
                   </div>
                 </div>
                 
-                <div className="ml-16">
+                <div className="ml-8 sm:ml-16">
                   <div className="group relative">
                     {/* Main card */}
                     <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50/50 dark:from-blue-900/20 dark:via-transparent dark:to-purple-900/20"></div>
                       
-                      <div className="relative p-6">
+                      <div className="relative p-4 sm:p-6">
                         {/* Header */}
-                        <div className="flex items-start justify-between mb-4">
+                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 space-y-2 sm:space-y-0">
                           <div className="flex items-center space-x-3">
-                            <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-lg">
+                            <div className="p-2 sm:p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-lg">
                               {getIconForRole(item.title)}
                             </div>
                             <div>
-                              <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                              <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                 {item.title}
                               </h3>
-                              <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300 mt-1">
+                              <div className="flex items-center space-x-2 text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-1">
                                 <FaBuilding className="text-gray-400" />
-                                <span>{item.location}</span>
+                                <span className="break-words">{item.location}</span>
                               </div>
                             </div>
                           </div>
                           
-                          <div className="text-right">
-                            <div className="flex items-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
+                          <div className="text-left sm:text-right">
+                            <div className="flex items-center space-x-1 text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                               <FaCalendarAlt className="text-gray-400" />
                               <span className="font-medium">{item.date}</span>
                             </div>
@@ -209,20 +209,20 @@ export default function Experience() {
 
                         {/* Description */}
                         <div className="mb-4">
-                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                          <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                             {item.description}
                           </p>
                         </div>
 
                         {/* Technologies learned/used */}
                         <div className="space-y-3">
-                          <div className="flex items-center space-x-2">
+                          <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-2">
                             <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                               Technologies & Skills:
                             </span>
                             <div className="flex items-center space-x-2 flex-wrap">
                               {getTechIcons(item.technologies || []).map((icon, iconIndex) => (
-                                <div key={iconIndex} className="p-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg hover:scale-110 transition-transform">
+                                <div key={iconIndex} className="p-1 sm:p-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg hover:scale-110 transition-transform">
                                   {icon}
                                 </div>
                               ))}

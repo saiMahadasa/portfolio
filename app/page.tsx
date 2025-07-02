@@ -18,7 +18,6 @@ export default function Home() {
       <Skills />
       <Experience />
       <Contact />
-      <Chatbot/>
     </main>
   );
 }
