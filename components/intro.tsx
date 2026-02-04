@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin, BsGithub } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
-import { SiTypescript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiTypescript, SiNextdotjs, SiDotnet, SiMicrosoftsqlserver } from "react-icons/si";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import Sai from '../public/sai.jpeg'
@@ -74,7 +74,7 @@ export default function Intro() {
                 transition={{ delay: 0.4 }}
               >
                 <div className="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-300 dark:to-gray-100 bg-clip-text text-transparent">
-                  Full Stack Developer
+                  Sr. Full Stack Developer
         </div>
               </motion.div>
       </div>
@@ -87,13 +87,16 @@ export default function Intro() {
               transition={{ delay: 0.5 }}
             >
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Senior Software Developer with 5+ years of expertise architecting enterprise-grade applications that drive business growth and user engagement. 
-                Master of React.js, Node.js, Python, and TypeScript, delivering scalable, high-performance web solutions that transform user experiences.
+                Sr. Full Stack Developer with 6 years of experience building workflow-heavy
+                applications for HR/benefits, financial services, and healthcare organizations.
+                Core stack: React + TypeScript for high-performance UIs and C#/.NET Core for
+                scalable backend services, with Node.js for integrations.
               </p>
-              
+
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Proven leader in mentoring development teams, optimizing application architecture, and collaborating with cross-functional 
-                stakeholders to deliver innovative solutions that exceed business objectives and drive measurable results.
+                Strong in API design (REST/GraphQL), secure auth patterns (JWT, RBAC, OAuth),
+                SQL performance tuning, and production delivery with Docker and CI/CD in
+                AWS/Azure environments.
               </p>
             </motion.div>
 
@@ -195,8 +198,8 @@ export default function Intro() {
                     <FaNodeJs className="text-white text-xs sm:text-sm md:text-xl" />
                   </div>
                   
-                  <div className="absolute top-1/2 -right-8 sm:-right-12 md:-right-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
-                    <FaPython className="text-white text-xs sm:text-sm md:text-lg" />
+                  <div className="absolute top-1/2 -right-8 sm:-right-12 md:-right-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
+                    <SiDotnet className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
                   
                   <div className="absolute top-1/2 -left-8 sm:-left-12 md:-left-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center shadow-lg">
@@ -207,8 +210,8 @@ export default function Intro() {
                     <SiNextdotjs className="text-white dark:text-black text-xs sm:text-sm md:text-lg" />
                   </div>
                   
-                  <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-4 sm:-right-6 md:-right-8 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                    <SiTailwindcss className="text-white text-xs sm:text-sm md:text-lg" />
+                  <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-4 sm:-right-6 md:-right-8 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 bg-gradient-to-r from-red-500 to-red-700 rounded-full flex items-center justify-center shadow-lg">
+                    <SiMicrosoftsqlserver className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
                 </div>
               </motion.div>

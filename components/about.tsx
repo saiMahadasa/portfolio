@@ -2,95 +2,81 @@
 
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { 
-  FaReact, 
-  FaNodeJs, 
-  FaPython, 
-  FaAws, 
-  FaDocker, 
+import {
+  FaReact,
+  FaAws,
+  FaDocker,
   FaCode,
   FaRocket,
-  FaBrain,
   FaUsers,
   FaGlobe,
-  FaNewspaper,
-  FaChevronDown,
-  FaChevronUp
+  FaShieldAlt,
+  FaChartLine,
 } from "react-icons/fa";
-import { 
-  SiTypescript, 
-  SiNextdotjs, 
-  SiPostgresql, 
-  SiMongodb,
-  SiTailwindcss,
-  SiRedux,
-  SiGraphql,
-  SiJest,
-  SiCypress,
-  SiDocker,
-  SiPython,
-  SiFlask,
-  SiOpenai,
-  SiWhatsapp,
-  SiChartdotjs
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiDotnet,
+  SiMicrosoftsqlserver,
+  SiRedis,
 } from "react-icons/si";
 
 export default function About() {
   const { ref } = useSectionInView("About", 0.5);
 
   const techStack = [
-    { icon: FaReact, name: "React.js", color: "text-blue-500" },
+    { icon: FaReact, name: "React", color: "text-blue-500" },
     { icon: SiNextdotjs, name: "Next.js", color: "text-black dark:text-white" },
     { icon: SiTypescript, name: "TypeScript", color: "text-blue-600" },
-    { icon: FaNodeJs, name: "Node.js", color: "text-green-600" },
-    { icon: FaPython, name: "Python", color: "text-yellow-500" },
-    { icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-700" },
-    { icon: FaAws, name: "AWS", color: "text-orange-500" },
+    { icon: SiDotnet, name: ".NET Core", color: "text-purple-600" },
+    { icon: SiMicrosoftsqlserver, name: "SQL Server", color: "text-red-600" },
+    { icon: SiRedis, name: "Redis", color: "text-red-500" },
     { icon: FaDocker, name: "Docker", color: "text-blue-400" },
+    { icon: FaAws, name: "AWS", color: "text-orange-500" },
   ];
 
   const achievements = [
     {
       icon: FaCode,
-      title: "Frontend Developer Certificate",
-      subtitle: "Meta (2024)",
-      color: "bg-primary-500"
+      title: "ASP.NET Professional Certificate",
+      subtitle: "Udemy",
+      color: "bg-primary-500",
     },
     {
       icon: FaCode,
-      title: "React.js Developer Certificate", 
-      subtitle: "Udemy (2022)",
-      color: "bg-secondary-500"
+      title: "Frontend Developer",
+      subtitle: "Udemy (JavaScript / React)",
+      color: "bg-secondary-500",
     },
     {
       icon: FaRocket,
       title: "NVIDIA Developer Contest",
-      subtitle: "GenAI Application Prize",
-      color: "bg-accent-500"
-    }
+      subtitle: "Prize Winner (2024)",
+      color: "bg-accent-500",
+    },
   ];
 
   const experienceHighlights = [
     {
       icon: FaRocket,
-      title: "5+ Years Experience",
-      description: "Senior Software Developer"
+      title: "6+ Years Experience",
+      description: "Full Stack Delivery",
     },
     {
       icon: FaUsers,
-      title: "5000+ Users",
-      description: "Healthcare Application"
+      title: "Enterprise Workflows",
+      description: "HR & Financial Systems",
     },
     {
-      icon: FaGlobe,
-      title: "20% Performance Boost",
-      description: "User Engagement Increase"
+      icon: FaShieldAlt,
+      title: "Secure APIs",
+      description: "JWT, RBAC, OAuth",
     },
     {
-      icon: FaCode,
-      title: "Enterprise Security",
-      description: "WCAG 2.1 Compliant"
-    }
+      icon: FaChartLine,
+      title: "SQL Performance",
+      description: "Tuning & Optimization",
+    },
   ];
 
   return (
@@ -134,7 +120,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                Senior Software Developer
+                Sr. Full Stack Developer
               </motion.h3>
               <motion.p 
                 className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-6"
@@ -143,9 +129,10 @@ export default function About() {
                 transition={{ delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Highly skilled Senior Software Developer with 5 years of experience in designing and developing scalable, secure web applications. 
-                Proficient in JavaScript, React.js, Next.js, Node.js and TypeScript, with strong expertise in building reusable, high-performance 
-                components and integrating GenAI, RESTful and GraphQL APIs.
+                Sr. Full Stack Developer with 6 years of experience building workflow-heavy
+                web applications for HR/benefits, financial services, and healthcare
+                organizations. Core stack includes React + TypeScript for high-performance
+                UIs and C#/.NET Core (ASP.NET Core Web APIs) for scalable backend services.
               </motion.p>
               <motion.p 
                 className="text-lg leading-relaxed text-gray-700 dark:text-gray-300"
@@ -154,8 +141,10 @@ export default function About() {
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                Demonstrated success in optimizing application performance, enhancing user experience, and ensuring robust code quality through modern development practices. 
-                Adept at mentoring teams and collaborating with cross-functional stakeholders to deliver innovative solutions in the healthcare industry.
+                Specialized in API design (REST/GraphQL), secure auth patterns (JWT, RBAC,
+                OAuth concepts), SQL performance tuning, and production delivery with Docker
+                and CI/CD in AWS/Azure environments. Enjoy partnering with product and QA to
+                translate complex business rules into maintainable code.
               </motion.p>
             </div>
             <div className="relative">
@@ -296,17 +285,20 @@ export default function About() {
       >
         <div className="text-center">
           <FaRocket className="text-5xl mx-auto mb-6" />
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">Currently at Perky NY</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            Currently at Lincoln Financial Group
+          </h3>
           <p className="text-xl text-primary-100 mb-6">
-            Spearheading the development of a scalable Employee Leave Benefits Application using React.js and Node.js, 
-            delivering seamless user experience across complex workflows and reducing HR management overhead.
+            Building enterprise leave/benefits workflows with React + TypeScript and
+            ASP.NET Core Web APIs, focusing on secure RBAC patterns, predictable UI
+            states, and performance on data-heavy pages.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">React.js</span>
-            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">Node.js</span>
+            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">React</span>
+            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">TypeScript</span>
+            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">ASP.NET Core</span>
+            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">SQL Server</span>
             <span className="bg-white/20 px-4 py-2 rounded-full text-sm">Docker</span>
-            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">PostgreSQL</span>
-            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">WCAG 2.1</span>
           </div>
         </div>
       </motion.div>
