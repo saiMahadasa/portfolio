@@ -98,7 +98,7 @@ const getIconForRole = (title: string) => {
   return <FaBuilding className="text-gray-500" />;
 };
 
-const getTechIcons = (technologies: string[]) => {
+const getTechIcons = (technologies: readonly string[]) => {
   const techIcons: JSX.Element[] = [];
   
   technologies.forEach(tech => {
