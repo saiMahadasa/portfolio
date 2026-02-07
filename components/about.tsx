@@ -12,6 +12,7 @@ import {
   FaGlobe,
   FaShieldAlt,
   FaChartLine,
+  FaNodeJs,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -19,20 +20,23 @@ import {
   SiDotnet,
   SiMicrosoftsqlserver,
   SiRedis,
+  SiMicrosoftazure,
 } from "react-icons/si";
 
 export default function About() {
   const { ref } = useSectionInView("About", 0.5);
 
   const techStack = [
-    { icon: FaReact, name: "React", color: "text-blue-500" },
-    { icon: SiNextdotjs, name: "Next.js", color: "text-black dark:text-white" },
-    { icon: SiTypescript, name: "TypeScript", color: "text-blue-600" },
-    { icon: SiDotnet, name: ".NET Core", color: "text-purple-600" },
-    { icon: SiMicrosoftsqlserver, name: "SQL Server", color: "text-red-600" },
-    { icon: SiRedis, name: "Redis", color: "text-red-500" },
-    { icon: FaDocker, name: "Docker", color: "text-blue-400" },
-    { icon: FaAws, name: "AWS", color: "text-orange-500" },
+    { icon: FaReact, name: "React", color: "text-cyan-500" },
+    { icon: SiNextdotjs, name: "Next.js", color: "text-gray-800 dark:text-gray-100" },
+    { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
+    { icon: SiDotnet, name: ".NET Core", color: "text-purple-500" },
+    { icon: FaNodeJs, name: "Node.js", color: "text-green-600 dark:text-green-400" },
+    { icon: SiMicrosoftsqlserver, name: "SQL Server", color: "text-red-500" },
+    { icon: FaAws, name: "AWS", color: "text-orange-600 dark:text-orange-400" },
+    { icon: SiMicrosoftazure, name: "Azure", color: "text-blue-600 dark:text-blue-400" },
+    { icon: FaRocket, name: "GenAI/RAG", color: "text-purple-600 dark:text-purple-400" },
+    { icon: FaDocker, name: "Docker", color: "text-blue-600 dark:text-blue-300" },
   ];
 
   const achievements = [
@@ -40,42 +44,42 @@ export default function About() {
       icon: FaCode,
       title: "ASP.NET Professional Certificate",
       subtitle: "Udemy",
-      color: "bg-primary-500",
+      color: "bg-purple-500",
     },
     {
       icon: FaCode,
-      title: "Frontend Developer",
+      title: "Frontend Developer Certificate",
       subtitle: "Udemy (JavaScript / React)",
-      color: "bg-secondary-500",
+      color: "bg-blue-500",
     },
     {
       icon: FaRocket,
-      title: "NVIDIA Developer Contest",
-      subtitle: "Prize Winner (2024)",
-      color: "bg-accent-500",
+      title: "NVIDIA Developer Contest Winner",
+      subtitle: "Generative AI Application (2024)",
+      color: "bg-green-500",
     },
   ];
 
   const experienceHighlights = [
     {
-      icon: FaRocket,
-      title: "6+ Years Experience",
-      description: "Full Stack Delivery",
+      icon: FaUsers,
+      title: "Cross-Functional Leadership",
+      description: "Partner with Product, Design & QA",
     },
     {
-      icon: FaUsers,
-      title: "Enterprise Workflows",
-      description: "HR & Financial Systems",
+      icon: FaRocket,
+      title: "Mentorship & Code Reviews",
+      description: "Guide teams on best practices",
     },
     {
       icon: FaShieldAlt,
-      title: "Secure APIs",
-      description: "JWT, RBAC, OAuth",
+      title: "End-to-End Ownership",
+      description: "Design to Production Support",
     },
     {
       icon: FaChartLine,
-      title: "SQL Performance",
-      description: "Tuning & Optimization",
+      title: "Business-Focused Solutions",
+      description: "Balance quality with delivery",
     },
   ];
 
@@ -120,7 +124,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                Sr. Full Stack Developer
+                Senior Full Stack Developer
               </motion.h3>
               <motion.p 
                 className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-6"
@@ -129,10 +133,9 @@ export default function About() {
                 transition={{ delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Sr. Full Stack Developer with 6 years of experience building workflow-heavy
-                web applications for HR/benefits, financial services, and healthcare
-                organizations. Core stack includes React + TypeScript for high-performance
-                UIs and C#/.NET Core (ASP.NET Core Web APIs) for scalable backend services.
+                I thrive in collaborative environments where clear communication and ownership drive results. 
+                My approach focuses on understanding business needs first, then architecting solutions that 
+                balance technical excellence with practical delivery timelines.
               </motion.p>
               <motion.p 
                 className="text-lg leading-relaxed text-gray-700 dark:text-gray-300"
@@ -141,10 +144,10 @@ export default function About() {
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                Specialized in API design (REST/GraphQL), secure auth patterns (JWT, RBAC,
-                OAuth concepts), SQL performance tuning, and production delivery with Docker
-                and CI/CD in AWS/Azure environments. Enjoy partnering with product and QA to
-                translate complex business rules into maintainable code.
+                I partner closely with product managers, designers, and QA teams to translate complex requirements 
+                into maintainable code. I actively mentor junior developers through code reviews and pairing sessions, 
+                helping teams establish best practices and improve code quality. My experience spans the full development 
+                lifecycle—from requirements gathering and system design to production support and incident resolution.
               </motion.p>
             </div>
             <div className="relative">
@@ -173,7 +176,7 @@ export default function About() {
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Key Achievements
+          Professional Strengths
         </motion.h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {experienceHighlights.map((highlight, index) => (
@@ -190,8 +193,8 @@ export default function About() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full mb-4">
                   <highlight.icon className="text-primary-600 dark:text-primary-400 text-xl" />
                 </div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{highlight.title}</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{highlight.description}</p>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">{highlight.title}</h4>
+                <p className="text-xs text-gray-600 dark:text-gray-400">{highlight.description}</p>
               </div>
             </motion.div>
           ))}
@@ -215,18 +218,18 @@ export default function About() {
         >
           Technology Stack
         </motion.h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {techStack.map((tech, index) => (
             <motion.div
               key={index}
               className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-brand border border-gray-200 dark:border-gray-700 hover:shadow-brand-lg transition-all duration-300 hover:-translate-y-2 text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.08 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
-              <tech.icon className={`text-3xl mx-auto mb-2 ${tech.color}`} />
+              <tech.icon className={`text-4xl mx-auto mb-2 ${tech.color}`} />
               <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{tech.name}</p>
             </motion.div>
           ))}
@@ -289,16 +292,19 @@ export default function About() {
             Currently at Lincoln Financial Group
           </h3>
           <p className="text-xl text-primary-100 mb-6">
-            Building enterprise leave/benefits workflows with React + TypeScript and
-            ASP.NET Core Web APIs, focusing on secure RBAC patterns, predictable UI
-            states, and performance on data-heavy pages.
+            Leading development of enterprise HR/benefits workflows in a regulated environment. Collaborating 
+            with cross-functional teams to deliver secure, audit-compliant systems. Building GenAI features 
+            that reduce support escalations and improve employee self-service.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">React</span>
-            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">TypeScript</span>
-            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">ASP.NET Core</span>
-            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">SQL Server</span>
-            <span className="bg-white/20 px-4 py-2 rounded-full text-sm">Docker</span>
+          <div className="flex flex-wrap justify-center gap-3">
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">React</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Next.js</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">.NET Core</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Node.js</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Azure</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">AWS</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">GenAI/RAG</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">LangChain</span>
           </div>
         </div>
       </motion.div>
@@ -312,12 +318,11 @@ export default function About() {
         viewport={{ once: true }}
       >
         <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-brand border border-gray-200 dark:border-gray-700">
-          <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Beyond Coding</h3>
+          <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Outside of Work</h3>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            <span className="italic">When I'm not coding</span>, I enjoy capturing and editing pictures, watching movies, and playing cricket. 
-            I also enjoy <span className="font-medium text-primary-600 dark:text-primary-400">learning new things</span>. 
-            I am currently learning about <span className="font-medium text-primary-600 dark:text-primary-400">history and philosophy</span>. 
-            I'm also learning how to play the guitar.
+            I maintain a curious mindset through continuous learning—currently exploring history and philosophy while 
+            learning guitar. I enjoy photography, cricket, and watching films. This diverse range of interests helps 
+            me bring fresh perspectives to problem-solving and team collaboration.
           </p>
         </div>
       </motion.div>

@@ -9,8 +9,8 @@ import Chatbot from "@/components/chatbot";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Sai Mahadasa | Professional Portfolio",
-  description: "",
+  title: "Sai Subrahmanyam Mahadasa | Senior Full Stack Developer",
+  description: "Senior Full Stack Developer with 6+ years of experience building workflow-heavy web applications across HR/benefits, financial services, and healthcare. Strong in React, Next.js, TypeScript, C#/.NET Core, and GenAI/LLM features with LangChain/LlamaIndex.",
 };
 
 export default function RootLayout({

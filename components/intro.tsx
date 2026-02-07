@@ -87,16 +87,16 @@ export default function Intro() {
               transition={{ delay: 0.5 }}
             >
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Sr. Full Stack Developer with 6 years of experience building workflow-heavy
-                applications for HR/benefits, financial services, and healthcare organizations.
-                Core stack: React + TypeScript for high-performance UIs and C#/.NET Core for
-                scalable backend services, with Node.js for integrations.
+                6+ years building enterprise applications across HR, finance, and healthcare. 
+                Expert in <span className="font-semibold text-gray-800 dark:text-gray-200">React/Next.js/TypeScript</span> frontends, 
+                <span className="font-semibold text-gray-800 dark:text-gray-200"> C#/.NET Core APIs</span>, and 
+                <span className="font-semibold text-gray-800 dark:text-gray-200"> Node.js microservices</span>.
               </p>
 
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Strong in API design (REST/GraphQL), secure auth patterns (JWT, RBAC, OAuth),
-                SQL performance tuning, and production delivery with Docker and CI/CD in
-                AWS/Azure environments.
+                Deliver secure, scalable solutions with <span className="font-semibold text-gray-800 dark:text-gray-200">Azure</span> and 
+                <span className="font-semibold text-gray-800 dark:text-gray-200"> AWS</span>, optimize databases, and build 
+                <span className="font-semibold text-gray-800 dark:text-gray-200"> GenAI/RAG chatbots</span> using LangChain & vector databases.
               </p>
             </motion.div>
 

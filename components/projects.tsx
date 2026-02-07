@@ -64,12 +64,10 @@ export default function Projects() {
 
   const getProjectIcon = (title: string) => {
     const iconMap: { [key: string]: any } = {
-      "Leave Management Tool": FaRocket,
-      "ONC News Management Platform": FaNewspaper,
-      "Online Customer Assistance and Survey Platform": FaUsers,
-      "PixelPark NFT Marketplace": FaCode,
-      "GMB DocRank AI": FaBrain,
-      "Generative AI Chatbot Development": FaBrain,
+      "Enterprise Leave Management Platform (Lincoln Financial)": FaRocket,
+      "GenAI HR Policy Assistant with RAG": FaBrain,
+      "HR Leave SaaS Platform (Perky)": FaUsers,
+      "Financial Analytics & Reporting Console (ICICI)": FaChartBar,
     };
     return iconMap[title] || FaCode;
   };
@@ -89,55 +87,34 @@ export default function Projects() {
   const getTechIcon = (tech: string) => {
     const iconMap: { [key: string]: any } = {
       "React": FaReact,
-      "React.js": FaReact,
       "Next.js": SiNextdotjs,
       "TypeScript": SiTypescript,
       "Node.js": FaNodeJs,
       "Python": SiPython,
-      "Flask": SiFlask,
-      "Docker": SiDocker,
-      "AWS": FaAws,
+      "C#": FaCode,
+      "ASP.NET Core": FaServer,
+      "ASP.NET Core Web API": FaServer,
+      "Microservices": FaNetworkWired,
+      "SQL Server": FaDatabase,
       "PostgreSQL": SiPostgresql,
       "MongoDB": SiMongodb,
-      "Redux": SiRedux,
+      "Redis": FaDatabase,
+      "Entity Framework Core": FaDatabase,
+      "REST": FaNetworkWired,
       "GraphQL": SiGraphql,
-      "Tailwind CSS": SiTailwindcss,
-      "Jest": SiJest,
-      "Cypress": SiCypress,
-      "LangChain": FaCode,
+      "Redux": SiRedux,
+      "Docker": SiDocker,
+      "AWS": FaAws,
+      "Azure": FaDatabase,
+      "LangChain": FaBrain,
+      "LlamaIndex": FaBrain,
       "OpenAI": SiOpenai,
-      "LLaMA": FaBrain,
-      "ChromaDB": FaCode,
-      "WhatsApp API": SiWhatsapp,
-      "Chart.js": SiChartdotjs,
-      "Aptible": FaGlobe,
-      "Full Stack": FaCode,
-      "News API": FaNewspaper,
-      "Express.js": SiExpress,
-      "Bootstrap": SiBootstrap,
-      "Web3.js": SiWeb3Dotjs,
-      "Ethereum": SiEthereum,
-      "Solidity": SiSolidity,
-      "MetaMask": FaCode,
-      "IPFS": SiIpfs,
+      "Vector DB": FaDatabase,
+      "RAG": FaBrain,
       "GitHub Actions": SiGithubactions,
+      "CI/CD": FaCog,
       "JWT": FaLock,
       "OAuth": FaLock,
-      "SEO": FaSearch,
-      "Analytics": SiGoogleanalytics,
-      "Dashboard": FaChartBar,
-      "RESTful APIs": FaCode,
-      "NLP": FaBrain,
-      "Machine Learning": FaBrain,
-      "API Integration": FaCode,
-      "Responsive Design": FaEye,
-      "Authentication": FaLock,
-      "Database": FaDatabase,
-      "Server": FaServer,
-      "Security": FaShieldAlt,
-      "Search": FaSearch,
-      "Network": FaNetworkWired,
-      "Configuration": FaCog,
     };
     return iconMap[tech] || FaCode;
   };
@@ -149,7 +126,7 @@ export default function Projects() {
     }));
   };
 
-  const truncateDescription = (description: string, maxLength: number = 150) => {
+  const truncateDescription = (description: string, maxLength: number = 120) => {
     if (description.length <= maxLength) return description;
     return description.substring(0, maxLength) + '...';
   };
@@ -162,8 +139,8 @@ export default function Projects() {
     >
       <SectionHeading>My projects</SectionHeading>
       
-      {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+      {/* Projects Grid - 2 columns on desktop for better layout with 4 projects */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-16 max-w-6xl mx-auto">
         {projectsData.map((project, index) => {
           const ProjectIcon = getProjectIcon(project.title);
           const gradientClass = getProjectColor(index);
