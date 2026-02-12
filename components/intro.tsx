@@ -87,16 +87,16 @@ export default function Intro() {
               transition={{ delay: 0.5 }}
             >
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                6+ years building enterprise applications across HR, finance, and healthcare. 
-                Expert in <span className="font-semibold text-gray-800 dark:text-gray-200">React/Next.js/TypeScript</span> frontends, 
+                6 years building workflow-heavy web applications across HR/benefits, finance, and healthcare. 
+                Strong in <span className="font-semibold text-gray-800 dark:text-gray-200">React/Next.js/TypeScript</span> for UI layers, 
                 <span className="font-semibold text-gray-800 dark:text-gray-200"> C#/.NET Core APIs</span>, and 
-                <span className="font-semibold text-gray-800 dark:text-gray-200"> Node.js microservices</span>.
+                <span className="font-semibold text-gray-800 dark:text-gray-200"> Node.js/Express</span> for supporting services.
               </p>
 
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Deliver secure, scalable solutions with <span className="font-semibold text-gray-800 dark:text-gray-200">Azure</span> and 
-                <span className="font-semibold text-gray-800 dark:text-gray-200"> AWS</span>, optimize databases, and build 
-                <span className="font-semibold text-gray-800 dark:text-gray-200"> GenAI/RAG chatbots</span> using LangChain & vector databases.
+                Experienced with secure systems (<span className="font-semibold text-gray-800 dark:text-gray-200">JWT/OAuth, RBAC</span>), 
+                optimizing <span className="font-semibold text-gray-800 dark:text-gray-200">SQL Server/PostgreSQL</span>, and building 
+                <span className="font-semibold text-gray-800 dark:text-gray-200"> GenAI/RAG chatbots</span> using LangChain/LlamaIndex & vector databases.
               </p>
             </motion.div>
 

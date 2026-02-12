@@ -133,9 +133,11 @@ export default function About() {
                 transition={{ delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                I thrive in collaborative environments where clear communication and ownership drive results. 
-                My approach focuses on understanding business needs first, then architecting solutions that 
-                balance technical excellence with practical delivery timelines.
+                Strong in React, Next.js, TypeScript for high-performing UI layers and C#/.NET Core (ASP.NET Core Web APIs)
+                for scalable backend services, with Node.js/Express used for supporting services, integrations, and 
+                async/event-driven patterns. Experienced delivering secure systems with JWT/OAuth concepts, RBAC, 
+                and audit-friendly logging; optimizing SQL Server/PostgreSQL performance; and shipping production code 
+                through Docker + CI/CD in AWS/Azure environments.
               </motion.p>
               <motion.p 
                 className="text-lg leading-relaxed text-gray-700 dark:text-gray-300"
@@ -144,10 +146,10 @@ export default function About() {
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                I partner closely with product managers, designers, and QA teams to translate complex requirements 
-                into maintainable code. I actively mentor junior developers through code reviews and pairing sessions, 
-                helping teams establish best practices and improve code quality. My experience spans the full development 
-                lifecycle—from requirements gathering and system design to production support and incident resolution.
+                Recently focused on GenAI/LLM features — building RAG-based chatbots using LangChain/LlamaIndex, 
+                integrating vector databases, and deploying reliable retrieval pipelines with evaluation and monitoring. 
+                Known for strong ownership, clear communication, mentoring, and partnering with product/design/QA to 
+                deliver clean UX and predictable systems from design through production support.
               </motion.p>
             </div>
             <div className="relative">
@@ -278,7 +280,7 @@ export default function About() {
         </div>
       </motion.div>
       
-      {/* Current Role Highlight */}
+      {/* Latest Role Highlight */}
       <motion.div
         className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white shadow-brand-xl"
         initial={{ opacity: 0, y: 60 }}
@@ -289,19 +291,19 @@ export default function About() {
         <div className="text-center">
           <FaRocket className="text-5xl mx-auto mb-6" />
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Currently at Lincoln Financial Group
+            Most Recently at Perky (Client: Lincoln Finance)
           </h3>
           <p className="text-xl text-primary-100 mb-6">
-            Leading development of enterprise HR/benefits workflows in a regulated environment. Collaborating 
-            with cross-functional teams to deliver secure, audit-compliant systems. Building GenAI features 
-            that reduce support escalations and improve employee self-service.
+            Owned end-to-end delivery for HR leave-management features in a SaaS platform. Built secure, 
+            audit-friendly workflows with JWT/OAuth and RBAC patterns. Delivered a GenAI chatbot with RAG 
+            patterns for employee self-service, and improved release reliability with CI/CD, Docker, and AWS.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">React</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Next.js</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">.NET Core</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Node.js</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Azure</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">PostgreSQL</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">AWS</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">GenAI/RAG</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">LangChain</span>
