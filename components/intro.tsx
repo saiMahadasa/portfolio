@@ -6,8 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin, BsGithub } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTypescript, SiNextdotjs, SiDotnet, SiMicrosoftsqlserver } from "react-icons/si";
+import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
+import { SiTypescript, SiNextdotjs, SiGraphql } from "react-icons/si";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import Sai from '../public/sai.jpeg'
@@ -87,16 +87,16 @@ export default function Intro() {
               transition={{ delay: 0.5 }}
             >
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                6 years building workflow-heavy web applications across HR/benefits, finance, and healthcare. 
-                Strong in <span className="font-semibold text-gray-800 dark:text-gray-200">React/Next.js/TypeScript</span> for UI layers, 
-                <span className="font-semibold text-gray-800 dark:text-gray-200"> C#/.NET Core APIs</span>, and 
-                <span className="font-semibold text-gray-800 dark:text-gray-200"> Node.js/Express</span> for supporting services.
+                6+ years building scalable, workflow-heavy web applications across healthcare SaaS, financial analytics,
+                and enterprise platforms. Strong in <span className="font-semibold text-gray-800 dark:text-gray-200">React/Next.js/TypeScript</span> with 
+                <span className="font-semibold text-gray-800 dark:text-gray-200"> Redux/Redux Toolkit</span>, and 
+                <span className="font-semibold text-gray-800 dark:text-gray-200"> Node.js/Express + GraphQL</span> for backend services.
               </p>
 
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Experienced with secure systems (<span className="font-semibold text-gray-800 dark:text-gray-200">JWT/OAuth, RBAC</span>), 
-                optimizing <span className="font-semibold text-gray-800 dark:text-gray-200">SQL Server/PostgreSQL</span>, and building 
-                <span className="font-semibold text-gray-800 dark:text-gray-200"> GenAI/RAG chatbots</span> using LangChain/LlamaIndex & vector databases.
+                Experienced with <span className="font-semibold text-gray-800 dark:text-gray-200">MySQL/PostgreSQL, Redis</span>, 
+                secure patterns (<span className="font-semibold text-gray-800 dark:text-gray-200">JWT, RBAC</span>), and building
+                <span className="font-semibold text-gray-800 dark:text-gray-200"> GenAI/RAG features</span> using LangChain concepts & vector databases.
               </p>
             </motion.div>
 
@@ -199,7 +199,7 @@ export default function Intro() {
                   </div>
                   
                   <div className="absolute top-1/2 -right-8 sm:-right-12 md:-right-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
-                    <SiDotnet className="text-white text-xs sm:text-sm md:text-lg" />
+                    <SiGraphql className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
                   
                   <div className="absolute top-1/2 -left-8 sm:-left-12 md:-left-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center shadow-lg">
@@ -210,8 +210,8 @@ export default function Intro() {
                     <SiNextdotjs className="text-white dark:text-black text-xs sm:text-sm md:text-lg" />
                   </div>
                   
-                  <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-4 sm:-right-6 md:-right-8 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 bg-gradient-to-r from-red-500 to-red-700 rounded-full flex items-center justify-center shadow-lg">
-                    <SiMicrosoftsqlserver className="text-white text-xs sm:text-sm md:text-lg" />
+                  <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-4 sm:-right-6 md:-right-8 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center shadow-lg">
+                    <FaAws className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
                 </div>
               </motion.div>

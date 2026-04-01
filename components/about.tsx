@@ -17,10 +17,9 @@ import {
 import {
   SiTypescript,
   SiNextdotjs,
-  SiDotnet,
-  SiMicrosoftsqlserver,
+  SiGraphql,
+  SiMysql,
   SiRedis,
-  SiMicrosoftazure,
 } from "react-icons/si";
 
 export default function About() {
@@ -30,11 +29,11 @@ export default function About() {
     { icon: FaReact, name: "React", color: "text-cyan-500" },
     { icon: SiNextdotjs, name: "Next.js", color: "text-gray-800 dark:text-gray-100" },
     { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
-    { icon: SiDotnet, name: ".NET Core", color: "text-purple-500" },
     { icon: FaNodeJs, name: "Node.js", color: "text-green-600 dark:text-green-400" },
-    { icon: SiMicrosoftsqlserver, name: "SQL Server", color: "text-red-500" },
+    { icon: SiGraphql, name: "GraphQL", color: "text-pink-500" },
+    { icon: SiMysql, name: "MySQL", color: "text-blue-600" },
     { icon: FaAws, name: "AWS", color: "text-orange-600 dark:text-orange-400" },
-    { icon: SiMicrosoftazure, name: "Azure", color: "text-blue-600 dark:text-blue-400" },
+    { icon: SiRedis, name: "Redis", color: "text-red-500" },
     { icon: FaRocket, name: "GenAI/RAG", color: "text-purple-600 dark:text-purple-400" },
     { icon: FaDocker, name: "Docker", color: "text-blue-600 dark:text-blue-300" },
   ];
@@ -42,7 +41,7 @@ export default function About() {
   const achievements = [
     {
       icon: FaCode,
-      title: "ASP.NET Professional Certificate",
+      title: "React & TypeScript Advanced Certificate",
       subtitle: "Udemy",
       color: "bg-purple-500",
     },
@@ -133,11 +132,11 @@ export default function About() {
                 transition={{ delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Strong in React, Next.js, TypeScript for high-performing UI layers and C#/.NET Core (ASP.NET Core Web APIs)
-                for scalable backend services, with Node.js/Express used for supporting services, integrations, and 
-                async/event-driven patterns. Experienced delivering secure systems with JWT/OAuth concepts, RBAC, 
-                and audit-friendly logging; optimizing SQL Server/PostgreSQL performance; and shipping production code 
-                through Docker + CI/CD in AWS/Azure environments.
+                Strong in React, Next.js, TypeScript for pixel-perfect, high-performing UI layers with Redux/Redux Toolkit,
+                reusable component systems, and design-system thinking. Experienced integrating GraphQL (Apollo) and
+                REST APIs with Node.js/Express, backed by MySQL and production-ready patterns using Redis for
+                sessions/caching, Docker for environment consistency, and AWS-based delivery practices. Comfortable
+                building robust unit tests (Jest) and enforcing CI quality gates via GitHub Actions.
               </motion.p>
               <motion.p 
                 className="text-lg leading-relaxed text-gray-700 dark:text-gray-300"
@@ -146,10 +145,10 @@ export default function About() {
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                Recently focused on GenAI/LLM features — building RAG-based chatbots using LangChain/LlamaIndex, 
-                integrating vector databases, and deploying reliable retrieval pipelines with evaluation and monitoring. 
-                Known for strong ownership, clear communication, mentoring, and partnering with product/design/QA to 
-                deliver clean UX and predictable systems from design through production support.
+                Recently worked on GenAI integrations including LLM + RAG features using LangChain concepts,
+                retrieval pipelines, and safe UI experiences with grounded responses and evaluation-minded logging.
+                Known for clear communication, strong ownership, and collaboration with product, design, and QA
+                in Agile teams. Comfortable contributing to micro-frontend architectures and code review culture.
               </motion.p>
             </div>
             <div className="relative">
@@ -291,19 +290,20 @@ export default function About() {
         <div className="text-center">
           <FaRocket className="text-5xl mx-auto mb-6" />
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Most Recently at Perky (Client: Lincoln Finance)
+            Most Recently at Perky (Perspective Partners)
           </h3>
           <p className="text-xl text-primary-100 mb-6">
-            Owned end-to-end delivery for HR leave-management features in a SaaS platform. Built secure, 
-            audit-friendly workflows with JWT/OAuth and RBAC patterns. Delivered a GenAI chatbot with RAG 
-            patterns for employee self-service, and improved release reliability with CI/CD, Docker, and AWS.
+            Owned key healthcare workflows end-to-end in a SaaS platform. Built complex validation-heavy
+            forms with react-hook-form + Zod, designed scalable state flows with Redux Toolkit, and integrated
+            GraphQL APIs with Node.js/Express backends. Contributed GenAI features with LLM + RAG patterns
+            and improved reliability with Jest tests, CI/CD via GitHub Actions, Docker, and AWS.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">React</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Next.js</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">.NET Core</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">TypeScript</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Node.js</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">PostgreSQL</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">GraphQL</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Redis</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">AWS</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">GenAI/RAG</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">LangChain</span>

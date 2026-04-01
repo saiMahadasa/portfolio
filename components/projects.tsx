@@ -64,10 +64,10 @@ export default function Projects() {
 
   const getProjectIcon = (title: string) => {
     const iconMap: { [key: string]: any } = {
-      "Enterprise Leave Management Platform (Lincoln Financial)": FaRocket,
-      "GenAI HR Policy Assistant with RAG": FaBrain,
-      "HR Leave SaaS Platform (Perky)": FaUsers,
-      "Financial Analytics & Reporting Console (ICICI)": FaChartBar,
+      "Healthcare Management Web Platform": FaRocket,
+      "AI-Powered Leave Assistant & Policy RAG Engine": FaBrain,
+      "Financial Analytics Web Application": FaChartBar,
+      "Healthcare Template & Workflow Modules": FaUsers,
     };
     return iconMap[title] || FaCode;
   };
@@ -91,15 +91,15 @@ export default function Projects() {
       "TypeScript": SiTypescript,
       "Node.js": FaNodeJs,
       "Python": SiPython,
-      "C#": FaCode,
-      "ASP.NET Core": FaServer,
-      "ASP.NET Core Web API": FaServer,
-      "Microservices": FaNetworkWired,
-      "SQL Server": FaDatabase,
+      "MySQL": FaDatabase,
+      "Zod": FaCode,
+      "react-hook-form": FaCode,
+      "FastAPI": FaServer,
+      "Gulp.js": FaCog,
       "PostgreSQL": SiPostgresql,
       "MongoDB": SiMongodb,
       "Redis": FaDatabase,
-      "Entity Framework Core": FaDatabase,
+      "Webpack": FaCog,
       "REST": FaNetworkWired,
       "GraphQL": SiGraphql,
       "Redux": SiRedux,
