@@ -56,7 +56,6 @@ import {
   SiGithubactions,
   SiGoogleanalytics
 } from "react-icons/si";
-import Image from "next/image";
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
@@ -65,6 +64,7 @@ export default function Projects() {
   const getProjectIcon = (title: string) => {
     const iconMap: { [key: string]: any } = {
       "HR Management Web Platform": FaRocket,
+      "Healthcare Management Web Platform": FaShieldAlt,
       "Financial Analytics Web Application": FaChartBar,
       "Medicine E-Commerce Platform": FaGlobe,
     };
@@ -114,6 +114,9 @@ export default function Projects() {
       "GitHub Actions": SiGithubactions,
       "CI/CD": FaCog,
       "JWT": FaLock,
+      "New Relic": FaChartBar,
+      "Databricks": FaDatabase,
+      "Jest": FaCode,
     };
     return iconMap[tech] || FaCode;
   };

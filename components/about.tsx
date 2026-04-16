@@ -22,6 +22,7 @@ import {
   SiPostgresql,
   SiRedis,
   SiFastapi,
+  SiNodedotjs,
 } from "react-icons/si";
 
 export default function About() {
@@ -34,6 +35,7 @@ export default function About() {
     { icon: FaPython, name: "Python", color: "text-yellow-500" },
     { icon: SiDjango, name: "Django", color: "text-green-800 dark:text-green-400" },
     { icon: SiFastapi, name: "FastAPI", color: "text-teal-500" },
+    { icon: SiNodedotjs, name: "Node.js", color: "text-green-600 dark:text-green-400" },
     { icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-600" },
     { icon: FaAws, name: "AWS", color: "text-orange-600 dark:text-orange-400" },
     { icon: SiRedis, name: "Redis", color: "text-red-500" },

@@ -2,9 +2,6 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
@@ -144,7 +141,24 @@ export const projectsData = [
       "PostgreSQL",
       "Redis",
     ],
-    imageUrl: corpcommentImg,
+  },
+  {
+    title: "Healthcare Management Web Platform",
+    description:
+      "A secure healthcare platform supporting workflow-driven experiences where users manage dashboards, approvals/status changes, and document-driven processes. On the frontend, built the experience using React.js + TypeScript, combining Redux/Redux Toolkit for shared state. The application integrated with backend services built using Node.js, with collaboration on API design, request validation, and scalable service patterns to keep contracts predictable as business rules evolved. Reliability and performance were supported through Redis session/caching patterns, Docker for environment consistency, and AWS-based deployment practices with New Relic monitoring for tracing and faster incident resolution. Worked with Databricks to support data processing and reporting workflows, enabling efficient handling of large healthcare datasets and improving dashboard performance. Quality improved through Jest tests enforced via GitHub Actions, preventing regressions and ensuring stable releases across environments.",
+    tags: [
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "Redux Toolkit",
+      "Redis",
+      "Docker",
+      "AWS",
+      "New Relic",
+      "Databricks",
+      "Jest",
+      "GitHub Actions",
+    ],
   },
   {
     title: "Financial Analytics Web Application",
@@ -162,7 +176,6 @@ export const projectsData = [
       "AWS",
       "Terraform",
     ],
-    imageUrl: rmtdevImg,
   },
   {
     title: "Medicine E-Commerce Platform",
@@ -180,7 +193,6 @@ export const projectsData = [
       "EC2",
       "RDS",
     ],
-    imageUrl: wordanalyticsImg,
   },
 ] as const;
 
