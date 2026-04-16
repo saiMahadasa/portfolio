@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Sai Subrahmanyam Mahadasa | Senior Full Stack Developer",
-  description: "Senior Full Stack Developer with 6+ years building scalable, workflow-heavy web applications across healthcare SaaS, financial analytics, and enterprise platforms. Strong in React.js, TypeScript, Redux, and Node.js/Express with GraphQL and REST APIs, backed by MySQL, Redis, and AWS. Experienced with GenAI integrations including LLM + RAG features using LangChain patterns.",
+  description: "Senior Full Stack Developer with 5+ years building scalable web applications across healthcare SaaS, financial analytics, and enterprise platforms. Strong in React.js, Next.js, TypeScript, Python, Django, FastAPI, and AWS. Experienced with Gen AI integrations including LLM + RAG features using LangChain, LangGraph, and vector databases.",
 };
 
 export default function RootLayout({

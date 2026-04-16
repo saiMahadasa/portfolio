@@ -6,8 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin, BsGithub } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
-import { SiTypescript, SiNextdotjs, SiGraphql } from "react-icons/si";
+import { FaReact, FaPython, FaAws } from "react-icons/fa";
+import { SiTypescript, SiNextdotjs, SiDjango } from "react-icons/si";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import Sai from '../public/sai.jpeg'
@@ -74,7 +74,7 @@ export default function Intro() {
                 transition={{ delay: 0.4 }}
               >
                 <div className="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-300 dark:to-gray-100 bg-clip-text text-transparent">
-                  Sr. Full Stack Developer
+                  Senior Full Stack Developer
         </div>
               </motion.div>
       </div>
@@ -87,16 +87,16 @@ export default function Intro() {
               transition={{ delay: 0.5 }}
             >
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                6+ years building scalable, workflow-heavy web applications across healthcare SaaS, financial analytics,
-                and enterprise platforms. Strong in <span className="font-semibold text-gray-800 dark:text-gray-200">React/Next.js/TypeScript</span> with 
-                <span className="font-semibold text-gray-800 dark:text-gray-200"> Redux/Redux Toolkit</span>, and 
-                <span className="font-semibold text-gray-800 dark:text-gray-200"> Node.js/Express + GraphQL</span> for backend services.
+                5+ years building scalable web applications across healthcare SaaS, financial analytics,
+                and enterprise platforms. Strong in <span className="font-semibold text-gray-800 dark:text-gray-200">React.js/Next.js/TypeScript</span> with 
+                <span className="font-semibold text-gray-800 dark:text-gray-200"> Redux/RTK Query</span>, and 
+                <span className="font-semibold text-gray-800 dark:text-gray-200"> Python/Django/FastAPI</span> for backend services.
               </p>
 
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Experienced with <span className="font-semibold text-gray-800 dark:text-gray-200">MySQL/PostgreSQL, Redis</span>, 
+                Experienced with <span className="font-semibold text-gray-800 dark:text-gray-200">PostgreSQL, Redis, AWS</span>, 
                 secure patterns (<span className="font-semibold text-gray-800 dark:text-gray-200">JWT, RBAC</span>), and building
-                <span className="font-semibold text-gray-800 dark:text-gray-200"> GenAI/RAG features</span> using LangChain concepts & vector databases.
+                <span className="font-semibold text-gray-800 dark:text-gray-200"> Gen AI/RAG features</span> using LangChain, LangGraph & vector databases.
               </p>
             </motion.div>
 
@@ -195,11 +195,11 @@ export default function Intro() {
                   </div>
                   
                   <div className="absolute -bottom-6 sm:-bottom-8 md:-bottom-12 -left-6 sm:-left-8 md:-left-12 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                    <FaNodeJs className="text-white text-xs sm:text-sm md:text-xl" />
+                    <FaPython className="text-white text-xs sm:text-sm md:text-xl" />
                   </div>
                   
-                  <div className="absolute top-1/2 -right-8 sm:-right-12 md:-right-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
-                    <SiGraphql className="text-white text-xs sm:text-sm md:text-lg" />
+                  <div className="absolute top-1/2 -right-8 sm:-right-12 md:-right-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-green-700 to-green-900 rounded-full flex items-center justify-center shadow-lg">
+                    <SiDjango className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
                   
                   <div className="absolute top-1/2 -left-8 sm:-left-12 md:-left-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center shadow-lg">

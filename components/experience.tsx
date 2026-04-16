@@ -48,7 +48,18 @@ import {
   SiPhp,
   SiMysql,
   SiFigma,
-  SiJenkins
+  SiJenkins,
+  SiDjango,
+  SiFastapi,
+  SiRedis,
+  SiGraphql,
+  SiGitlab,
+  SiTerraform,
+  SiOpenai,
+  SiJest,
+  SiPytest,
+  SiStripe,
+  SiKubernetes,
 } from "react-icons/si";
 
 const getLevelIcon = (level: string) => {
@@ -107,33 +118,42 @@ const getTechIcons = (technologies: readonly string[]) => {
     if (lowerTech.includes("html")) techIcons.push(<SiHtml5 key="html" className="text-orange-500" title="HTML5" />);
     else if (lowerTech.includes("css")) techIcons.push(<SiCss3 key="css" className="text-blue-500" title="CSS3" />);
     else if (lowerTech.includes("javascript")) techIcons.push(<SiJavascript key="js" className="text-yellow-400" title="JavaScript" />);
-    else if (lowerTech.includes("php")) techIcons.push(<SiPhp key="php" className="text-purple-500" title="PHP" />);
+    else if (lowerTech.includes("django")) techIcons.push(<SiDjango key="django" className="text-green-800 dark:text-green-400" title="Django" />);
+    else if (lowerTech.includes("fastapi")) techIcons.push(<SiFastapi key="fastapi" className="text-teal-500" title="FastAPI" />);
     else if (lowerTech.includes("mysql")) techIcons.push(<SiMysql key="mysql" className="text-blue-600" title="MySQL" />);
     else if (lowerTech.includes("react")) techIcons.push(<SiReact key="react" className="text-blue-400" title="React" />);
     else if (lowerTech.includes("next.js") || lowerTech.includes("nextjs")) techIcons.push(<SiNextdotjs key="next" className="text-black dark:text-white" title="Next.js" />);
     else if (lowerTech.includes("node.js") || lowerTech.includes("nodejs")) techIcons.push(<SiNodedotjs key="node" className="text-green-500" title="Node.js" />);
     else if (lowerTech.includes("typescript")) techIcons.push(<SiTypescript key="ts" className="text-blue-600" title="TypeScript" />);
-    else if (lowerTech.includes("python")) techIcons.push(<SiPython key="python" className="text-blue-500" title="Python" />);
+    else if (lowerTech.includes("python")) techIcons.push(<SiPython key="python" className="text-yellow-500" title="Python" />);
     else if (lowerTech.includes("docker")) techIcons.push(<SiDocker key="docker" className="text-blue-500" title="Docker" />);
     else if (lowerTech.includes("aws")) techIcons.push(<SiAmazonaws key="aws" className="text-orange-500" title="AWS" />);
     else if (lowerTech.includes("azure")) techIcons.push(<SiMicrosoftazure key="azure" className="text-blue-600" title="Azure" />);
     else if (lowerTech.includes("postgresql")) techIcons.push(<SiPostgresql key="postgres" className="text-blue-600" title="PostgreSQL" />);
     else if (lowerTech.includes("mongodb")) techIcons.push(<SiMongodb key="mongo" className="text-green-500" title="MongoDB" />);
-    else if (lowerTech.includes("git")) techIcons.push(<SiGit key="git" className="text-orange-600" title="Git" />);
-    else if (lowerTech.includes("github")) techIcons.push(<SiGithub key="github" className="text-gray-800 dark:text-white" title="GitHub" />);
+    else if (lowerTech.includes("redis")) techIcons.push(<SiRedis key="redis" className="text-red-500" title="Redis" />);
+    else if (lowerTech.includes("graphql")) techIcons.push(<SiGraphql key="graphql" className="text-pink-500" title="GraphQL" />);
+    else if (lowerTech.includes("gitlab")) techIcons.push(<SiGitlab key="gitlab" className="text-orange-600" title="GitLab" />);
+    else if (lowerTech.includes("github")) techIcons.push(<SiGithub key="github" className="text-gray-800 dark:text-white" title="GitHub Actions" />);
+    else if (lowerTech.includes("terraform")) techIcons.push(<SiTerraform key="terraform" className="text-purple-600" title="Terraform" />);
+    else if (lowerTech === "git") techIcons.push(<SiGit key="git" className="text-orange-600" title="Git" />);
     else if (lowerTech.includes("tailwind")) techIcons.push(<SiTailwindcss key="tailwind" className="text-cyan-500" title="Tailwind CSS" />);
-    else if (lowerTech.includes("redux")) techIcons.push(<SiRedux key="redux" className="text-purple-600" title="Redux" />);
-    else if (lowerTech.includes("java")) techIcons.push(<FaCode key="java" className="text-red-500" title="Java" />);
+    else if (lowerTech.includes("redux")) techIcons.push(<SiRedux key="redux" className="text-purple-600" title="Redux Toolkit" />);
+    else if (lowerTech.includes("jest")) techIcons.push(<SiJest key="jest" className="text-red-600" title="Jest" />);
+    else if (lowerTech.includes("pytest")) techIcons.push(<SiPytest key="pytest" className="text-blue-500" title="pytest" />);
+    else if (lowerTech.includes("openai")) techIcons.push(<SiOpenai key="openai" className="text-gray-800 dark:text-white" title="OpenAI" />);
+    else if (lowerTech.includes("langchain")) techIcons.push(<FaBrain key="langchain" className="text-green-600" title="LangChain" />);
+    else if (lowerTech.includes("langgraph")) techIcons.push(<FaBrain key="langgraph" className="text-blue-500" title="LangGraph" />);
+    else if (lowerTech.includes("jwt")) techIcons.push(<FaShieldAlt key="jwt" className="text-yellow-600" title="JWT" />);
+    else if (lowerTech.includes("stripe")) techIcons.push(<SiStripe key="stripe" className="text-purple-500" title="Stripe" />);
+    else if (lowerTech.includes("kubernetes")) techIcons.push(<SiKubernetes key="k8s" className="text-blue-500" title="Kubernetes" />);
     else if (lowerTech.includes("figma")) techIcons.push(<SiFigma key="figma" className="text-pink-500" title="Figma" />);
     else if (lowerTech.includes("jenkins")) techIcons.push(<SiJenkins key="jenkins" className="text-red-600" title="Jenkins" />);
     else if (lowerTech.includes("ai") || lowerTech.includes("llm")) techIcons.push(<FaBrain key="ai" className="text-purple-500" title="AI/LLM" />);
     else if (lowerTech.includes("database") || lowerTech.includes("dbms")) techIcons.push(<FaDatabase key="db" className="text-blue-400" title="Database" />);
     else if (lowerTech.includes("cloud")) techIcons.push(<FaCloud key="cloud" className="text-blue-300" title="Cloud" />);
-    else if (lowerTech.includes("mobile") || lowerTech.includes("responsive")) techIcons.push(<FaMobile key="mobile" className="text-green-400" title="Mobile" />);
     else if (lowerTech.includes("server") || lowerTech.includes("backend")) techIcons.push(<FaServer key="server" className="text-gray-400" title="Backend" />);
     else if (lowerTech.includes("security") || lowerTech.includes("authentication")) techIcons.push(<FaShieldAlt key="security" className="text-red-400" title="Security" />);
-    else if (lowerTech.includes("team") || lowerTech.includes("collaboration")) techIcons.push(<FaUsers key="team" className="text-purple-400" title="Team Collaboration" />);
-    else if (lowerTech.includes("analytics") || lowerTech.includes("performance")) techIcons.push(<FaChartLine key="analytics" className="text-green-500" title="Analytics" />);
   });
   
   return techIcons;

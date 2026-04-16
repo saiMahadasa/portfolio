@@ -64,10 +64,9 @@ export default function Projects() {
 
   const getProjectIcon = (title: string) => {
     const iconMap: { [key: string]: any } = {
-      "Healthcare Management Web Platform": FaRocket,
-      "AI-Powered Leave Assistant & Policy RAG Engine": FaBrain,
+      "HR Management Web Platform": FaRocket,
       "Financial Analytics Web Application": FaChartBar,
-      "Healthcare Template & Workflow Modules": FaUsers,
+      "Medicine E-Commerce Platform": FaGlobe,
     };
     return iconMap[title] || FaCode;
   };
@@ -86,35 +85,35 @@ export default function Projects() {
 
   const getTechIcon = (tech: string) => {
     const iconMap: { [key: string]: any } = {
+      "React.js": FaReact,
       "React": FaReact,
       "Next.js": SiNextdotjs,
       "TypeScript": SiTypescript,
       "Node.js": FaNodeJs,
       "Python": SiPython,
-      "MySQL": FaDatabase,
-      "Zod": FaCode,
-      "react-hook-form": FaCode,
+      "Django": FaCode,
       "FastAPI": FaServer,
-      "Gulp.js": FaCog,
+      "MySQL": FaDatabase,
       "PostgreSQL": SiPostgresql,
       "MongoDB": SiMongodb,
       "Redis": FaDatabase,
-      "Webpack": FaCog,
-      "REST": FaNetworkWired,
       "GraphQL": SiGraphql,
+      "Redux Toolkit": SiRedux,
       "Redux": SiRedux,
       "Docker": SiDocker,
       "AWS": FaAws,
-      "Azure": FaDatabase,
       "LangChain": FaBrain,
-      "LlamaIndex": FaBrain,
       "OpenAI": SiOpenai,
-      "Vector DB": FaDatabase,
-      "RAG": FaBrain,
+      "ChromaDB": FaDatabase,
+      "Stripe": FaLock,
+      "REST APIs": FaNetworkWired,
+      "Terraform": FaCog,
+      "S3": FaAws,
+      "EC2": FaServer,
+      "RDS": FaDatabase,
       "GitHub Actions": SiGithubactions,
       "CI/CD": FaCog,
       "JWT": FaLock,
-      "OAuth": FaLock,
     };
     return iconMap[tech] || FaCode;
   };

@@ -9,52 +9,49 @@ import {
   FaCode,
   FaRocket,
   FaUsers,
-  FaGlobe,
   FaShieldAlt,
   FaChartLine,
-  FaNodeJs,
+  FaPython,
+  FaTrophy,
+  FaCertificate,
 } from "react-icons/fa";
 import {
   SiTypescript,
   SiNextdotjs,
-  SiGraphql,
-  SiMysql,
+  SiDjango,
+  SiPostgresql,
   SiRedis,
+  SiFastapi,
 } from "react-icons/si";
 
 export default function About() {
   const { ref } = useSectionInView("About", 0.5);
 
   const techStack = [
-    { icon: FaReact, name: "React", color: "text-cyan-500" },
+    { icon: FaReact, name: "React.js", color: "text-cyan-500" },
     { icon: SiNextdotjs, name: "Next.js", color: "text-gray-800 dark:text-gray-100" },
     { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
-    { icon: FaNodeJs, name: "Node.js", color: "text-green-600 dark:text-green-400" },
-    { icon: SiGraphql, name: "GraphQL", color: "text-pink-500" },
-    { icon: SiMysql, name: "MySQL", color: "text-blue-600" },
+    { icon: FaPython, name: "Python", color: "text-yellow-500" },
+    { icon: SiDjango, name: "Django", color: "text-green-800 dark:text-green-400" },
+    { icon: SiFastapi, name: "FastAPI", color: "text-teal-500" },
+    { icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-600" },
     { icon: FaAws, name: "AWS", color: "text-orange-600 dark:text-orange-400" },
     { icon: SiRedis, name: "Redis", color: "text-red-500" },
-    { icon: FaRocket, name: "GenAI/RAG", color: "text-purple-600 dark:text-purple-400" },
+    { icon: FaRocket, name: "Gen AI / LLM", color: "text-purple-600 dark:text-purple-400" },
     { icon: FaDocker, name: "Docker", color: "text-blue-600 dark:text-blue-300" },
   ];
 
   const achievements = [
     {
-      icon: FaCode,
-      title: "React & TypeScript Advanced Certificate",
-      subtitle: "Udemy",
-      color: "bg-purple-500",
+      icon: FaCertificate,
+      title: "AWS Certified Solutions Architect",
+      subtitle: "Amazon Web Services, 2021",
+      color: "bg-orange-500",
     },
     {
-      icon: FaCode,
-      title: "Frontend Developer Certificate",
-      subtitle: "Udemy (JavaScript / React)",
-      color: "bg-blue-500",
-    },
-    {
-      icon: FaRocket,
-      title: "NVIDIA Developer Contest Winner",
-      subtitle: "Generative AI Application (2024)",
+      icon: FaTrophy,
+      title: "NVIDIA AI RAG Developer Contest Winner",
+      subtitle: "Generative AI Application, 2024",
       color: "bg-green-500",
     },
   ];
@@ -63,12 +60,12 @@ export default function About() {
     {
       icon: FaUsers,
       title: "Cross-Functional Leadership",
-      description: "Partner with Product, Design & QA",
+      description: "Led Agile teams of 8-12 members",
     },
     {
       icon: FaRocket,
       title: "Mentorship & Code Reviews",
-      description: "Guide teams on best practices",
+      description: "Mentored 3+ junior developers",
     },
     {
       icon: FaShieldAlt,
@@ -132,11 +129,10 @@ export default function About() {
                 transition={{ delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Strong in React, Next.js, TypeScript for pixel-perfect, high-performing UI layers with Redux/Redux Toolkit,
-                reusable component systems, and design-system thinking. Experienced integrating GraphQL (Apollo) and
-                REST APIs with Node.js/Express, backed by MySQL and production-ready patterns using Redis for
-                sessions/caching, Docker for environment consistency, and AWS-based delivery practices. Comfortable
-                building robust unit tests (Jest) and enforcing CI quality gates via GitHub Actions.
+                Strong in React.js, Next.js, TypeScript for pixel-perfect, high-performing UI layers with Redux Toolkit
+                and RTK Query. Experienced building scalable RESTful APIs using Python, Django REST Framework, and FastAPI,
+                backed by PostgreSQL, Redis, and production-ready patterns using Docker for environment consistency and
+                AWS-based delivery practices. Comfortable building robust tests with Jest, React Testing Library, and pytest.
               </motion.p>
               <motion.p 
                 className="text-lg leading-relaxed text-gray-700 dark:text-gray-300"
@@ -145,10 +141,10 @@ export default function About() {
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                Recently worked on GenAI integrations including LLM + RAG features using LangChain concepts,
-                retrieval pipelines, and safe UI experiences with grounded responses and evaluation-minded logging.
-                Known for clear communication, strong ownership, and collaboration with product, design, and QA
-                in Agile teams. Comfortable contributing to micro-frontend architectures and code review culture.
+                Designed multi-agent AI pipelines using LangGraph, FastAPI, OpenAI, and AWS Bedrock with ChromaDB
+                vector embeddings. Built LLM-powered applications including conversational assistants and document Q&A
+                systems using LangChain with custom prompt templates, memory management, and streaming responses.
+                Known for clear communication, strong ownership, and collaboration in Agile teams.
               </motion.p>
             </div>
             <div className="relative">
@@ -219,7 +215,7 @@ export default function About() {
         >
           Technology Stack
         </motion.h3>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {techStack.map((tech, index) => (
             <motion.div
               key={index}
@@ -254,7 +250,7 @@ export default function About() {
         >
           Certifications & Awards
         </motion.h3>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {achievements.map((achievement, index) => (
             <motion.div
               key={index}
@@ -293,20 +289,20 @@ export default function About() {
             Most Recently at Perky (Perspective Partners)
           </h3>
           <p className="text-xl text-primary-100 mb-6">
-            Owned key healthcare workflows end-to-end in a SaaS platform. Built complex validation-heavy
-            forms with react-hook-form + Zod, designed scalable state flows with Redux Toolkit, and integrated
-            GraphQL APIs with Node.js/Express backends. Contributed GenAI features with LLM + RAG patterns
-            and improved reliability with Jest tests, CI/CD via GitHub Actions, Docker, and AWS.
+            Designed a multi-agent AI pipeline using LangGraph, FastAPI, OpenAI, and AWS Bedrock with ChromaDB
+            vector embeddings handling 500+ concurrent users. Built responsive UI with React.js, Next.js and TypeScript,
+            cutting page load times from 3.5s to 1.2s. Engineered scalable RESTful APIs using Django REST Framework
+            with PostgreSQL. Containerized services with Docker and deployed on AWS with GitLab CI/CD pipelines.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">React</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">React.js</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">TypeScript</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Node.js</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">GraphQL</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Redis</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">AWS</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">GenAI/RAG</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Python</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Django</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">FastAPI</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Gen AI</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">LangChain</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">AWS</span>
           </div>
         </div>
       </motion.div>
