@@ -292,7 +292,7 @@ export default function About() {
           </h3>
           <p className="text-xl text-primary-100 mb-6">
             Designed a multi-agent AI pipeline using LangGraph, FastAPI, OpenAI, and AWS Bedrock with ChromaDB
-            vector embeddings handling 500+ concurrent users. Built responsive UI with React.js, Next.js and TypeScript,
+            vector embeddings handling 500+ concurrent users for client delivery with Lincoln Finance. Built responsive UI with React.js, Next.js and TypeScript,
             cutting page load times from 3.5s to 1.2s. Engineered scalable RESTful APIs using Django REST Framework
             with PostgreSQL. Containerized services with Docker and deployed on AWS with GitLab CI/CD pipelines.
           </p>

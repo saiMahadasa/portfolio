@@ -88,9 +88,10 @@ export default function Intro() {
             >
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 5+ years building scalable web applications across healthcare SaaS, financial analytics,
-                and enterprise platforms. Strong in <span className="font-semibold text-gray-800 dark:text-gray-200">React.js/Next.js/TypeScript</span> with 
-                <span className="font-semibold text-gray-800 dark:text-gray-200"> Redux/RTK Query</span>, and 
-                <span className="font-semibold text-gray-800 dark:text-gray-200"> Python/Django/FastAPI</span> for backend services.
+                and enterprise platforms. Strong in{" "}
+                <span className="font-semibold text-gray-800 dark:text-gray-200">React.js+TypeScript</span> with{" "}
+                <span className="font-semibold text-gray-800 dark:text-gray-200">Redux</span>, and{" "}
+                <span className="font-semibold text-gray-800 dark:text-gray-200">Node.js and Python</span> for backend services.
               </p>
 
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
