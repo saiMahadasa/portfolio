@@ -10,7 +10,7 @@ import { FaReact, FaPython, FaAws } from "react-icons/fa";
 import { SiTypescript, SiNextdotjs, SiDjango } from "react-icons/si";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import Sai from '../public/sai.jpeg'
+import Sai from "../public/sai.png";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);

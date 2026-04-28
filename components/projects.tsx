@@ -97,6 +97,7 @@ export default function Projects() {
       "PostgreSQL": SiPostgresql,
       "MongoDB": SiMongodb,
       "Redis": FaDatabase,
+      "RabbitMQ": FaNetworkWired,
       "GraphQL": SiGraphql,
       "Redux Toolkit": SiRedux,
       "Redux": SiRedux,

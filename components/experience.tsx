@@ -132,6 +132,7 @@ const getTechIcons = (technologies: readonly string[]) => {
     else if (lowerTech.includes("postgresql")) techIcons.push(<SiPostgresql key="postgres" className="text-blue-600" title="PostgreSQL" />);
     else if (lowerTech.includes("mongodb")) techIcons.push(<SiMongodb key="mongo" className="text-green-500" title="MongoDB" />);
     else if (lowerTech.includes("redis")) techIcons.push(<SiRedis key="redis" className="text-red-500" title="Redis" />);
+    else if (lowerTech.includes("rabbitmq")) techIcons.push(<FaServer key="rabbitmq" className="text-orange-500" title="RabbitMQ" />);
     else if (lowerTech.includes("graphql")) techIcons.push(<SiGraphql key="graphql" className="text-pink-500" title="GraphQL" />);
     else if (lowerTech.includes("gitlab")) techIcons.push(<SiGitlab key="gitlab" className="text-orange-600" title="GitLab" />);
     else if (lowerTech.includes("github")) techIcons.push(<SiGithub key="github" className="text-gray-800 dark:text-white" title="GitHub Actions" />);
