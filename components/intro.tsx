@@ -10,7 +10,6 @@ import { FaReact, FaPython, FaAws } from "react-icons/fa";
 import { SiTypescript, SiNextdotjs, SiDjango } from "react-icons/si";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import Sai from "../public/sai.png";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -181,10 +180,11 @@ export default function Intro() {
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full p-1">
                     <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-2">
                       <Image
-                        src={Sai}
+                        src="/sai.png"
                         alt="Sai Subrahmanyam Mahadasa"
                         fill
                         className="rounded-full object-cover"
+                        unoptimized
                         priority
                       />
                     </div>
