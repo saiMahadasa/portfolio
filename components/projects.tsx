@@ -64,7 +64,7 @@ export default function Projects() {
   const getProjectIcon = (title: string) => {
     const iconMap: { [key: string]: any } = {
       "HR Management Web Platform": FaRocket,
-      "Healthcare Management Web Platform": FaShieldAlt,
+      "AI Leave Policy Assistant": FaBrain,
       "Financial Analytics Web Application": FaChartBar,
       "Medicine E-Commerce Platform": FaGlobe,
     };
@@ -104,8 +104,13 @@ export default function Projects() {
       "Docker": SiDocker,
       "AWS": FaAws,
       "LangChain": FaBrain,
+      "LangGraph": FaBrain,
       "OpenAI": SiOpenai,
       "ChromaDB": FaDatabase,
+      "RAG": FaBrain,
+      "Vector DB": FaDatabase,
+      "Vercel AI SDK UI": FaBrain,
+      "MCP": FaNetworkWired,
       "Stripe": FaLock,
       "REST APIs": FaNetworkWired,
       "Terraform": FaCog,
@@ -117,7 +122,11 @@ export default function Projects() {
       "JWT": FaLock,
       "New Relic": FaChartBar,
       "Databricks": FaDatabase,
+      "Datadog": FaChartBar,
+      "RBAC": FaShieldAlt,
       "Jest": FaCode,
+      "Tailwind CSS": SiTailwindcss,
+      "RTK Query": SiRedux,
     };
     return iconMap[tech] || FaCode;
   };
