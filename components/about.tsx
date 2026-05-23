@@ -29,18 +29,18 @@ export default function About() {
   const { ref } = useSectionInView("About", 0.5);
 
   const techStack = [
+    { icon: FaPython, name: "Python", color: "text-yellow-500" },
+    { icon: SiFastapi, name: "FastAPI", color: "text-teal-500" },
+    { icon: SiDjango, name: "Django", color: "text-green-800 dark:text-green-400" },
+    { icon: FaRocket, name: "Gen AI / LLM", color: "text-purple-600 dark:text-purple-400" },
+    { icon: FaAws, name: "AWS", color: "text-orange-600 dark:text-orange-400" },
+    { icon: FaDocker, name: "Docker", color: "text-blue-600 dark:text-blue-300" },
     { icon: FaReact, name: "React.js", color: "text-cyan-500" },
     { icon: SiNextdotjs, name: "Next.js", color: "text-gray-800 dark:text-gray-100" },
     { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
-    { icon: FaPython, name: "Python", color: "text-yellow-500" },
-    { icon: SiDjango, name: "Django", color: "text-green-800 dark:text-green-400" },
-    { icon: SiFastapi, name: "FastAPI", color: "text-teal-500" },
-    { icon: SiNodedotjs, name: "Node.js", color: "text-green-600 dark:text-green-400" },
     { icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-600" },
-    { icon: FaAws, name: "AWS", color: "text-orange-600 dark:text-orange-400" },
     { icon: SiRedis, name: "Redis", color: "text-red-500" },
-    { icon: FaRocket, name: "Gen AI / LLM", color: "text-purple-600 dark:text-purple-400" },
-    { icon: FaDocker, name: "Docker", color: "text-blue-600 dark:text-blue-300" },
+    { icon: SiNodedotjs, name: "Node.js", color: "text-green-600 dark:text-green-400" },
   ];
 
   const achievements = [
@@ -48,36 +48,42 @@ export default function About() {
       icon: FaCertificate,
       title: "AWS Certified Solutions Architect",
       subtitle: "Amazon Web Services, 2021",
-      color: "bg-orange-500",
+      color: "bg-gradient-to-br from-blue-600 to-indigo-700",
     },
     {
       icon: FaTrophy,
       title: "NVIDIA AI RAG Developer Contest Winner",
       subtitle: "Generative AI Application, 2024",
-      color: "bg-green-500",
+      color: "bg-gradient-to-br from-blue-600 to-indigo-700",
+    },
+    {
+      icon: FaCertificate,
+      title: "AWS Certified Generative AI Engineer Associate",
+      subtitle: "Amazon Web Services, 2026",
+      color: "bg-gradient-to-br from-blue-600 to-indigo-700",
     },
   ];
 
   const experienceHighlights = [
     {
       icon: FaUsers,
-      title: "Cross-Functional Leadership",
-      description: "Led Agile teams of 8-12 members",
+      title: "Full Stack Delivery",
+      description: "React + Python across 3 companies",
     },
     {
       icon: FaRocket,
-      title: "Mentorship & Code Reviews",
-      description: "Mentored 3+ junior developers",
+      title: "Gen AI & RAG Systems",
+      description: "LangGraph, AWS Bedrock, LangChain",
     },
     {
       icon: FaShieldAlt,
-      title: "End-to-End Ownership",
-      description: "Design to Production Support",
+      title: "Enterprise Security",
+      description: "RBAC, JWT/OAuth, audit logging",
     },
     {
       icon: FaChartLine,
-      title: "Business-Focused Solutions",
-      description: "Balance quality with delivery",
+      title: "Cloud & DevOps",
+      description: "AWS, Kubernetes, GitLab CI/CD",
     },
   ];
 
@@ -122,7 +128,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                Senior Full Stack Developer
+                Senior Full Stack AI Engineer
               </motion.h3>
               <motion.p 
                 className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-6"
@@ -131,10 +137,10 @@ export default function About() {
                 transition={{ delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Strong in React.js, Next.js, TypeScript for pixel-perfect, high-performing UI layers with Redux Toolkit
-                and RTK Query. Experienced building scalable RESTful APIs using Python, Django REST Framework, and FastAPI,
-                backed by PostgreSQL, Redis, and production-ready patterns using Docker for environment consistency and
-                AWS-based delivery practices. Comfortable building robust tests with Jest, React Testing Library, and pytest.
+                Primarily a Python and AI engineer, building scalable REST and GraphQL APIs with Django and FastAPI,
+                and designing production-grade Gen AI systems using LangGraph, LangChain, and AWS Bedrock. Experienced
+                with RAG pipelines, agentic workflows, vector embeddings, and multi-step document retrieval for real
+                enterprise use cases. Backed by PostgreSQL, Redis, Docker, and Kubernetes on AWS.
               </motion.p>
               <motion.p 
                 className="text-lg leading-relaxed text-gray-700 dark:text-gray-300"
@@ -143,17 +149,17 @@ export default function About() {
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                Designed multi-agent AI pipelines using LangGraph, FastAPI, OpenAI, and AWS Bedrock with ChromaDB
-                vector embeddings. Built LLM-powered applications including conversational assistants and document Q&A
-                systems using LangChain with custom prompt templates, memory management, and streaming responses.
-                Known for clear communication, strong ownership, and collaboration in Agile teams.
+                On the frontend, deliver full stack features end-to-end using React.js, Next.js, and TypeScript with
+                Redux Toolkit and RTK Query for data-intensive dashboards, multi-step workflows, and
+                role-based UIs that connect directly to AI-powered backends. Test coverage across pytest, Jest,
+                and React Testing Library across the entire stack.
               </motion.p>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-primary-500 to-secondary-600 rounded-2xl p-6 text-white shadow-brand-lg">
+              <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-6 text-white shadow-brand-lg">
                 <FaCode className="text-4xl mb-4" />
                 <h4 className="text-xl font-semibold mb-2">Full Stack Expertise</h4>
-                <p className="text-primary-100">Frontend to Backend, Cloud to AI</p>
+                <p className="text-white/80">Frontend to Backend, Cloud to AI</p>
               </div>
             </div>
           </div>
@@ -228,7 +234,9 @@ export default function About() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
-              <tech.icon className={`text-4xl mx-auto mb-2 ${tech.color}`} />
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl mx-auto mb-3 flex items-center justify-center">
+                <tech.icon className="text-xl text-white" />
+              </div>
               <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{tech.name}</p>
             </motion.div>
           ))}
@@ -252,7 +260,7 @@ export default function About() {
         >
           Certifications & Awards
         </motion.h3>
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {achievements.map((achievement, index) => (
             <motion.div
               key={index}
@@ -288,22 +296,22 @@ export default function About() {
         <div className="text-center">
           <FaRocket className="text-5xl mx-auto mb-6" />
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Most Recently at Perky (Perspective Partners)
+            Currently at Perky, Client: Lincoln Financial Group
           </h3>
           <p className="text-xl text-primary-100 mb-6">
-            Designed a multi-agent AI pipeline using LangGraph, FastAPI, OpenAI, and AWS Bedrock with ChromaDB
-            vector embeddings handling 500+ concurrent users for client delivery with Lincoln Finance. Built responsive UI with React.js, Next.js and TypeScript,
-            cutting page load times from 3.5s to 1.2s. Engineered scalable RESTful APIs using Django REST Framework
-            with PostgreSQL. Containerized services with Docker and deployed on AWS with GitLab CI/CD pipelines.
+            Building full stack features for a financial analytics platform using React, TypeScript, Python Django,
+            and GraphQL across 25+ data-intensive dashboards. Managing Kubernetes on AWS EKS with 99.9% uptime
+            across services handling 20K+ records per request. Engineered Python REST APIs with RBAC, JWT/OAuth,
+            and audit logging. Automated GitLab CI/CD with Docker and AWS, cutting release cycles by 40%.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">React.js</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">TypeScript</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Python</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Django</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">FastAPI</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Gen AI</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">LangChain</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">GraphQL</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Kubernetes</span>
+            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">LangGraph</span>
             <span className="bg-white/20 px-3 py-2 rounded-full text-sm">AWS</span>
           </div>
         </div>
@@ -320,7 +328,7 @@ export default function About() {
         <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-brand border border-gray-200 dark:border-gray-700">
           <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Outside of Work</h3>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            I maintain a curious mindset through continuous learning—currently exploring history and philosophy while 
+            I maintain a curious mindset through continuous learning, currently exploring history and philosophy while 
             learning guitar. I enjoy photography, cricket, and watching films. This diverse range of interests helps 
             me bring fresh perspectives to problem-solving and team collaboration.
           </p>

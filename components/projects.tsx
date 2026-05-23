@@ -5,126 +5,85 @@ import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  FaReact, 
-  FaNodeJs, 
-  FaPython, 
-  FaAws, 
-  FaDocker, 
+import {
+  FaReact,
+  FaNodeJs,
+  FaPython,
+  FaAws,
   FaCode,
   FaRocket,
   FaBrain,
-  FaUsers,
   FaGlobe,
-  FaNewspaper,
   FaChevronDown,
   FaChevronUp,
   FaShieldAlt,
-  FaSearch,
   FaChartBar,
   FaDatabase,
   FaServer,
   FaLock,
-  FaEye,
   FaCog,
   FaNetworkWired,
-  FaGithub,
-  FaExternalLinkAlt
 } from "react-icons/fa";
-import { 
-  SiTypescript, 
-  SiNextdotjs, 
-  SiPostgresql, 
-  SiMongodb,
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiPostgresql,
   SiTailwindcss,
   SiRedux,
   SiGraphql,
-  SiJest,
-  SiCypress,
   SiDocker,
   SiPython,
-  SiFlask,
   SiOpenai,
-  SiWhatsapp,
-  SiChartdotjs,
-  SiExpress,
-  SiBootstrap,
-  SiWeb3Dotjs,
-  SiEthereum,
-  SiSolidity,
-  SiIpfs,
   SiGithubactions,
-  SiGoogleanalytics
+  SiGitlab,
+  SiKubernetes,
 } from "react-icons/si";
+
+const CARD_GRADIENT = "from-blue-600 to-indigo-700";
+
+const projectIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  "HR Management Platform": FaRocket,
+  "AI Leave Policy Assistant": FaBrain,
+  "Financial Analytics Platform": FaChartBar,
+  "Medicine E-Commerce Platform": FaGlobe,
+};
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
   const [expandedProjects, setExpandedProjects] = useState<{ [key: number]: boolean }>({});
 
-  const getProjectIcon = (title: string) => {
-    const iconMap: { [key: string]: any } = {
-      "HR Management Web Platform": FaRocket,
-      "AI Leave Policy Assistant": FaBrain,
-      "Financial Analytics Web Application": FaChartBar,
-      "Medicine E-Commerce Platform": FaGlobe,
-    };
-    return iconMap[title] || FaCode;
-  };
-
-  const getProjectColor = (index: number) => {
-    const colors = [
-      "from-primary-500 to-secondary-600",
-      "from-accent-500 to-primary-600", 
-      "from-secondary-500 to-accent-600",
-      "from-primary-600 to-secondary-700",
-      "from-accent-600 to-primary-700",
-      "from-secondary-600 to-accent-700"
-    ];
-    return colors[index % colors.length];
-  };
-
   const getTechIcon = (tech: string) => {
     const iconMap: { [key: string]: any } = {
       "React.js": FaReact,
-      "React": FaReact,
       "Next.js": SiNextdotjs,
       "TypeScript": SiTypescript,
       "Node.js": FaNodeJs,
       "Python": SiPython,
       "Django": FaCode,
       "FastAPI": FaServer,
-      "MySQL": FaDatabase,
       "PostgreSQL": SiPostgresql,
-      "MongoDB": SiMongodb,
       "Redis": FaDatabase,
-      "RabbitMQ": FaNetworkWired,
       "GraphQL": SiGraphql,
       "Redux Toolkit": SiRedux,
-      "Redux": SiRedux,
       "Docker": SiDocker,
+      "Kubernetes": SiKubernetes,
       "AWS": FaAws,
+      "AWS Bedrock": FaAws,
       "LangChain": FaBrain,
       "LangGraph": FaBrain,
       "OpenAI": SiOpenai,
-      "ChromaDB": FaDatabase,
       "RAG": FaBrain,
       "Vector DB": FaDatabase,
-      "Vercel AI SDK UI": FaBrain,
       "MCP": FaNetworkWired,
       "Stripe": FaLock,
       "REST APIs": FaNetworkWired,
-      "Terraform": FaCog,
       "S3": FaAws,
       "EC2": FaServer,
       "RDS": FaDatabase,
       "GitHub Actions": SiGithubactions,
-      "CI/CD": FaCog,
-      "JWT": FaLock,
-      "New Relic": FaChartBar,
-      "Databricks": FaDatabase,
+      "GitLab CI/CD": SiGitlab,
       "Datadog": FaChartBar,
       "RBAC": FaShieldAlt,
-      "Jest": FaCode,
       "Tailwind CSS": SiTailwindcss,
       "RTK Query": SiRedux,
     };
@@ -154,8 +113,7 @@ export default function Projects() {
       {/* Projects Grid - 2 columns on desktop for better layout with 4 projects */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-16 max-w-6xl mx-auto">
         {projectsData.map((project, index) => {
-          const ProjectIcon = getProjectIcon(project.title);
-          const gradientClass = getProjectColor(index);
+          const ProjectIcon = projectIconMap[project.title] ?? FaCode;
           const isExpanded = expandedProjects[index];
           
           return (
@@ -178,7 +136,7 @@ export default function Projects() {
               >
                 
                 {/* Header with Icon and Gradient */}
-                <div className={`bg-gradient-to-r ${gradientClass} p-6 text-white relative overflow-hidden`}>
+                <div className={`bg-gradient-to-r ${CARD_GRADIENT} p-6 text-white relative overflow-hidden`}>
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
                   
@@ -188,7 +146,7 @@ export default function Projects() {
                         <ProjectIcon className="text-2xl" />
                       </div>
                       {index === 0 && (
-                        <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-semibold">
+                        <span className="bg-white/20 text-white border border-white/30 px-3 py-1 rounded-full text-xs font-semibold">
                           Current
                         </span>
                       )}
@@ -240,7 +198,7 @@ export default function Projects() {
                         className="overflow-hidden mt-auto"
                       >
                         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                          <FaCode className="mr-2 text-blue-500" />
+                          <FaCode className="mr-2 text-gray-500 dark:text-gray-400" />
                           Technologies Used
                         </h4>
                         <div className="grid grid-cols-2 gap-2 mb-4">
@@ -257,8 +215,8 @@ export default function Projects() {
                             );
                           })}
                           {project.tags.length > 6 && (
-                            <div className="flex items-center bg-blue-100 dark:bg-blue-900 rounded-lg px-2 py-1 text-xs">
-                              <span className="text-blue-600 dark:text-blue-400">+{project.tags.length - 6} more</span>
+                            <div className="flex items-center bg-gray-100 dark:bg-gray-700 rounded-lg px-2 py-1 text-xs">
+                              <span className="text-gray-600 dark:text-gray-400">+{project.tags.length - 6} more</span>
                             </div>
                           )}
                         </div>
@@ -305,7 +263,7 @@ export default function Projects() {
                       >
                         <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
                           <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                            <FaCode className="mr-2 text-blue-500" />
+                            <FaCode className="mr-2 text-gray-500 dark:text-gray-400" />
                             Technologies Used
                           </h4>
                           <div className="grid grid-cols-2 gap-2 mb-6">

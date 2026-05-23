@@ -7,7 +7,7 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin, BsGithub } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaReact, FaPython, FaAws } from "react-icons/fa";
-import { SiTypescript, SiNextdotjs, SiDjango } from "react-icons/si";
+import { SiTypescript, SiDjango, SiFastapi } from "react-icons/si";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -73,8 +73,8 @@ export default function Intro() {
                 transition={{ delay: 0.4 }}
               >
                 <div className="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-300 dark:to-gray-100 bg-clip-text text-transparent">
-                  Senior Full Stack Developer
-        </div>
+                  Senior Full Stack AI Engineer
+                </div>
               </motion.div>
       </div>
 
@@ -86,17 +86,18 @@ export default function Intro() {
               transition={{ delay: 0.5 }}
             >
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                5+ years building scalable web applications across healthcare SaaS, financial analytics,
-                and enterprise platforms. Strong in{" "}
-                <span className="font-semibold text-gray-800 dark:text-gray-200">React.js+TypeScript</span> with{" "}
-                <span className="font-semibold text-gray-800 dark:text-gray-200">Redux</span>, and{" "}
-                <span className="font-semibold text-gray-800 dark:text-gray-200">Node.js and Python</span> for backend services.
+                5+ years building AI-powered full stack systems across financial analytics, healthcare, and enterprise
+                platforms. Core stack is{" "}
+                <span className="font-semibold text-gray-800 dark:text-gray-200">Python, Django, and FastAPI</span> for backend services, with{" "}
+                <span className="font-semibold text-gray-800 dark:text-gray-200">LangGraph, LangChain, and AWS Bedrock</span> for Gen AI and RAG pipelines.
               </p>
 
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Experienced with <span className="font-semibold text-gray-800 dark:text-gray-200">PostgreSQL, Redis, AWS</span>, 
-                secure patterns (<span className="font-semibold text-gray-800 dark:text-gray-200">JWT, RBAC</span>), and building
-                <span className="font-semibold text-gray-800 dark:text-gray-200"> Gen AI/RAG features</span> using LangChain, LangGraph & vector databases.
+                Deliver production-grade AI features end-to-end, from{" "}
+                <span className="font-semibold text-gray-800 dark:text-gray-200">agentic workflows and vector retrieval</span> on the backend
+                to{" "}
+                <span className="font-semibold text-gray-800 dark:text-gray-200">React.js + TypeScript</span> frontends, deployed on{" "}
+                <span className="font-semibold text-gray-800 dark:text-gray-200">AWS with Kubernetes</span> and GitLab CI/CD.
               </p>
             </motion.div>
 
@@ -190,28 +191,34 @@ export default function Intro() {
                     </div>
                   </div>
                   
-                  {/* Static Tech Icons - Responsive positioning */}
-                  <div className="absolute -top-6 sm:-top-8 md:-top-12 -right-6 sm:-right-8 md:-right-12 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                    <FaReact className="text-white text-xs sm:text-sm md:text-xl" />
-                  </div>
-                  
-                  <div className="absolute -bottom-6 sm:-bottom-8 md:-bottom-12 -left-6 sm:-left-8 md:-left-12 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                  {/* Tech Icons: dark background, white icons throughout */}
+                  {/* Top-right: Python (largest) */}
+                  <div className="absolute -top-6 sm:-top-8 md:-top-12 -right-6 sm:-right-8 md:-right-12 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full flex items-center justify-center shadow-lg">
                     <FaPython className="text-white text-xs sm:text-sm md:text-xl" />
                   </div>
-                  
-                  <div className="absolute top-1/2 -right-8 sm:-right-12 md:-right-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-green-700 to-green-900 rounded-full flex items-center justify-center shadow-lg">
+
+                  {/* Bottom-left: FastAPI (largest) */}
+                  <div className="absolute -bottom-6 sm:-bottom-8 md:-bottom-12 -left-6 sm:-left-8 md:-left-12 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-indigo-600 to-purple-700 rounded-full flex items-center justify-center shadow-lg">
+                    <SiFastapi className="text-white text-xs sm:text-sm md:text-xl" />
+                  </div>
+
+                  {/* Middle-right: Django */}
+                  <div className="absolute top-1/2 -right-8 sm:-right-12 md:-right-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full flex items-center justify-center shadow-lg">
                     <SiDjango className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
-                  
-                  <div className="absolute top-1/2 -left-8 sm:-left-12 md:-left-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center shadow-lg">
+
+                  {/* Middle-left: React */}
+                  <div className="absolute top-1/2 -left-8 sm:-left-12 md:-left-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
+                    <FaReact className="text-white text-xs sm:text-sm md:text-lg" />
+                  </div>
+
+                  {/* Top-left: TypeScript */}
+                  <div className="absolute -top-4 sm:-top-6 md:-top-8 -left-4 sm:-left-6 md:-left-8 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 bg-gradient-to-r from-indigo-600 to-blue-700 rounded-full flex items-center justify-center shadow-lg">
                     <SiTypescript className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
-                  
-                  <div className="absolute -top-4 sm:-top-6 md:-top-8 -left-4 sm:-left-6 md:-left-8 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 bg-gradient-to-r from-black to-gray-800 dark:from-white dark:to-gray-200 rounded-full flex items-center justify-center shadow-lg">
-                    <SiNextdotjs className="text-white dark:text-black text-xs sm:text-sm md:text-lg" />
-                  </div>
-                  
-                  <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-4 sm:-right-6 md:-right-8 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center shadow-lg">
+
+                  {/* Bottom-right: AWS */}
+                  <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-4 sm:-right-6 md:-right-8 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 bg-gradient-to-r from-gray-700 to-indigo-800 rounded-full flex items-center justify-center shadow-lg">
                     <FaAws className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
                 </div>
