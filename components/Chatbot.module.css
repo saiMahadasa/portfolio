@@ -1,10 +1,8 @@
-/* Chatbot Wrapper */
 .chatbotWrapper {
     position: relative;
     z-index: 1000;
 }
 
-/* Floating Action Button */
 .Chatbot_toggleButton__7bM1p {
     position: fixed !important;
     right: 30px !important;
@@ -49,7 +47,6 @@
     border-color: rgba(255, 255, 255, 0.4);
 }
 
-/* Connection Status Indicator */
 .connectionIndicator {
     position: absolute;
     top: -2px;
@@ -80,7 +77,6 @@
     }
 }
 
-/* AI Assistant Label */
 .aiAssistantLabel {
     position: fixed;
     right: 100px;
@@ -119,37 +115,34 @@
     border-bottom: 6px solid transparent;
 }
 
-/* Chat Container */
 .chatContainer {
     position: fixed;
     right: 30px;
     bottom: 100px;
     width: 100%;
-    max-width: 420px;
-    height: 600px;
-    max-height: 80vh;
+    max-width: 400px;
+    height: min(600px, 85vh);
     background: white;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     z-index: 9999;
 }
 
 .chatContainer.minimized {
-    height: 80px;
+    height: auto;
 }
 
-/* Header */
 .chatHeader {
     background: linear-gradient(135deg, #2563eb 0%, #4338ca 100%);
     color: white;
     padding: 0;
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .chatHeader::before {
@@ -250,17 +243,18 @@
     transform: scale(1.05);
 }
 
-/* Chat Content */
 .chatContent {
     flex: 1;
+    min-height: 0;
     display: flex;
     flex-direction: column;
     background: #f8fafc;
+    overflow: hidden;
 }
 
-/* Messages Container */
 .messagesContainer {
     flex: 1;
+    min-height: 0;
     padding: 20px;
     overflow-y: auto;
     scroll-behavior: smooth;
@@ -283,7 +277,6 @@
     background: rgba(37, 99, 235, 0.4);
 }
 
-/* Message Container */
 .messageContainer {
     display: flex;
     align-items: flex-start;
@@ -300,7 +293,6 @@
     justify-content: flex-start;
 }
 
-/* Icon Container */
 .iconContainer {
     width: 36px;
     height: 36px;
@@ -321,7 +313,6 @@
     background: linear-gradient(135deg, #4338ca 0%, #2563eb 100%);
 }
 
-/* Message Bubble */
 .messageBubble {
     max-width: 75%;
     padding: 12px 16px;
@@ -351,7 +342,6 @@
     font-size: 14px;
 }
 
-/* Message Time */
 .messageTime {
     font-size: 11px;
     color: #9ca3af;
@@ -363,7 +353,6 @@
     text-align: left;
 }
 
-/* Quick Questions */
 .quickQuestions {
     margin-top: 20px;
     padding: 16px;
@@ -411,7 +400,6 @@
     transform: translateY(-1px);
 }
 
-/* Typing Indicator */
 .typingBubble {
     display: flex;
     align-items: center;
@@ -443,8 +431,8 @@
     font-style: italic;
 }
 
-/* Input Container */
 .inputContainer {
+    flex-shrink: 0;
     padding: 16px 20px;
     background: white;
     border-top: 1px solid #e5e7eb;
@@ -514,151 +502,130 @@
     color: #9ca3af;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .chatContainer {
-        right: 10px;
-        left: 10px;
+        right: 12px;
+        left: 12px;
         bottom: 80px;
         width: auto;
         max-width: none;
-        height: 70vh;
+        height: min(520px, 78vh);
         border-radius: 16px;
     }
-    
+
     .Chatbot_toggleButton__7bM1p {
-        right: 20px !important;
-        bottom: 20px !important;
-        width: 60px !important;
-        height: 60px !important;
-        font-size: 24px !important;
+        right: 16px !important;
+        bottom: 16px !important;
+        width: 56px !important;
+        height: 56px !important;
+        font-size: 22px !important;
         border: 2px solid rgba(255, 255, 255, 0.2) !important;
     }
-    
+
     .aiAssistantLabel {
         display: none;
     }
-    
-    .messagesContainer {
-        padding: 16px;
-    }
-    
-    .inputContainer {
-        padding: 12px 16px;
-    }
-    
-    .messageBubble {
-        max-width: 85%;
-    }
-    
-    .quickQuestionsGrid {
-        grid-template-columns: 1fr;
-    }
-    
+
     .headerContent {
         padding: 12px 16px;
     }
-    
+
     .botAvatar {
-        width: 36px;
-        height: 36px;
-        font-size: 16px;
-    }
-    
-    .botDetails h3 {
+        width: 34px;
+        height: 34px;
         font-size: 15px;
     }
-}
 
-@media (max-width: 480px) {
-    .chatContainer {
-        height: 80vh;
-        bottom: 70px;
-    }
-    
-    .Chatbot_toggleButton__7bM1p {
-        right: 15px !important;
-        bottom: 15px !important;
-        width: 55px !important;
-        height: 55px !important;
-        font-size: 22px !important;
-    }
-    
-    .messageBubble {
-        max-width: 90%;
-        padding: 10px 14px;
-    }
-    
-    .iconContainer {
-        width: 32px;
-        height: 32px;
+    .botDetails h3 {
         font-size: 14px;
     }
-    
+
+    .messagesContainer {
+        padding: 14px;
+    }
+
+    .messageBubble {
+        max-width: 88%;
+        padding: 10px 14px;
+    }
+
+    .iconContainer {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .inputContainer {
+        padding: 10px 14px;
+    }
+
     .input {
         padding: 10px 14px;
         font-size: 13px;
     }
-    
+
     .sendButton {
         width: 40px;
         height: 40px;
         font-size: 14px;
     }
+
+    .quickQuestionsGrid {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
     .chatContainer {
         background: #1f2937;
         border-color: #374151;
     }
-    
+
     .chatContent {
         background: #111827;
     }
-    
+
     .botContainer .messageBubble {
         background: #374151;
         color: #f9fafb;
         border-color: #4b5563;
     }
-    
+
     .typingBubble {
         background: #374151;
         border-color: #4b5563;
     }
-    
+
     .quickQuestions {
         background: #374151;
         border-color: #4b5563;
     }
-    
+
     .quickQuestion {
         background: #4b5563;
         border-color: #6b7280;
         color: #f9fafb;
     }
-    
+
     .quickQuestion:hover {
         background: #6b7280;
     }
-    
+
     .inputContainer {
         background: #1f2937;
         border-color: #374151;
     }
-    
+
     .input {
         background: #374151;
         border-color: #4b5563;
         color: #f9fafb;
     }
-    
+
     .input:focus {
         background: #4b5563;
     }
-    
+
     .sendButton {
         background: #4b5563;
         color: #9ca3af;

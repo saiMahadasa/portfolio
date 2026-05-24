@@ -110,7 +110,6 @@ export default function Projects() {
     >
       <SectionHeading>My projects</SectionHeading>
       
-      {/* Projects Grid - 2 columns on desktop for better layout with 4 projects */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-16 max-w-6xl mx-auto">
         {projectsData.map((project, index) => {
           const ProjectIcon = projectIconMap[project.title] ?? FaCode;
@@ -126,7 +125,6 @@ export default function Projects() {
               viewport={{ once: true }}
               layout
             >
-              {/* Project Card */}
               <motion.div 
                 className={`bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-500 group-hover:shadow-2xl h-full flex flex-col ${
                   isExpanded ? 'ring-2 ring-blue-500/20 shadow-2xl' : ''
@@ -135,7 +133,6 @@ export default function Projects() {
                 whileHover={{ y: -5 }}
               >
                 
-                {/* Header with Icon and Gradient */}
                 <div className={`bg-gradient-to-r ${CARD_GRADIENT} p-6 text-white relative overflow-hidden`}>
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
@@ -159,15 +156,12 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">
-                  {/* Project Description */}
                   <motion.div layout className="flex-1">
                     <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-4">
                       {isExpanded ? project.description : truncateDescription(project.description)}
                     </p>
                     
-                    {/* Read More/Less Button */}
                     <motion.button
                       onClick={() => toggleProjectExpansion(index)}
                       className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 text-sm font-medium flex items-center mb-4 transition-colors hover:bg-blue-50 dark:hover:bg-blue-900/20 px-3 py-1 rounded-lg"
@@ -188,7 +182,6 @@ export default function Projects() {
                     </motion.button>
                   </motion.div>
 
-                  {/* Technology Stack - Hidden when expanded */}
                   <AnimatePresence>
                     {!isExpanded && (
                       <motion.div
@@ -224,7 +217,6 @@ export default function Projects() {
                     )}
                   </AnimatePresence>
 
-                  {/* Project Stats - Hidden when expanded */}
                   <AnimatePresence>
                     {!isExpanded && (
                       <motion.div
@@ -251,7 +243,6 @@ export default function Projects() {
                     )}
                   </AnimatePresence>
 
-                  {/* Expanded Content - Show when expanded */}
                   <AnimatePresence>
                     {isExpanded && (
                       <motion.div

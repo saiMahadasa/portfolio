@@ -37,7 +37,6 @@ export default function Header() {
       <nav className="hidden sm:flex fixed top-[0.8rem] left-1/2 h-[initial] -translate-x-1/2 py-0">
         <ul className="flex w-[initial] flex-nowrap items-center justify-center gap-1.5 text-[0.8rem] font-medium text-gray-500">
 
-          {/* Home, About, Projects, Skills, Experience */}
           {mainLinks.map((link) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative"
@@ -68,7 +67,6 @@ export default function Header() {
             </motion.li>
           ))}
 
-          {/* AI Projects page link — sits between Experience and Contact */}
           <motion.li
             className="h-3/4 flex items-center justify-center relative"
             initial={{ y: -100, opacity: 0 }}
@@ -92,7 +90,6 @@ export default function Header() {
             </Link>
           </motion.li>
 
-          {/* Contact — always last */}
           <motion.li
             className="h-3/4 flex items-center justify-center relative"
             key={contactLink.hash}

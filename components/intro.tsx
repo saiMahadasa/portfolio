@@ -22,14 +22,12 @@ export default function Intro() {
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-slate-900 py-8 sm:py-0 sm:pt-16 lg:pt-20"
       style={{ marginTop: 0, marginBottom: 0, paddingBottom: 0 }}
     >
-      {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
         <div className="absolute top-40 left-40 w-80 h-80 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
       </div>
 
-      {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 opacity-30" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
       }}></div>
@@ -37,14 +35,12 @@ export default function Intro() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center pt-0">
         <div className="grid lg:grid-cols-2 gap-8 items-center w-full">
           
-          {/* Left Column - Content */}
           <motion.div
             className="space-y-4 sm:space-y-6 text-center lg:text-left"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Main Heading */}
             <div className="space-y-2 sm:space-y-3">
               <motion.h1
                 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight"
@@ -65,7 +61,6 @@ export default function Intro() {
                 </span>
               </motion.h1>
 
-              {/* Static Role Display */}
               <motion.div
                 className="h-8 sm:h-10 flex items-center justify-center lg:justify-start"
                 initial={{ opacity: 0, y: 20 }}
@@ -78,7 +73,6 @@ export default function Intro() {
               </motion.div>
       </div>
 
-            {/* Elaborate Description */}
             <motion.div
               className="space-y-3 sm:space-y-4"
               initial={{ opacity: 0, y: 20 }}
@@ -101,7 +95,6 @@ export default function Intro() {
               </p>
             </motion.div>
 
-            {/* CTA Buttons */}
       <motion.div
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
@@ -133,7 +126,6 @@ export default function Intro() {
               </a>
             </motion.div>
 
-            {/* Social Links */}
             <motion.div
               className="flex gap-3 sm:gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
@@ -159,7 +151,6 @@ export default function Intro() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Profile Image */}
           <motion.div
             className="flex justify-center lg:justify-end order-first lg:order-last"
             initial={{ opacity: 0, x: 50 }}
@@ -167,17 +158,13 @@ export default function Intro() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative">
-              {/* Glowing Background */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-              
-              {/* Main Image Container */}
               <motion.div
                 className="relative"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
                 <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80">
-                  {/* Border Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full p-1">
                     <div className="w-full h-full bg-white dark:bg-gray-900 rounded-full p-2">
                       <Image
@@ -191,33 +178,26 @@ export default function Intro() {
                     </div>
                   </div>
                   
-                  {/* Tech Icons: dark background, white icons throughout */}
-                  {/* Top-right: Python (largest) */}
                   <div className="absolute -top-6 sm:-top-8 md:-top-12 -right-6 sm:-right-8 md:-right-12 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full flex items-center justify-center shadow-lg">
                     <FaPython className="text-white text-xs sm:text-sm md:text-xl" />
                   </div>
 
-                  {/* Bottom-left: FastAPI (largest) */}
                   <div className="absolute -bottom-6 sm:-bottom-8 md:-bottom-12 -left-6 sm:-left-8 md:-left-12 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-indigo-600 to-purple-700 rounded-full flex items-center justify-center shadow-lg">
                     <SiFastapi className="text-white text-xs sm:text-sm md:text-xl" />
                   </div>
 
-                  {/* Middle-right: Django */}
                   <div className="absolute top-1/2 -right-8 sm:-right-12 md:-right-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full flex items-center justify-center shadow-lg">
                     <SiDjango className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
 
-                  {/* Middle-left: React */}
                   <div className="absolute top-1/2 -left-8 sm:-left-12 md:-left-16 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
                     <FaReact className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
 
-                  {/* Top-left: TypeScript */}
                   <div className="absolute -top-4 sm:-top-6 md:-top-8 -left-4 sm:-left-6 md:-left-8 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 bg-gradient-to-r from-indigo-600 to-blue-700 rounded-full flex items-center justify-center shadow-lg">
                     <SiTypescript className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
 
-                  {/* Bottom-right: AWS */}
                   <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-4 sm:-right-6 md:-right-8 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 bg-gradient-to-r from-gray-700 to-indigo-800 rounded-full flex items-center justify-center shadow-lg">
                     <FaAws className="text-white text-xs sm:text-sm md:text-lg" />
                   </div>
@@ -228,7 +208,6 @@ export default function Intro() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <motion.div
         className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0 }}

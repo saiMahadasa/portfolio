@@ -22,7 +22,6 @@ export default function AiProjects() {
   return (
     <main className="flex flex-col items-center px-4 pt-28 pb-20">
 
-      {/* Hero */}
       <motion.div
         className="text-center max-w-3xl mb-14"
         initial={{ opacity: 0, y: 30 }}
@@ -49,7 +48,6 @@ export default function AiProjects() {
         </p>
       </motion.div>
 
-      {/* Project Cards */}
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
         {aiProjectsData.map((project, index) => {
           const Icon = project.id === 2 ? SiNvidia : CARD_ICONS[index];
@@ -63,7 +61,6 @@ export default function AiProjects() {
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
               whileHover={{ y: -4 }}
             >
-              {/* Card Header — same gradient on every card */}
               <div className={`bg-gradient-to-r ${CARD_GRADIENT} p-5 text-white relative overflow-hidden`}>
                 <div className="absolute top-0 right-0 w-28 h-28 bg-white/10 rounded-full -translate-y-14 translate-x-14" />
 
@@ -82,7 +79,6 @@ export default function AiProjects() {
                 </div>
               </div>
 
-              {/* Video or note — same wrapper bg on every card */}
               <div className="p-4 bg-gray-50 dark:bg-gray-900/30">
                 {project.loomVideoId ? (
                   <LoomEmbed videoId={project.loomVideoId} title={project.title} />
@@ -96,7 +92,6 @@ export default function AiProjects() {
                 ) : null}
               </div>
 
-              {/* Card body — same layout on every card */}
               <div className="p-5 flex flex-col flex-1">
                 <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-5">
                   {project.description}

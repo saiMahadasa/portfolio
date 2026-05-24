@@ -110,7 +110,6 @@ export default function About() {
         About Me
       </motion.h2>
       
-      {/* Main Introduction Card */}
       <motion.div
         className="relative mb-16"
         initial={{ opacity: 0, y: 60 }}
@@ -166,7 +165,6 @@ export default function About() {
         </div>
       </motion.div>
 
-      {/* Experience Highlights */}
       <motion.div
         className="mb-16"
         initial={{ opacity: 0, y: 60 }}
@@ -206,7 +204,6 @@ export default function About() {
         </div>
       </motion.div>
 
-      {/* Tech Stack */}
       <motion.div
         className="mb-16"
         initial={{ opacity: 0, y: 60 }}
@@ -243,7 +240,6 @@ export default function About() {
         </div>
       </motion.div>
       
-      {/* Certifications & Awards */}
       <motion.div
         className="mb-16"
         initial={{ opacity: 0, y: 60 }}
@@ -285,7 +281,6 @@ export default function About() {
         </div>
       </motion.div>
       
-      {/* Latest Role Highlight */}
       <motion.div
         className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white shadow-brand-xl"
         initial={{ opacity: 0, y: 60 }}
@@ -317,7 +312,6 @@ export default function About() {
         </div>
       </motion.div>
 
-      {/* Personal Interests */}
       <motion.div
         className="mt-16 text-center"
         initial={{ opacity: 0, y: 60 }}

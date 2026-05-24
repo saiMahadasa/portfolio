@@ -1,26 +1,16 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  FaBrain, 
-  FaRegUser, 
-  FaRobot, 
-  FaPaperPlane, 
+import {
+  FaBrain,
+  FaRegUser,
+  FaPaperPlane,
   FaRegWindowClose,
-  FaRegSmile,
-  FaRegLightbulb,
   FaRegComments,
   FaRegQuestionCircle,
-  FaRegClock,
-  FaRegCheckCircle,
-  FaRegTimesCircle,
-  FaComments
+  FaComments,
 } from "react-icons/fa";
-import { 
-  SiOpenai, 
-  SiChatbot
-} from "react-icons/si";
-import { BsLightningCharge, BsStars } from "react-icons/bs";
+import { BsLightningCharge } from "react-icons/bs";
 import styles from './Chatbot.module.css';
 
 interface Message {
@@ -37,7 +27,6 @@ const Chatbot: React.FC = () => {
     const [isTyping, setIsTyping] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isConnected, setIsConnected] = useState(true);
-    const [showLabel, setShowLabel] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -78,7 +67,7 @@ const Chatbot: React.FC = () => {
             setIsTyping(true);
 
             try {
-                const response = await fetch('https://ai-portfolio-chatbot.onrender.com/chatbot', {
+                const response = await fetch('https://ai-portfolio-chatbot-1-6kuk.onrender.com/chatbot', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -143,7 +132,6 @@ const Chatbot: React.FC = () => {
 
     return (
         <>
-            {/* Floating Action Button as Toggle */}
             <button
                 className={styles.Chatbot_toggleButton__7bM1p}
                 aria-label={isOpen ? "Close AI Assistant" : "Open AI Assistant"}
@@ -153,7 +141,6 @@ const Chatbot: React.FC = () => {
                 <FaComments />
             </button>
 
-            {/* Chat Container */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div 
@@ -163,7 +150,6 @@ const Chatbot: React.FC = () => {
                         exit={{ opacity: 0, scale: 0.8, y: 20 }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     >
-                        {/* Header */}
                         <motion.div 
                             className={styles.chatHeader}
                             initial={{ y: -20, opacity: 0 }}
@@ -202,7 +188,6 @@ const Chatbot: React.FC = () => {
                             </div>
                         </motion.div>
 
-                        {/* Chat Content */}
                         <AnimatePresence>
                             {!isMinimized && (
                                 <motion.div 
@@ -212,9 +197,7 @@ const Chatbot: React.FC = () => {
                                     exit={{ height: 0, opacity: 0 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    {/* Messages Container */}
                                     <div className={styles.messagesContainer}>
-                                        {/* Welcome Message */}
                                         {messages.length === 0 && (
                                             <motion.div 
                                                 className={`${styles.messageContainer} ${styles.botContainer}`}
@@ -234,7 +217,6 @@ const Chatbot: React.FC = () => {
                                             </motion.div>
                                         )}
 
-                                        {/* Quick Questions */}
                                         {messages.length === 0 && (
                                             <motion.div 
                                                 className={styles.quickQuestions}
@@ -265,7 +247,6 @@ const Chatbot: React.FC = () => {
                                             </motion.div>
                                         )}
 
-                                        {/* Messages */}
                                         <AnimatePresence>
                                             {messages.map((msg, index) => (
                                                 <motion.div
@@ -289,7 +270,6 @@ const Chatbot: React.FC = () => {
                                             ))}
                                         </AnimatePresence>
 
-                                        {/* Typing Indicator */}
                                         <AnimatePresence>
                                             {isTyping && (
                                                 <motion.div 
@@ -328,7 +308,6 @@ const Chatbot: React.FC = () => {
                                         <div ref={messagesEndRef} />
                                     </div>
 
-                                    {/* Input Container */}
                                     <motion.div 
                                         className={styles.inputContainer}
                                         initial={{ y: 20, opacity: 0 }}

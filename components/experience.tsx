@@ -137,7 +137,6 @@ export default function Experience() {
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
-          {/* Career progression line */}
           <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 to-indigo-500 rounded-full"></div>
           
           <div className="space-y-8 sm:space-y-12">
@@ -150,12 +149,10 @@ export default function Experience() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                {/* Timeline dot with level indicator */}
                 <div className="absolute left-2 sm:left-6 top-6 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-white dark:border-gray-900 shadow-lg z-10 flex items-center justify-center">
                   <div className="w-1 h-1 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                 </div>
                 
-                {/* Level badge - responsive positioning */}
                 <div className="absolute left-0 sm:left-0 top-4 z-10 transform -translate-x-full pr-2 hidden sm:block">
                   <div className={`${getLevelColor(item.level)} text-white px-2 sm:px-3 py-1 rounded-full text-xs font-semibold shadow-lg flex items-center space-x-1 whitespace-nowrap`}>
                     {getLevelIcon(item.level)}
@@ -165,13 +162,10 @@ export default function Experience() {
                 
                 <div className="ml-8 sm:ml-16">
                   <div className="group relative">
-                    {/* Main card */}
                     <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                      {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50/50 dark:from-blue-900/20 dark:via-transparent dark:to-purple-900/20"></div>
                       
                       <div className="relative p-4 sm:p-6">
-                        {/* Header */}
                         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 space-y-2 sm:space-y-0">
                           <div className="flex items-center space-x-3">
                             <div className="p-2 sm:p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-lg">
@@ -196,14 +190,12 @@ export default function Experience() {
                           </div>
                         </div>
 
-                        {/* Description */}
                         <div className="mb-4">
                           <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                             {item.description}
                           </p>
                         </div>
 
-                        {/* Technologies learned/used */}
                         <div className="space-y-3">
                           <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-2">
                             <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
@@ -219,7 +211,6 @@ export default function Experience() {
                           </div>
                         </div>
 
-                        {/* Hover effect overlay */}
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
                       </div>
                     </div>
