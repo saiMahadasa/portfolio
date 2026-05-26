@@ -81,7 +81,11 @@ export default function AiProjects() {
 
               <div className="p-4 bg-gray-50 dark:bg-gray-900/30">
                 {project.loomVideoId ? (
-                  <LoomEmbed videoId={project.loomVideoId} title={project.title} />
+                  <LoomEmbed
+                    videoId={project.loomVideoId}
+                    title={project.title}
+                    thumbnailUrl={project.thumbnailUrl || undefined}
+                  />
                 ) : project.loomNote ? (
                   <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5 flex items-start gap-3">
                     <span className="w-2 h-2 bg-gray-400 dark:bg-gray-500 rounded-full animate-pulse mt-1.5 flex-shrink-0" />
