@@ -11,9 +11,10 @@ import {
   FaCalendarAlt,
   FaCode,
   FaDatabase,
-  FaCloud,
-  FaServer,
+  FaMapMarkerAlt,
+  FaNetworkWired,
   FaShieldAlt,
+  FaRobot,
   FaRocket,
   FaStar,
   FaCrown,
@@ -30,22 +31,17 @@ import {
   SiDocker,
   SiAmazonaws,
   SiPostgresql,
-  SiGit,
-  SiGithub,
-  SiTailwindcss,
   SiNextdotjs,
-  SiRedux,
   SiHtml5,
   SiCss3,
   SiMysql,
   SiDjango,
   SiFastapi,
   SiRedis,
+  SiRabbitmq,
   SiGraphql,
-  SiGitlab,
-  SiTerraform,
-  SiJest,
-  SiPytest,
+  SiGithubactions,
+  SiDatadog,
   SiKubernetes,
 } from "react-icons/si";
 
@@ -76,56 +72,41 @@ const getIconForRole = (title: string) => {
   if (t.includes("full stack") || t.includes("software")) return <FaCode className="text-white" />;
   if (t.includes("frontend")) return <FaDesktop className="text-white" />;
   if (t.includes("senior") || t.includes("ai engineer")) return <FaRocket className="text-white" />;
-  if (t.includes("graduate") || t.includes("master") || t.includes("bachelor")) return <FaGraduationCap className="text-white" />;
+  if (t.includes("graduate") || t.includes("master") || t.includes("bachelor") || t.includes("b.tech")) return <FaGraduationCap className="text-white" />;
   return <FaBuilding className="text-white" />;
 };
 
 const ic = "text-gray-500 dark:text-gray-400";
 
-const getTechIcons = (technologies: readonly string[]) => {
-  const techIcons: JSX.Element[] = [];
+const getTechIcon = (tech: string): JSX.Element | null => {
+  const t = tech.toLowerCase();
 
-  technologies.forEach(tech => {
-    const t = tech.toLowerCase();
-
-    if (t.includes("html")) techIcons.push(<SiHtml5 key="html" className={ic} title="HTML5" />);
-    else if (t.includes("css")) techIcons.push(<SiCss3 key="css" className={ic} title="CSS3" />);
-    else if (t.includes("javascript")) techIcons.push(<SiJavascript key="js" className={ic} title="JavaScript" />);
-    else if (t.includes("django")) techIcons.push(<SiDjango key="django" className={ic} title="Django" />);
-    else if (t.includes("fastapi")) techIcons.push(<SiFastapi key="fastapi" className={ic} title="FastAPI" />);
-    else if (t.includes("mysql")) techIcons.push(<SiMysql key="mysql" className={ic} title="MySQL" />);
-    else if (t.includes("react")) techIcons.push(<SiReact key="react" className={ic} title="React" />);
-    else if (t.includes("next.js") || t.includes("nextjs")) techIcons.push(<SiNextdotjs key="next" className={ic} title="Next.js" />);
-    else if (t.includes("node.js") || t.includes("nodejs")) techIcons.push(<SiNodedotjs key="node" className={ic} title="Node.js" />);
-    else if (t.includes("typescript")) techIcons.push(<SiTypescript key="ts" className={ic} title="TypeScript" />);
-    else if (t.includes("python")) techIcons.push(<SiPython key="python" className={ic} title="Python" />);
-    else if (t.includes("docker")) techIcons.push(<SiDocker key="docker" className={ic} title="Docker" />);
-    else if (t.includes("aws")) techIcons.push(<SiAmazonaws key="aws" className={ic} title="AWS" />);
-    else if (t.includes("postgresql")) techIcons.push(<SiPostgresql key="postgres" className={ic} title="PostgreSQL" />);
-    else if (t.includes("redis")) techIcons.push(<SiRedis key="redis" className={ic} title="Redis" />);
-    else if (t.includes("rabbitmq")) techIcons.push(<FaServer key="rabbitmq" className={ic} title="RabbitMQ" />);
-    else if (t.includes("graphql")) techIcons.push(<SiGraphql key="graphql" className={ic} title="GraphQL" />);
-    else if (t.includes("gitlab")) techIcons.push(<SiGitlab key="gitlab" className={ic} title="GitLab CI/CD" />);
-    else if (t.includes("github")) techIcons.push(<SiGithub key="github" className={ic} title="GitHub Actions" />);
-    else if (t.includes("datadog")) techIcons.push(<FaServer key="datadog" className={ic} title="Datadog" />);
-    else if (t.includes("terraform")) techIcons.push(<SiTerraform key="terraform" className={ic} title="Terraform" />);
-    else if (t === "git") techIcons.push(<SiGit key="git" className={ic} title="Git" />);
-    else if (t.includes("tailwind")) techIcons.push(<SiTailwindcss key="tailwind" className={ic} title="Tailwind CSS" />);
-    else if (t.includes("redux")) techIcons.push(<SiRedux key="redux" className={ic} title="Redux Toolkit" />);
-    else if (t.includes("jest")) techIcons.push(<SiJest key="jest" className={ic} title="Jest" />);
-    else if (t.includes("pytest")) techIcons.push(<SiPytest key="pytest" className={ic} title="pytest" />);
-    else if (t.includes("langchain")) techIcons.push(<FaBrain key="langchain" className={ic} title="LangChain" />);
-    else if (t.includes("langgraph")) techIcons.push(<FaBrain key="langgraph" className={ic} title="LangGraph" />);
-    else if (t.includes("jwt")) techIcons.push(<FaShieldAlt key="jwt" className={ic} title="JWT" />);
-    else if (t.includes("kubernetes")) techIcons.push(<SiKubernetes key="k8s" className={ic} title="Kubernetes" />);
-    else if (t.includes("ai") || t.includes("llm")) techIcons.push(<FaBrain key="ai" className={ic} title="AI/LLM" />);
-    else if (t.includes("database") || t.includes("dbms")) techIcons.push(<FaDatabase key="db" className={ic} title="Database" />);
-    else if (t.includes("cloud")) techIcons.push(<FaCloud key="cloud" className={ic} title="Cloud" />);
-    else if (t.includes("server") || t.includes("backend")) techIcons.push(<FaServer key="server" className={ic} title="Backend" />);
-    else if (t.includes("security") || t.includes("authentication")) techIcons.push(<FaShieldAlt key="security" className={ic} title="Security" />);
-  });
-
-  return techIcons;
+  if (t.includes("html")) return <SiHtml5 className={ic} />;
+  if (t.includes("css")) return <SiCss3 className={ic} />;
+  if (t.includes("javascript")) return <SiJavascript className={ic} />;
+  if (t.includes("django")) return <SiDjango className={ic} />;
+  if (t.includes("fastapi")) return <SiFastapi className={ic} />;
+  if (t.includes("mysql")) return <SiMysql className={ic} />;
+  if (t.includes("react")) return <SiReact className={ic} />;
+  if (t.includes("next.js")) return <SiNextdotjs className={ic} />;
+  if (t.includes("node.js")) return <SiNodedotjs className={ic} />;
+  if (t.includes("typescript")) return <SiTypescript className={ic} />;
+  if (t.includes("python")) return <SiPython className={ic} />;
+  if (t.includes("docker")) return <SiDocker className={ic} />;
+  if (t.includes("aws")) return <SiAmazonaws className={ic} />;
+  if (t.includes("postgresql")) return <SiPostgresql className={ic} />;
+  if (t.includes("redis")) return <SiRedis className={ic} />;
+  if (t.includes("rabbitmq")) return <SiRabbitmq className={ic} />;
+  if (t.includes("graphql")) return <SiGraphql className={ic} />;
+  if (t.includes("github actions")) return <SiGithubactions className={ic} />;
+  if (t.includes("datadog")) return <SiDatadog className={ic} />;
+  if (t.includes("kubernetes")) return <SiKubernetes className={ic} />;
+  if (t.includes("jwt")) return <FaShieldAlt className={ic} />;
+  if (t === "mcp") return <FaNetworkWired className={ic} />;
+  if (t.includes("claude")) return <FaRobot className={ic} />;
+  if (t.includes("lang") || t.includes("ai") || t.includes("learning")) return <FaBrain className={ic} />;
+  if (t.includes("database")) return <FaDatabase className={ic} />;
+  return <FaCode className={ic} />;
 };
 
 export default function Experience() {
@@ -175,40 +156,50 @@ export default function Experience() {
                               <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                 {item.title}
                               </h3>
-                              <div className="flex items-center space-x-2 text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-1">
-                                <FaBuilding className="text-gray-400" />
-                                <span className="break-words">{item.location}</span>
+                              <div className="flex items-start space-x-2 text-sm sm:text-base font-medium text-blue-700 dark:text-blue-300 mt-1">
+                                <FaBuilding className="text-blue-400 mt-1 flex-shrink-0" />
+                                <span className="break-words">{item.company}</span>
                               </div>
                             </div>
                           </div>
-                          
-                          <div className="text-left sm:text-right">
-                            <div className="flex items-center space-x-1 text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+
+                          <div className="text-left sm:text-right space-y-1 pl-12 sm:pl-0 sm:flex-shrink-0">
+                            <div className="flex items-center sm:justify-end space-x-1 text-xs sm:text-sm text-gray-600 dark:text-gray-300">
                               <FaCalendarAlt className="text-gray-400" />
-                              <span className="font-medium">{item.date}</span>
+                              <span className="font-semibold whitespace-nowrap">{item.date}</span>
+                            </div>
+                            <div className="flex items-center sm:justify-end space-x-1 text-xs text-gray-500 dark:text-gray-400">
+                              <FaMapMarkerAlt className="text-gray-400" />
+                              <span className="whitespace-nowrap">{item.location}</span>
                             </div>
                           </div>
                         </div>
 
-                        <div className="mb-4">
-                          <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                            {item.description}
-                          </p>
-                        </div>
+                        <ul className="mb-5 space-y-2.5">
+                          {item.points.map((point, pointIndex) => (
+                            <li
+                              key={pointIndex}
+                              className="flex gap-3 text-sm sm:text-[0.95rem] text-gray-700 dark:text-gray-300 leading-relaxed"
+                            >
+                              <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
+                              <span>
+                                <span className="font-semibold text-gray-900 dark:text-white">{point.lead}</span>{" "}
+                                {point.text}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
 
-                        <div className="space-y-3">
-                          <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-2">
-                            <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
-                              Technologies & Skills:
+                        <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-200/80 dark:border-gray-700">
+                          {item.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="inline-flex items-center gap-1.5 rounded-lg bg-gray-100 dark:bg-gray-700/70 px-2.5 py-1 text-xs font-medium text-gray-700 dark:text-gray-200"
+                            >
+                              {getTechIcon(tech)}
+                              {tech}
                             </span>
-                            <div className="flex items-center space-x-2 flex-wrap">
-                              {getTechIcons(item.technologies || []).map((icon, iconIndex) => (
-                                <div key={iconIndex} className="p-1 sm:p-1.5 bg-gray-100 dark:bg-gray-700 rounded-lg hover:scale-110 transition-transform">
-                                  {icon}
-                                </div>
-                              ))}
-                            </div>
-                          </div>
+                          ))}
                         </div>
 
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>

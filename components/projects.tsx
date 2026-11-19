@@ -13,7 +13,9 @@ import {
   FaCode,
   FaRocket,
   FaBrain,
-  FaGlobe,
+  FaRobot,
+  FaSlack,
+  FaBuilding,
   FaChevronDown,
   FaChevronUp,
   FaShieldAlt,
@@ -42,10 +44,10 @@ import {
 const CARD_GRADIENT = "from-blue-600 to-indigo-700";
 
 const projectIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  "HR Management Platform": FaRocket,
-  "AI Leave Policy Assistant": FaBrain,
-  "Financial Analytics Platform": FaChartBar,
-  "Medicine E-Commerce Platform": FaGlobe,
+  "Multi-Agent Onboarding Platform": FaRobot,
+  "AI Leave Policy Advisor": FaBrain,
+  "Employee Benefits Assistant": FaShieldAlt,
+  "Loan Origination & Credit Workflows": FaChartBar,
 };
 
 export default function Projects() {
@@ -72,6 +74,9 @@ export default function Projects() {
       "LangChain": FaBrain,
       "LangGraph": FaBrain,
       "OpenAI": SiOpenai,
+      "Claude": FaRobot,
+      "ChromaDB": FaDatabase,
+      "Slack API": FaSlack,
       "RAG": FaBrain,
       "Vector DB": FaDatabase,
       "MCP": FaNetworkWired,
@@ -97,9 +102,10 @@ export default function Projects() {
     }));
   };
 
-  const truncateDescription = (description: string, maxLength: number = 120) => {
+  const truncateDescription = (description: string, maxLength: number = 170) => {
     if (description.length <= maxLength) return description;
-    return description.substring(0, maxLength) + '...';
+    const cut = description.substring(0, maxLength);
+    return cut.substring(0, cut.lastIndexOf(' ')).replace(/[,.;:]$/, '') + '...';
   };
 
   return (
@@ -142,16 +148,14 @@ export default function Projects() {
                       <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
                         <ProjectIcon className="text-2xl" />
                       </div>
-                      {index === 0 && (
-                        <span className="bg-white/20 text-white border border-white/30 px-3 py-1 rounded-full text-xs font-semibold">
-                          Current
-                        </span>
-                      )}
+                      <span className="bg-white/20 text-white border border-white/30 px-3 py-1 rounded-full text-xs font-semibold">
+                        {project.category}
+                      </span>
                     </div>
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                     <div className="flex items-center text-white/80 text-sm">
-                      <FaCode className="mr-2" />
-                      <span>Full Stack Development</span>
+                      <FaBuilding className="mr-2 flex-shrink-0" />
+                      <span>{project.company}</span>
                     </div>
                   </div>
                 </div>
@@ -228,7 +232,7 @@ export default function Projects() {
                         <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                           <div className="text-center">
                             <div className="text-lg font-bold text-gray-900 dark:text-white">
-                              {index === 0 ? "Active" : "Completed"}
+                              {project.status}
                             </div>
                             <div className="text-xs text-gray-600 dark:text-gray-400">Status</div>
                           </div>
@@ -275,7 +279,7 @@ export default function Projects() {
                           <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                             <div className="text-center">
                               <div className="text-lg font-bold text-gray-900 dark:text-white">
-                                {index === 0 ? "Active" : "Completed"}
+                                {project.status}
                               </div>
                               <div className="text-xs text-gray-600 dark:text-gray-400">Status</div>
                             </div>
