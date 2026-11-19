@@ -9,9 +9,9 @@ import Chatbot from "@/components/chatbot";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Sai Subrahmanyam Mahadasa | Senior Full Stack AI Engineer",
+  title: "Sai Subrahmanyam Mahadasa | Senior AI Engineer, Agentic AI",
   description:
-    "Senior Full Stack AI Engineer with 5+ years building AI-powered systems across financial analytics, healthcare, and enterprise platforms. Core stack: Python, Django, FastAPI, LangGraph, LangChain, AWS Bedrock for Gen AI and RAG — with React.js, Next.js, and TypeScript for the frontend. NVIDIA AI RAG Developer Contest Winner, 2024.",
+    "Senior AI Engineer at CoreWeave with 6 years of full-stack and AI experience, building multi-agent systems for enterprise HR and financial services with Claude, LangGraph, MCP, FastAPI, and AWS Bedrock. AWS Certified Generative AI Developer – Professional.",
 };
 
 export default function RootLayout({

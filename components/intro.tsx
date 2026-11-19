@@ -5,10 +5,11 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin, BsGithub } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
+import { HiDownload, HiOutlineMail } from "react-icons/hi";
 import { FaReact, FaPython, FaAws } from "react-icons/fa";
-import { SiTypescript, SiDjango, SiFastapi } from "react-icons/si";
+import { SiTypescript, SiDjango, SiFastapi, SiOrcid } from "react-icons/si";
 import { useSectionInView } from "@/lib/hooks";
+import { orcidUrl } from "@/lib/data";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
@@ -68,8 +69,23 @@ export default function Intro() {
                 transition={{ delay: 0.4 }}
               >
                 <div className="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-300 dark:to-gray-100 bg-clip-text text-transparent">
-                  Senior Full Stack AI Engineer
+                  Senior AI Engineer <span className="text-gray-400 dark:text-gray-500 font-normal">|</span> Agentic AI
                 </div>
+              </motion.div>
+
+              <motion.div
+                className="flex justify-center lg:justify-start"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.45 }}
+              >
+                <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 dark:border-blue-800 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm px-3 py-1 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-200 shadow-sm">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+                  </span>
+                  Currently at CoreWeave · Manhattan, NY
+                </span>
               </motion.div>
       </div>
 
@@ -80,18 +96,19 @@ export default function Intro() {
               transition={{ delay: 0.5 }}
             >
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                5+ years building AI-powered full stack systems across financial analytics, healthcare, and enterprise
-                platforms. Core stack is{" "}
-                <span className="font-semibold text-gray-800 dark:text-gray-200">Python, Django, and FastAPI</span> for backend services, with{" "}
-                <span className="font-semibold text-gray-800 dark:text-gray-200">LangGraph, LangChain, and AWS Bedrock</span> for Gen AI and RAG pipelines.
+                6 years of full-stack and AI experience, now building{" "}
+                <span className="font-semibold text-gray-800 dark:text-gray-200">multi-agent systems</span> for enterprise HR and
+                financial services. I design agentic pipelines in Python that combine RAG retrieval, LLM reasoning, and MCP tool
+                calling, using{" "}
+                <span className="font-semibold text-gray-800 dark:text-gray-200">Claude, LangGraph, FastAPI, and AWS Bedrock</span>,
+                with human approval and guardrails built in where decisions matter.
               </p>
 
               <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Deliver production-grade AI features end-to-end, from{" "}
-                <span className="font-semibold text-gray-800 dark:text-gray-200">agentic workflows and vector retrieval</span> on the backend
-                to{" "}
-                <span className="font-semibold text-gray-800 dark:text-gray-200">React.js + TypeScript</span> frontends, deployed on{" "}
-                <span className="font-semibold text-gray-800 dark:text-gray-200">AWS with Kubernetes</span> and GitLab CI/CD.
+                I ship the full product around the agents, from{" "}
+                <span className="font-semibold text-gray-800 dark:text-gray-200">secure APIs and React interfaces</span> to{" "}
+                <span className="font-semibold text-gray-800 dark:text-gray-200">Kubernetes deployments on AWS</span>, and work
+                directly with business teams to get it adopted.
               </p>
             </motion.div>
 
@@ -127,7 +144,7 @@ export default function Intro() {
             </motion.div>
 
             <motion.div
-              className="flex gap-3 sm:gap-4 justify-center lg:justify-start"
+              className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
@@ -147,6 +164,22 @@ export default function Intro() {
                 rel="noopener noreferrer"
               >
                 <BsGithub className="text-lg sm:text-xl text-gray-900 dark:text-white group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                className="group p-2 sm:p-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                href={orcidUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ORCID"
+              >
+                <SiOrcid className="text-lg sm:text-xl text-[#A6CE39] group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                className="group inline-flex items-center gap-2 px-3 sm:px-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 text-sm font-medium text-gray-800 dark:text-gray-100"
+                href="mailto:saimahadasa1999@gmail.com"
+              >
+                <HiOutlineMail className="text-lg sm:text-xl text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                <span className="break-all">saimahadasa1999@gmail.com</span>
               </a>
             </motion.div>
           </motion.div>
@@ -209,7 +242,7 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2"
+        className="hidden sm:block absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}

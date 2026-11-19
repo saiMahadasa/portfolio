@@ -17,94 +17,98 @@ import {
   FaRobot,
   FaProjectDiagram,
   FaLink,
-  FaMobileAlt,
   FaCode,
   FaUniversalAccess,
+  FaBrain,
+  FaCloud,
+  FaVial,
+  FaTools,
+  FaDatabase,
+  FaSearch,
+  FaNetworkWired,
+  FaUsers,
 } from "react-icons/fa";
 import {
   SiTypescript,
-  SiJavascript,
   SiNextdotjs,
   SiRedux,
   SiTailwindcss,
-  SiHtml5,
-  SiCss3,
   SiDjango,
   SiFastapi,
   SiGraphql,
   SiTerraform,
   SiPostgresql,
-  SiMysql,
   SiRedis,
+  SiRabbitmq,
   SiJest,
   SiTestinglibrary,
   SiPytest,
-  SiGitlab,
   SiKubernetes,
   SiOpenai,
-  SiGit,
-  SiApachekafka,
+  SiGithubactions,
+  SiGithub,
+  SiDatadog,
 } from "react-icons/si";
-const skillIconMap: Record<string, { icon: React.ComponentType<{ className?: string }>; color: string }> = {
-  "React.js": { icon: FaReact, color: "text-cyan-500" },
-  "Next.js": { icon: SiNextdotjs, color: "text-gray-800 dark:text-gray-100" },
-  "TypeScript": { icon: SiTypescript, color: "text-blue-600" },
-  "JavaScript (ES6+)": { icon: SiJavascript, color: "text-yellow-400" },
-  "Redux Toolkit": { icon: SiRedux, color: "text-purple-600" },
-  "RTK Query": { icon: SiRedux, color: "text-purple-500" },
-  "React Hooks": { icon: FaReact, color: "text-cyan-400" },
-  "Context API": { icon: FaReact, color: "text-cyan-600" },
-  "Tailwind CSS": { icon: SiTailwindcss, color: "text-cyan-500" },
-  "HTML5": { icon: SiHtml5, color: "text-orange-500" },
-  "CSS3": { icon: SiCss3, color: "text-blue-500" },
-  "WCAG 2.1 Accessibility": { icon: FaUniversalAccess, color: "text-blue-600" },
-  "Responsive Design": { icon: FaMobileAlt, color: "text-green-500" },
-  "Python": { icon: FaPython, color: "text-yellow-500" },
-  "Django": { icon: SiDjango, color: "text-green-800 dark:text-green-400" },
-  "Node.js": { icon: FaNodeJs, color: "text-green-600" },
-  "FastAPI": { icon: SiFastapi, color: "text-teal-500" },
-  "REST APIs": { icon: FaServer, color: "text-blue-500" },
-  "GraphQL": { icon: SiGraphql, color: "text-pink-500" },
-  "Terraform": { icon: SiTerraform, color: "text-purple-600" },
-  "JWT Authentication": { icon: FaLock, color: "text-yellow-600" },
-  "RBAC": { icon: FaShieldAlt, color: "text-red-500" },
-  "Kafka": { icon: SiApachekafka, color: "text-gray-700 dark:text-gray-300" },
-  "LangChain": { icon: FaLink, color: "text-green-600" },
-  "LangGraph": { icon: FaProjectDiagram, color: "text-blue-600" },
-  "RAG": { icon: FaRobot, color: "text-purple-500" },
-  "Agentic AI": { icon: FaRobot, color: "text-indigo-500" },
-  "MCP": { icon: FaLink, color: "text-blue-500" },
-  "AWS Bedrock": { icon: FaAws, color: "text-orange-400" },
-  "OpenAI": { icon: SiOpenai, color: "text-gray-800 dark:text-gray-100" },
-  "PostgreSQL": { icon: SiPostgresql, color: "text-blue-600" },
-  "MySQL": { icon: SiMysql, color: "text-blue-600" },
-  "Redis": { icon: SiRedis, color: "text-red-500" },
-  "Jest": { icon: SiJest, color: "text-red-600" },
-  "React Testing Library": { icon: SiTestinglibrary, color: "text-red-500" },
-  "pytest": { icon: SiPytest, color: "text-blue-500" },
-  "Integration Testing": { icon: FaCode, color: "text-red-500" },
-  "Unit Testing": { icon: FaCode, color: "text-blue-500" },
-  "Docker": { icon: FaDocker, color: "text-blue-500" },
-  "Kubernetes": { icon: SiKubernetes, color: "text-blue-500" },
-  "AWS": { icon: FaAws, color: "text-orange-500" },
-  "GitLab CI/CD": { icon: SiGitlab, color: "text-orange-600" },
-  "GitHub Actions": { icon: FaServer, color: "text-gray-700 dark:text-gray-200" },
-  "Git": { icon: SiGit, color: "text-orange-600" },
-  "Structured Logging": { icon: FaServer, color: "text-gray-500" },
+
+type IconType = React.ComponentType<{ className?: string }>;
+
+const categoryIconMap: Record<string, IconType> = {
+  "AI / GenAI": FaBrain,
+  "Backend": FaServer,
+  "Frontend": FaReact,
+  "Cloud / DevOps": FaCloud,
+  "Testing": FaVial,
+  "AI Tooling": FaTools,
 };
 
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
+const skillIconMap: Record<string, IconType> = {
+  "Claude": FaRobot,
+  "LangGraph": FaProjectDiagram,
+  "LangChain": FaLink,
+  "LlamaIndex": FaBrain,
+  "RAG & RAG Evaluation": FaSearch,
+  "MCP": FaNetworkWired,
+  "Tool Calling": FaTools,
+  "Multi-Agent Systems": FaUsers,
+  "Guardrails": FaShieldAlt,
+  "Embeddings & Vector Search": FaSearch,
+  "AWS Bedrock": FaAws,
+  "OpenAI Models": SiOpenai,
+  "ChromaDB": FaDatabase,
+  "pgvector": SiPostgresql,
+  "Ollama": FaRobot,
+  "Hugging Face": FaBrain,
+  "Python": FaPython,
+  "FastAPI": SiFastapi,
+  "Django": SiDjango,
+  "Node.js": FaNodeJs,
+  "REST APIs": FaServer,
+  "GraphQL": SiGraphql,
+  "PostgreSQL": SiPostgresql,
+  "Redis": SiRedis,
+  "RabbitMQ": SiRabbitmq,
+  "JWT/OAuth": FaLock,
+  "RBAC": FaShieldAlt,
+  "React.js": FaReact,
+  "Next.js": SiNextdotjs,
+  "TypeScript": SiTypescript,
+  "Redux Toolkit": SiRedux,
+  "RTK Query": SiRedux,
+  "Tailwind CSS": SiTailwindcss,
+  "WCAG 2.1": FaUniversalAccess,
+  "AWS (EKS, EC2, S3, RDS, API Gateway, Bedrock)": FaAws,
+  "Kubernetes": SiKubernetes,
+  "Docker": FaDocker,
+  "GitHub Actions": SiGithubactions,
+  "Terraform": SiTerraform,
+  "Datadog": SiDatadog,
+  "pytest": SiPytest,
+  "Jest": SiJest,
+  "React Testing Library": SiTestinglibrary,
+  "Unit & Integration Testing": FaCode,
+  "Claude Code": FaRobot,
+  "Cursor": FaCode,
+  "GitHub Copilot": SiGithub,
 };
 
 export default function Skills() {
@@ -114,33 +118,52 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="mb-28 max-w-[58rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 w-full max-w-6xl px-4 scroll-mt-28 sm:mb-40"
     >
       <SectionHeading>Technical Expertise</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-base sm:text-lg text-gray-800">
-        {skillsData.map((skill, index) => {
-          const iconData = skillIconMap[skill];
-          const IconComponent = iconData?.icon;
-          const iconColor = iconData?.color || "text-gray-500";
+      <div className="grid gap-5 md:grid-cols-2">
+        {skillsData.map((group, groupIndex) => {
+          const CategoryIcon = categoryIconMap[group.category] ?? FaCode;
+          const isFeatured = groupIndex === 0;
 
           return (
-            <motion.li
-              className="bg-white borderBlack rounded-xl px-4 sm:px-5 py-2 sm:py-3 dark:bg-white/10 dark:text-white/80 hover:bg-gray-50 dark:hover:bg-white/20 transition-colors flex items-center gap-2"
-              key={index}
-              variants={fadeInAnimationVariants}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              custom={index}
+            <motion.div
+              key={group.category}
+              className={`rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/60 p-5 sm:p-6 shadow-lg hover:shadow-xl transition-shadow ${
+                isFeatured ? "md:col-span-2" : ""
+              }`}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: groupIndex * 0.08 }}
+              viewport={{ once: true }}
             >
-              {IconComponent && <IconComponent className="text-lg text-gray-400 dark:text-gray-500" />}
-              {skill}
-            </motion.li>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center shadow-md">
+                  <CategoryIcon className="text-white text-lg" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white">{group.category}</h3>
+                <span className="ml-auto text-xs font-medium text-gray-500 dark:text-gray-400">
+                  {group.skills.length} skills
+                </span>
+              </div>
+              <ul className="flex flex-wrap gap-2">
+                {group.skills.map((skill) => {
+                  const SkillIcon = skillIconMap[skill];
+                  return (
+                    <li
+                      key={skill}
+                      className="inline-flex items-center gap-2 rounded-lg border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 px-3 py-1.5 text-sm text-gray-800 dark:text-white/85 hover:border-blue-300 hover:bg-blue-50 dark:hover:bg-white/10 transition-colors"
+                    >
+                      {SkillIcon && <SkillIcon className="text-gray-400 dark:text-gray-400" />}
+                      {skill}
+                    </li>
+                  );
+                })}
+              </ul>
+            </motion.div>
           );
         })}
-      </ul>
+      </div>
     </section>
   );
 }

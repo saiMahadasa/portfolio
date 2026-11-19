@@ -12,53 +12,42 @@ import {
   FaShieldAlt,
   FaChartLine,
   FaPython,
-  FaTrophy,
   FaCertificate,
+  FaRobot,
+  FaProjectDiagram,
 } from "react-icons/fa";
 import {
   SiTypescript,
   SiNextdotjs,
   SiDjango,
   SiPostgresql,
-  SiRedis,
   SiFastapi,
   SiNodedotjs,
+  SiKubernetes,
 } from "react-icons/si";
 
 export default function About() {
   const { ref } = useSectionInView("About", 0.5);
 
   const techStack = [
+    { icon: FaRobot, name: "Claude", color: "text-purple-600 dark:text-purple-400" },
+    { icon: FaProjectDiagram, name: "LangGraph", color: "text-blue-600" },
+    { icon: FaRocket, name: "MCP", color: "text-indigo-600" },
+    { icon: FaAws, name: "AWS Bedrock", color: "text-orange-600 dark:text-orange-400" },
     { icon: FaPython, name: "Python", color: "text-yellow-500" },
     { icon: SiFastapi, name: "FastAPI", color: "text-teal-500" },
-    { icon: SiDjango, name: "Django", color: "text-green-800 dark:text-green-400" },
-    { icon: FaRocket, name: "Gen AI / LLM", color: "text-purple-600 dark:text-purple-400" },
-    { icon: FaAws, name: "AWS", color: "text-orange-600 dark:text-orange-400" },
-    { icon: FaDocker, name: "Docker", color: "text-blue-600 dark:text-blue-300" },
+    { icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-600" },
+    { icon: SiNodedotjs, name: "Node.js", color: "text-green-600 dark:text-green-400" },
     { icon: FaReact, name: "React.js", color: "text-cyan-500" },
     { icon: SiNextdotjs, name: "Next.js", color: "text-gray-800 dark:text-gray-100" },
-    { icon: SiTypescript, name: "TypeScript", color: "text-blue-500" },
-    { icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-600" },
-    { icon: SiRedis, name: "Redis", color: "text-red-500" },
-    { icon: SiNodedotjs, name: "Node.js", color: "text-green-600 dark:text-green-400" },
+    { icon: SiKubernetes, name: "Kubernetes", color: "text-blue-500" },
+    { icon: FaDocker, name: "Docker", color: "text-blue-600 dark:text-blue-300" },
   ];
 
   const achievements = [
     {
       icon: FaCertificate,
-      title: "AWS Certified Solutions Architect",
-      subtitle: "Amazon Web Services, 2021",
-      color: "bg-gradient-to-br from-blue-600 to-indigo-700",
-    },
-    {
-      icon: FaTrophy,
-      title: "NVIDIA AI RAG Developer Contest Winner",
-      subtitle: "Generative AI Application, 2024",
-      color: "bg-gradient-to-br from-blue-600 to-indigo-700",
-    },
-    {
-      icon: FaCertificate,
-      title: "AWS Certified Generative AI Engineer Associate",
+      title: "AWS Certified Generative AI Developer – Professional",
       subtitle: "Amazon Web Services, 2026",
       color: "bg-gradient-to-br from-blue-600 to-indigo-700",
     },
@@ -66,24 +55,24 @@ export default function About() {
 
   const experienceHighlights = [
     {
-      icon: FaUsers,
-      title: "Full Stack Delivery",
-      description: "React + Python across 3 companies",
-    },
-    {
-      icon: FaRocket,
-      title: "Gen AI & RAG Systems",
-      description: "LangGraph, AWS Bedrock, LangChain",
+      icon: FaRobot,
+      title: "Multi-Agent Systems",
+      description: "Claude, LangGraph, MCP tool calling",
     },
     {
       icon: FaShieldAlt,
-      title: "Enterprise Security",
-      description: "RBAC, JWT/OAuth, audit logging",
+      title: "RAG & Guardrails",
+      description: "Grounded answers, human approval, audit trails",
+    },
+    {
+      icon: FaUsers,
+      title: "Full Stack Delivery",
+      description: "Secure APIs to React interfaces",
     },
     {
       icon: FaChartLine,
       title: "Cloud & DevOps",
-      description: "AWS, Kubernetes, GitLab CI/CD",
+      description: "AWS EKS, Kubernetes, GitHub Actions",
     },
   ];
 
@@ -127,7 +116,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                Senior Full Stack AI Engineer
+                Senior AI Engineer, Agentic AI
               </motion.h3>
               <motion.p 
                 className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-6"
@@ -136,10 +125,10 @@ export default function About() {
                 transition={{ delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Primarily a Python and AI engineer, building scalable REST and GraphQL APIs with Django and FastAPI,
-                and designing production-grade Gen AI systems using LangGraph, LangChain, and AWS Bedrock. Experienced
-                with RAG pipelines, agentic workflows, vector embeddings, and multi-step document retrieval for real
-                enterprise use cases. Backed by PostgreSQL, Redis, Docker, and Kubernetes on AWS.
+                I build multi-agent systems for enterprise HR and financial services. My agentic pipelines in Python
+                combine RAG retrieval, LLM reasoning, and MCP tool calling on Claude, LangGraph, FastAPI, and AWS
+                Bedrock, with orchestration, memory, and guardrails designed so every workflow stays safe, traceable,
+                and consistent, and with a person in the loop where decisions matter.
               </motion.p>
               <motion.p 
                 className="text-lg leading-relaxed text-gray-700 dark:text-gray-300"
@@ -148,17 +137,31 @@ export default function About() {
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                On the frontend, deliver full stack features end-to-end using React.js, Next.js, and TypeScript with
-                Redux Toolkit and RTK Query for data-intensive dashboards, multi-step workflows, and
-                role-based UIs that connect directly to AI-powered backends. Test coverage across pytest, Jest,
-                and React Testing Library across the entire stack.
+                Six years of full-stack work means I ship the whole product around the agents: secure REST and
+                GraphQL APIs, React and Next.js interfaces, and Kubernetes deployments on AWS with GitHub Actions. I
+                work directly with business teams, from requirements and live demos through production, so what
+                gets built is what gets adopted.
               </motion.p>
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-6 text-white shadow-brand-lg">
                 <FaCode className="text-4xl mb-4" />
-                <h4 className="text-xl font-semibold mb-2">Full Stack Expertise</h4>
-                <p className="text-white/80">Frontend to Backend, Cloud to AI</p>
+                <h4 className="text-xl font-semibold mb-2">Agentic AI, End to End</h4>
+                <p className="text-white/80">From agent design to production on AWS</p>
+                <div className="mt-6 grid grid-cols-3 gap-3 border-t border-white/20 pt-5 text-center">
+                  <div>
+                    <div className="text-2xl font-bold">6</div>
+                    <div className="text-xs text-white/70">Years experience</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold">99.9%</div>
+                    <div className="text-xs text-white/70">Production uptime</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold">4</div>
+                    <div className="text-xs text-white/70">Companies</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -254,9 +257,9 @@ export default function About() {
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Certifications & Awards
+          Certifications
         </motion.h3>
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid gap-6 max-w-md mx-auto">
           {achievements.map((achievement, index) => (
             <motion.div
               key={index}
@@ -291,23 +294,21 @@ export default function About() {
         <div className="text-center">
           <FaRocket className="text-5xl mx-auto mb-6" />
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Currently at Perky, Client: Lincoln Financial Group
+            Currently at CoreWeave
           </h3>
-          <p className="text-xl text-primary-100 mb-6">
-            Building full stack features for a financial analytics platform using React, TypeScript, Python Django,
-            and GraphQL across 25+ data-intensive dashboards. Managing Kubernetes on AWS EKS with 99.9% uptime
-            across services handling 20K+ records per request. Engineered Python REST APIs with RBAC, JWT/OAuth,
-            and audit logging. Automated GitLab CI/CD with Docker and AWS, cutting release cycles by 40%.
+          <p className="text-base font-medium text-white/80 mb-4">
+            Senior AI Engineer, People Development · Manhattan, NY
+          </p>
+          <p className="text-lg md:text-xl text-primary-100 mb-6 max-w-4xl mx-auto">
+            Built the Multi-Agent Onboarding Platform that runs onboarding for every new hire and hiring manager,
+            and now apply the same agent patterns to recruiting, growth, and People operations. I own the
+            architecture for orchestration, memory, and guardrails across the team&apos;s agents, and I&apos;m building
+            an internal skill graph that matches employees to growth opportunities.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">React.js</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">TypeScript</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Python</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Django</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">GraphQL</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">Kubernetes</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">LangGraph</span>
-            <span className="bg-white/20 px-3 py-2 rounded-full text-sm">AWS</span>
+            {["Claude", "LangGraph", "MCP", "Python", "FastAPI", "Next.js", "PostgreSQL + pgvector", "Kubernetes"].map((tag) => (
+              <span key={tag} className="bg-white/20 px-3 py-2 rounded-full text-sm">{tag}</span>
+            ))}
           </div>
         </div>
       </motion.div>
